@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ch5cqdsptxbaf"]
+
+[ext_resource type="Material" uid="uid://d2ssb20fodra3" path="res://(TEMP) Debug Materials/Grey.tres" id="1_8gbba"]
+[ext_resource type="Material" uid="uid://svybax08fit0" path="res://(TEMP) Debug Materials/Red.tres" id="1_bo1nx"]
+[ext_resource type="Material" uid="uid://isbdqotqp8ok" path="res://(TEMP) Debug Materials/Green.tres" id="2_8gbba"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7u77a"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7u77a"]
+size = Vector3(2, 0.5, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
+size = Vector3(0.65, 0.4, 1.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
+size = Vector3(2, 0.5, 4)
+
+[node name="Main" type="Node3D" unique_id=759719230]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1401051954]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1687985303]
+transform = Transform3D(58.798435, 0, 0, 0, 1, 0, 0, 0, 58.798435, 0, 0, 0)
+material_override = ExtResource("1_8gbba")
+mesh = SubResource("PlaneMesh_7u77a")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1636508589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="Car Placeholder" type="MeshInstance3D" parent="RigidBody3D" unique_id=1411333018]
+material_override = ExtResource("1_bo1nx")
+mesh = SubResource("BoxMesh_7u77a")
+
+[node name="Car Back Indicator" type="MeshInstance3D" parent="RigidBody3D/Car Placeholder" unique_id=58585954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999998, -1)
+material_override = ExtResource("2_8gbba")
+mesh = SubResource("BoxMesh_jjgbg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1614464709]
+shape = SubResource("BoxShape3D_7u77a")
+
+[node name="WheelFL" type="RayCast3D" parent="RigidBody3D" unique_id=1693887389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 1.5)
+
+[node name="WheelRL" type="RayCast3D" parent="RigidBody3D" unique_id=1961143901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, -1.5)
+
+[node name="WheelFR" type="RayCast3D" parent="RigidBody3D" unique_id=2012831264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 1.5)
+
+[node name="WheelRR" type="RayCast3D" parent="RigidBody3D" unique_id=120439592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, -1.5)
