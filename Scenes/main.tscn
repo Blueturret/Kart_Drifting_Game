@@ -3,8 +3,25 @@
 [ext_resource type="Material" uid="uid://d2ssb20fodra3" path="res://(TEMP) Debug Materials/Grey.tres" id="1_8gbba"]
 [ext_resource type="Material" uid="uid://svybax08fit0" path="res://(TEMP) Debug Materials/Red.tres" id="1_bo1nx"]
 [ext_resource type="Material" uid="uid://isbdqotqp8ok" path="res://(TEMP) Debug Materials/Green.tres" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="2_jjvhh"]
+[ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="5_kry3j"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7u77a"]
+size = Vector2(60, 120)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjvhh"]
+size = Vector3(60, 0.3, 120)
+
+[sub_resource type="PrismMesh" id="PrismMesh_kry3j"]
+size = Vector3(12, 3.5, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kry3j"]
+data = PackedVector3Array(0, 1.75, 5, 6, -1.75, 5, -6, -1.75, 5, 0, 1.75, -5, -6, -1.75, -5, 6, -1.75, -5, 0, 1.75, 5, 0, 1.75, -5, 6, -1.75, 5, 0, 1.75, -5, 6, -1.75, -5, 6, -1.75, 5, 0, 1.75, -5, 0, 1.75, 5, -6, -1.75, -5, 0, 1.75, 5, -6, -1.75, 5, -6, -1.75, -5, -6, -1.75, 5, 6, -1.75, 5, -6, -1.75, -5, 6, -1.75, 5, 6, -1.75, -5, -6, -1.75, -5)
+
+[sub_resource type="Curve" id="Curve_kry3j"]
+_data = [Vector2(0, 0.3), 0.0, 0.0, 0, 0, Vector2(0.3, 0.90000004), 0.0, 0.0, 0, 0, Vector2(0.6, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
+point_count = 4
+metadata/_snap_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_7u77a"]
 size = Vector3(2, 0.5, 4)
@@ -15,38 +32,110 @@ size = Vector3(0.65, 0.4, 1.8)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(2, 0.5, 4)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_jjvhh"]
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.15
+
 [node name="Main" type="Node3D" unique_id=759719230]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1401051954]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=761540082]
+transform = Transform3D(-0.67421114, 0.42148158, -0.6064592, 0.060712084, 0.850012, 0.52325314, 0.73603904, 0.31596366, -0.5986765, -17.210289, 27.903875, -37.222466)
+light_energy = 5.0
+light_specular = 0.15
+shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1687985303]
-transform = Transform3D(58.798435, 0, 0, 0, 1, 0, 0, 0, 58.798435, 0, 0, 0)
+[node name="Environment" type="Node" parent="." unique_id=273938321]
+
+[node name="Ground" type="StaticBody3D" parent="Environment" unique_id=1401051954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 34.303474)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Ground" unique_id=1687985303]
 material_override = ExtResource("1_8gbba")
 mesh = SubResource("PlaneMesh_7u77a")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1636508589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground" unique_id=884524599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1055336, 0)
+shape = SubResource("BoxShape3D_jjvhh")
 
-[node name="Car Placeholder" type="MeshInstance3D" parent="RigidBody3D" unique_id=1411333018]
+[node name="Ramp" type="StaticBody3D" parent="Environment" unique_id=1106772237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28.551579)
+
+[node name="Mesh" type="MeshInstance3D" parent="Environment/Ramp" unique_id=364522091]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15.702926)
+material_override = ExtResource("1_8gbba")
+mesh = SubResource("PrismMesh_kry3j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ramp" unique_id=454060456]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15.702926)
+shape = SubResource("ConcavePolygonShape3D_kry3j")
+
+[node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2702271, 0)
+mass = 50.0
+script = ExtResource("2_jjvhh")
+wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePath("WheelRR")]
+acceleration = 1000.0
+accelerationCurve = SubResource("Curve_kry3j")
+
+[node name="Camera3D" type="Camera3D" parent="Kart" unique_id=1901270284]
+transform = Transform3D(-1, 8.742278e-08, 0, 3.821371e-15, 4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 2.3784528, 51.939354, 2.4879253)
+fov = 45.0
+
+[node name="Car Placeholder" type="MeshInstance3D" parent="Kart" unique_id=1411333018]
 material_override = ExtResource("1_bo1nx")
 mesh = SubResource("BoxMesh_7u77a")
 
-[node name="Car Back Indicator" type="MeshInstance3D" parent="RigidBody3D/Car Placeholder" unique_id=58585954]
+[node name="Car Back Indicator" type="MeshInstance3D" parent="Kart/Car Placeholder" unique_id=58585954]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999998, -1)
 material_override = ExtResource("2_8gbba")
 mesh = SubResource("BoxMesh_jjgbg")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1614464709]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kart" unique_id=1614464709]
 shape = SubResource("BoxShape3D_7u77a")
 
-[node name="WheelFL" type="RayCast3D" parent="RigidBody3D" unique_id=1693887389]
+[node name="WheelFL" type="RayCast3D" parent="Kart" unique_id=1693887389]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 1.5)
+enabled = false
+script = ExtResource("5_kry3j")
+springStrength = 4700.0
+springDamping = 110.0
 
-[node name="WheelRL" type="RayCast3D" parent="RigidBody3D" unique_id=1961143901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, -1.5)
+[node name="Wheel" type="MeshInstance3D" parent="Kart/WheelFL" unique_id=1726434588]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CylinderMesh_jjvhh")
 
-[node name="WheelFR" type="RayCast3D" parent="RigidBody3D" unique_id=2012831264]
+[node name="WheelFR" type="RayCast3D" parent="Kart" unique_id=2012831264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, 1.5)
+enabled = false
+script = ExtResource("5_kry3j")
+springStrength = 4700.0
+springDamping = 110.0
 
-[node name="WheelRR" type="RayCast3D" parent="RigidBody3D" unique_id=120439592]
+[node name="Wheel" type="MeshInstance3D" parent="Kart/WheelFR" unique_id=959280416]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CylinderMesh_jjvhh")
+
+[node name="WheelRL" type="RayCast3D" parent="Kart" unique_id=1961143901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, -1.5)
+enabled = false
+script = ExtResource("5_kry3j")
+springStrength = 4700.0
+springDamping = 110.0
+isMotor = true
+
+[node name="Wheel" type="MeshInstance3D" parent="Kart/WheelRL" unique_id=610838754]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CylinderMesh_jjvhh")
+
+[node name="WheelRR" type="RayCast3D" parent="Kart" unique_id=120439592]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0, -1.5)
+enabled = false
+script = ExtResource("5_kry3j")
+springStrength = 4700.0
+springDamping = 110.0
+isMotor = true
+
+[node name="Wheel" type="MeshInstance3D" parent="Kart/WheelRR" unique_id=1928537455]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CylinderMesh_jjvhh")
