@@ -1,4 +1,8 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://isbdqotqp8ok"]
 
+[ext_resource type="Texture2D" uid="uid://mt4tamwukpi3" path="res://(TEMP) Debug Materials/Textures/texture_02.png" id="1_uxomn"]
+
 [resource]
-albedo_color = Color(0, 1, 0, 1)
+albedo_color = Color(0.6, 0.6, 0.6, 1)
+albedo_texture = ExtResource("1_uxomn")
+metallic_specular = 0.0
