@@ -58,6 +58,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_bhey5")
 max_value = 120.0
 step = 0.001
 exp_edit = true
+allow_lesser = true
 show_percentage = false
 
 [node name="Multiplier" type="Label" parent="Panel" unique_id=416526719]

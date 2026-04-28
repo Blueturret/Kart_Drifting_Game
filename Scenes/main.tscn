@@ -2,13 +2,13 @@
 
 [ext_resource type="Material" uid="uid://d2ssb20fodra3" path="res://(TEMP) Debug Materials/Grey.tres" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://ds8jkuw3utkt0" path="res://Scripts/FollowPlayer.gd" id="1_21xkr"]
-[ext_resource type="Material" uid="uid://svybax08fit0" path="res://(TEMP) Debug Materials/Red.tres" id="1_bo1nx"]
 [ext_resource type="Material" uid="uid://isbdqotqp8ok" path="res://(TEMP) Debug Materials/Green.tres" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://do6khdhg44qnv" path="res://Scenes/MultiplierBar.tscn" id="2_344ge"]
 [ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bb11cw1dt8yqb" path="res://Scripts/multiplierBar.gd" id="3_d1ilt"]
 [ext_resource type="Material" uid="uid://ca25em8s42y1l" path="res://(TEMP) Debug Materials/Blue.tres" id="5_6bp64"]
 [ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://db21gy5e5v6fo" path="res://Scenes/Checkpoint.tscn" id="8_k12tt"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://drj44uym4mtsc" path="res://Assets/Player/Wheel.glb" id="11_d1ilt"]
 [ext_resource type="Shader" uid="uid://dpwobn4545xq5" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="12_jkdf5"]
@@ -99,7 +99,7 @@ material = SubResource("ShaderMaterial_hibaj")
 [node name="Main" type="Node3D" unique_id=759719230]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 1.4000092, 60, 3.1999989)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -235.79999, 60, -28.800001)
 fov = 45.0
 script = ExtResource("1_21xkr")
 yOffset = 75.0
@@ -124,740 +124,223 @@ use_collision = true
 size = Vector3(700, 0.75, 700)
 metadata/_edit_lock_ = true
 
-[node name="Obstacle" type="CSGBox3D" parent="Environment" unique_id=1829327430]
+[node name="Start section" type="Node" parent="Environment" unique_id=378411993]
+
+[node name="Obstacle" type="CSGBox3D" parent="Environment/Start section" unique_id=1829327430]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 13.028427, 2.7, 24.727922)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 6.4, 3.6000001)
 
-[node name="Obstacle2" type="CSGBox3D" parent="Environment" unique_id=563216820]
+[node name="Obstacle2" type="CSGBox3D" parent="Environment/Start section" unique_id=563216820]
 transform = Transform3D(-0.50000006, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, -0.50000006, -18.371572, 1.5, 24.727922)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 4, 3.6000001)
 
-[node name="Obstacle3" type="CSGBox3D" parent="Environment" unique_id=107952222]
+[node name="Obstacle3" type="CSGBox3D" parent="Environment/Start section" unique_id=107952222]
 transform = Transform3D(-0.9659258, 0, -0.25881895, 0, 1, 0, 0.25881895, 0, -0.9659258, -17.504625, 1.5, 55.440678)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 4, 3.6000001)
 
-[node name="Obstacle4" type="CSGBox3D" parent="Environment" unique_id=940370570]
+[node name="Obstacle4" type="CSGBox3D" parent="Environment/Start section" unique_id=940370570]
 transform = Transform3D(-3.967898, 0, -2.76423, 0, 1, 0, 6.8726006, 0, -1.5959291, 34.74886, 3.9, 50.859486)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 8.8, 3.6000001)
 
-[node name="Obstacle5" type="CSGBox3D" parent="Environment" unique_id=661792746]
+[node name="Obstacle5" type="CSGBox3D" parent="Environment/Start section" unique_id=661792746]
 transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -77.12719, 1.4609997, -71.64694)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(4.2000003, 8.8, 3.6000001)
 
-[node name="Obstacle6" type="CSGBox3D" parent="Environment" unique_id=88523652]
+[node name="Obstacle6" type="CSGBox3D" parent="Environment/Start section" unique_id=88523652]
 transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -105.70774, 1.4609997, -69.9443)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 8.8, 3.6000001)
 
-[node name="Obstacle11" type="CSGBox3D" parent="Environment" unique_id=958843829]
-transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -179.28958, 1.7000004, -60.814262)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle12" type="CSGBox3D" parent="Environment" unique_id=642975310]
-transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -212.5296, 1.7000004, -59.254257)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle13" type="CSGBox3D" parent="Environment" unique_id=1402652981]
-transform = Transform3D(4.12356, 0, 0.9575573, 0, 0.77999985, 0, -2.3807383, 0, 1.658538, -244.08957, 1.7000004, -56.374252)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle14" type="CSGBox3D" parent="Environment" unique_id=1883315473]
-transform = Transform3D(1.2323612, 0, 1.8498588, 0, 0.77999985, 0, -4.599233, 0, 0.4956682, -259.80957, 1.7000004, -35.614258)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle15" type="CSGBox3D" parent="Environment" unique_id=603949613]
-transform = Transform3D(2.8610228e-07, 0, 1.9151149, 0, 0.77999985, 0, -4.7614775, 0, 3.5762785e-08, -262.3296, 1.7000004, -3.8142548)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle23" type="CSGBox3D" parent="Environment" unique_id=904610504]
-transform = Transform3D(-1.2323607, 0, 1.8498589, 0, 0.77999985, 0, -4.5992336, 0, -0.49566814, -258.96957, 1.7000004, 28.585743)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle24" type="CSGBox3D" parent="Environment" unique_id=256329577]
-transform = Transform3D(-2.3807383, 0, 1.658538, 0, 0.77999985, 0, -4.12356, 0, -0.95755744, -246.48956, 1.7000004, 57.14574)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle25" type="CSGBox3D" parent="Environment" unique_id=2010892437]
-transform = Transform3D(-2.3807378, 0, 1.6585379, 0, 0.77999973, 0, -4.1235595, 0, -0.95755726, -213.84955, 1.7000004, 109.26575)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle18" type="CSGBox3D" parent="Environment" unique_id=2080177195]
-transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -171.84958, 1.7000004, -9.454262)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle19" type="CSGBox3D" parent="Environment" unique_id=396071400]
-transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -205.0896, 1.7000004, -7.8942566)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle20" type="CSGBox3D" parent="Environment" unique_id=1683307475]
-transform = Transform3D(2.3807383, 0, -1.658538, 0, 0.77999985, 0, 4.1235604, 0, 0.9575573, -172.64954, 1.7000004, 91.10574)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle21" type="CSGBox3D" parent="Environment" unique_id=2144070413]
-transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -202.28955, 1.7000004, 41.265736)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle22" type="CSGBox3D" parent="Environment" unique_id=673466743]
-transform = Transform3D(1.2323602, 0, -1.8498589, 0, 0.77999985, 0, 4.5992336, 0, 0.495668, -212.96957, 1.7000004, 11.865738)
-material_override = ExtResource("2_8gbba")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle7" type="CSGBox3D" parent="Environment" unique_id=1323337225]
+[node name="Obstacle7" type="CSGBox3D" parent="Environment/Start section" unique_id=1323337225]
 transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -91.30775, 1.4609997, -81.70429)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(5.8, 8.8, 3.6000001)
 
-[node name="Obstacle8" type="CSGBox3D" parent="Environment" unique_id=317590925]
+[node name="Obstacle8" type="CSGBox3D" parent="Environment/Start section" unique_id=317590925]
 transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -92.62775, 5.817, -76.9043)
 material_override = ExtResource("2_8gbba")
 use_collision = true
 size = Vector3(4, 8.8, 3.6000001)
 
-[node name="Arch1" type="CSGCylinder3D" parent="Environment" unique_id=432341519]
-transform = Transform3D(0.99999964, 2.9802322e-08, -3.785517e-08, 3.7855166e-08, -2.1855694e-08, 1, 2.9802322e-08, -0.99999964, -2.1855694e-08, 6.3859277, 1.4000034, 40.373367)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch1" unique_id=1297701612]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch8" type="CSGCylinder3D" parent="Environment" unique_id=2053932654]
-transform = Transform3D(0.2588189, 0.96592546, 1.1313339e-08, 3.7855166e-08, -2.185569e-08, 1, 0.96592546, -0.2588189, -4.2221956e-08, -152.81409, 1.4000034, -43.22663)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch8" unique_id=199170513]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch2" type="CSGCylinder3D" parent="Environment" unique_id=1764399322]
-transform = Transform3D(0.9659255, 0.25881898, -3.0908613e-08, 3.7855166e-08, -2.1855694e-08, 1, 0.25881898, -0.9659255, -3.0908613e-08, 2.1859276, 1.4000034, 58.773373)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch2" unique_id=1752021003]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch3" type="CSGCylinder3D" parent="Environment" unique_id=1672203936]
-transform = Transform3D(0.70710665, 0.7071066, -3.0908616e-08, 4.371138e-08, -6.4233507e-15, 1, 0.7071066, -0.70710665, -3.0908616e-08, -8.8027315, 1.4000034, 76.43652)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch3" unique_id=2034139493]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch4" type="CSGCylinder3D" parent="Environment" unique_id=615001790]
-transform = Transform3D(0.49999997, 0.86602527, 0, 3.785517e-08, -2.1855696e-08, 1, 0.86602527, -0.49999997, -4.371139e-08, -26.846224, 1.4000034, 87.388664)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch4" unique_id=788611293]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch5" type="CSGCylinder3D" parent="Environment" unique_id=356649715]
-transform = Transform3D(2.9802322e-08, 0.9999999, 0, 4.3711385e-08, -4.8849813e-15, 1, 0.9999999, -2.9802322e-08, -4.371139e-08, -45.97058, 1.4000034, 89.821236)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch5" unique_id=1790630925]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch6" type="CSGCylinder3D" parent="Environment" unique_id=922867761]
-transform = Transform3D(-0.4999999, 0.86602527, 2.1855692e-08, 4.371138e-08, -4.884981e-15, 1, 0.86602527, 0.4999999, -3.785517e-08, -66.57058, 1.4000034, 84.42124)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch6" unique_id=1503042983]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch7" type="CSGCylinder3D" parent="Environment" unique_id=468508578]
-transform = Transform3D(-0.8660252, 0.49999994, 3.785517e-08, 4.371138e-08, -3.346611e-15, 1, 0.49999994, 0.8660252, -2.1855694e-08, -80.37059, 1.4000034, 70.22124)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch7" unique_id=71423015]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch9" type="CSGCylinder3D" parent="Environment" unique_id=1942362513]
-transform = Transform3D(-0.99999976, 7.4505806e-08, 4.3711374e-08, 4.3711378e-08, -5.8044906e-15, 1, 7.4505806e-08, 0.99999976, 8.881784e-16, -84.77059, 1.4000034, 53.02124)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch9" unique_id=1818756491]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch18" type="CSGCylinder3D" parent="Environment" unique_id=697578172]
-transform = Transform3D(-0.49999988, -0.8660253, -1.5999476e-08, -3.199895e-08, 3.5527137e-15, 1, -0.8660253, 0.49999988, -2.7711906e-08, -173.9342, 1.4000028, 58.658836)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch18" unique_id=329024232]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch25" type="CSGCylinder3D" parent="Environment" unique_id=1323641267]
-transform = Transform3D(-2.9802322e-08, -0.9999999, -6.5567086e-08, 5.8562084e-09, -6.556706e-08, 1, -0.9999999, 2.9802322e-08, 5.8562035e-09, -157.24097, 1.4000043, 52.997166)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch25" unique_id=618449281]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch27" type="CSGCylinder3D" parent="Environment" unique_id=863315268]
-transform = Transform3D(0.70710665, -0.70710665, -5.0503893e-08, 5.8562137e-09, -6.5567065e-08, 1, -0.70710665, -0.70710665, -4.222197e-08, -136.84097, 1.4000043, 58.997166)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch27" unique_id=1972552708]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch26" type="CSGCylinder3D" parent="Environment" unique_id=330420536]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 76.79716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch26" unique_id=1821881459]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch28" type="CSGCylinder3D" parent="Environment" unique_id=1566013985]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 94.99716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch28" unique_id=1757179224]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch30" type="CSGCylinder3D" parent="Environment" unique_id=1124515897]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 116.19716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch30" unique_id=1052565946]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch37" type="CSGCylinder3D" parent="Environment" unique_id=1611840310]
-transform = Transform3D(-1.03316026e-07, -0.9999999, -6.556709e-08, 5.856209e-09, -6.556706e-08, 1, -0.9999999, 1.03316026e-07, 5.856211e-09, -79.3743, 1.4000044, 274.14786)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch37" unique_id=671086918]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch38" type="CSGCylinder3D" parent="Environment" unique_id=64233150]
-transform = Transform3D(-1.03316026e-07, -0.9999999, -6.556709e-08, 5.856209e-09, -6.556706e-08, 1, -0.9999999, 1.03316026e-07, 5.856211e-09, -61.1743, 1.4000044, 274.14786)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch38" unique_id=1646379719]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch39" type="CSGCylinder3D" parent="Environment" unique_id=1934929471]
-transform = Transform3D(-1.03316026e-07, -0.9999999, -6.556709e-08, 5.856209e-09, -6.556706e-08, 1, -0.9999999, 1.03316026e-07, 5.856211e-09, -39.97429, 1.4000044, 274.14786)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch39" unique_id=749350785]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch31" type="CSGCylinder3D" parent="Environment" unique_id=592641603]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -116.64099, 1.4000043, 135.39716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch31" unique_id=1150472830]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch32" type="CSGCylinder3D" parent="Environment" unique_id=439877706]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 156.59715)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch32" unique_id=133469715]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch33" type="CSGCylinder3D" parent="Environment" unique_id=797029576]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -117.64099, 1.4000043, 176.79716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch33" unique_id=1415949262]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch34" type="CSGCylinder3D" parent="Environment" unique_id=2145256433]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 197.99716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch34" unique_id=1857404316]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch35" type="CSGCylinder3D" parent="Environment" unique_id=1240679323]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -134.24098, 1.4000043, 217.19716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch35" unique_id=1047761342]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch36" type="CSGCylinder3D" parent="Environment" unique_id=2019081810]
-transform = Transform3D(0.9999999, -5.9604645e-08, -5.856208e-09, 5.8562084e-09, -6.556706e-08, 1, -5.9604645e-08, -0.9999999, -6.556709e-08, -126.84099, 1.4000043, 238.39716)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch36" unique_id=925130066]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch10" type="CSGCylinder3D" parent="Environment" unique_id=96692160]
-transform = Transform3D(-0.99999976, 7.4505806e-08, 4.3711374e-08, 4.3711378e-08, -5.8044906e-15, 1, 7.4505806e-08, 0.99999976, 8.881784e-16, -84.77059, 1.4000034, 32.02124)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch10" unique_id=759518575]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch14" type="CSGCylinder3D" parent="Environment" unique_id=833167748]
-transform = Transform3D(-0.99999976, 7.4505806e-08, 4.3711374e-08, 4.3711378e-08, -5.8044906e-15, 1, 7.4505806e-08, 0.99999976, 8.881784e-16, -84.77059, 1.4000034, 14.821239)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch14" unique_id=1897393282]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch15" type="CSGCylinder3D" parent="Environment" unique_id=1628580165]
-transform = Transform3D(-0.99999976, 7.4505806e-08, 4.3711374e-08, 4.3711378e-08, -5.8044906e-15, 1, 7.4505806e-08, 0.99999976, 8.881784e-16, -84.77059, 1.4000034, -6.1787605)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch15" unique_id=180294163]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch11" type="CSGCylinder3D" parent="Environment" unique_id=1178040393]
-transform = Transform3D(-0.8660252, 0.5, 3.785516e-08, 4.3711378e-08, -6.662405e-15, 1, 0.5, 0.8660252, -2.1855687e-08, -90.17059, 1.4000034, -28.778763)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch11" unique_id=1255364431]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch12" type="CSGCylinder3D" parent="Environment" unique_id=683112154]
-transform = Transform3D(-0.49999988, 0.86602527, 2.1855689e-08, 4.3711378e-08, -6.662405e-15, 1, 0.86602527, 0.49999988, -3.785516e-08, -108.170586, 1.4000034, -43.37876)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch12" unique_id=968465723]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch13" type="CSGCylinder3D" parent="Environment" unique_id=1803253105]
-transform = Transform3D(2.9802322e-08, 0.9999998, 1.7763568e-15, 4.3711374e-08, -8.438761e-15, 1, 0.9999998, -2.9802322e-08, -4.3711378e-08, -130.1706, 1.4000034, -46.978764)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch13" unique_id=1132783310]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch16" type="CSGCylinder3D" parent="Environment" unique_id=731493196]
-transform = Transform3D(-0.86602503, 0.49999976, 4.3711385e-08, 3.7855166e-08, -2.1855692e-08, 1, 0.49999976, 0.86602503, 7.993606e-15, -177.07321, 1.4000034, 130.78252)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch16" unique_id=2128443053]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch17" type="CSGCylinder3D" parent="Environment" unique_id=463006140]
-transform = Transform3D(-0.49999997, -0.8660251, 2.1855687e-08, 4.3711378e-08, -5.8044906e-15, 1, -0.8660251, 0.49999997, 3.785516e-08, -204.84775, 1.4000034, 173.29619)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch17" unique_id=1653895471]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch19" type="CSGCylinder3D" parent="Environment" unique_id=2119530722]
-transform = Transform3D(-0.8660252, -0.49999982, 3.7855152e-08, 4.3711374e-08, -8.438761e-15, 1, -0.49999982, 0.8660252, 2.185568e-08, -184.17168, 1.4000034, 157.46547)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch19" unique_id=1657003973]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch21" type="CSGCylinder3D" parent="Environment" unique_id=655698718]
-transform = Transform3D(8.940697e-08, -0.9999995, -2.1855703e-08, 3.7855166e-08, -2.1855694e-08, 1, -0.9999995, -8.940697e-08, 3.7855163e-08, -238.0372, 1.4000034, 180.5335)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch21" unique_id=614952374]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch22" type="CSGCylinder3D" parent="Environment" unique_id=320047371]
-transform = Transform3D(0.8660253, 0.4999999, -3.7855155e-08, 4.3711374e-08, -5.866086e-15, 1, 0.4999999, -0.8660253, -2.1855689e-08, -268.97348, 1.4000034, 109.13704)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch22" unique_id=1353789050]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch23" type="CSGCylinder3D" parent="Environment" unique_id=65092998]
-transform = Transform3D(0.96592563, -0.2588191, -4.2221934e-08, 4.3711374e-08, -9.174552e-15, 1, -0.2588191, -0.96592563, 1.13133325e-08, -272.8068, 1.4000034, 138.96461)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch23" unique_id=1878120097]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch24" type="CSGCylinder3D" parent="Environment" unique_id=2095610830]
-transform = Transform3D(0.70710665, -0.70710665, -3.0908605e-08, 4.3711374e-08, -8.438761e-15, 1, -0.70710665, -0.70710665, 3.0908605e-08, -260.3989, 1.4000034, 166.52585)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch24" unique_id=1269222362]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="Arch29" type="CSGCylinder3D" parent="Environment" unique_id=858371215]
-transform = Transform3D(0.49999988, 0.86602527, -2.1855685e-08, 4.3711374e-08, -9.296675e-15, 1, 0.86602527, -0.49999988, -3.7855152e-08, -250.48737, 1.4000034, 94.683685)
-material_override = ExtResource("1_bo1nx")
-radius = 14.6
-height = 2.8000002
-sides = 20
-metadata/_edit_group_ = true
-
-[node name="Substract" type="CSGCylinder3D" parent="Environment/Arch29" unique_id=641605388]
-transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
-material_override = ExtResource("1_bo1nx")
-operation = 2
-radius = 12.2
-height = 4.8
-sides = 20
-
-[node name="TurnAround" type="CSGCylinder3D" parent="Environment" unique_id=1157037493]
+[node name="Checkpoint" parent="Environment/Start section" unique_id=686523835 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4185462, 1.3750002, 40.477936)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint2" parent="Environment/Start section" unique_id=1190555808 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4185462, 1.3750002, 68.87794)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint3" parent="Environment/Start section" unique_id=1369784040 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -16.581453, 1.3750002, 96.07794)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint4" parent="Environment/Start section" unique_id=1532361083 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 0, -51.981457, 1.3750002, 101.877945)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint5" parent="Environment/Start section" unique_id=1753333320 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710665, -88.781456, 1.3750002, 91.07795)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint6" parent="Environment/Start section" unique_id=2068965649 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.99999964, 0, 0, 0, 1, 0, 0, 0, -0.99999964, -96.98146, 1.3750002, 53.877945)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint7" parent="Environment/Start section" unique_id=1127015844 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.99999964, 0, 0, 0, 1, 0, 0, 0, -0.99999964, -96.98146, 1.3750002, 25.877945)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint8" parent="Environment/Start section" unique_id=1499810335 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.8660251, 2.1855694e-08, -0.49999982, 2.1855687e-08, 1, 5.856214e-09, 0.49999982, -5.8562164e-09, -0.8660251, -102.18146, 1.3750002, -7.122055)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint9" parent="Environment/Start section" unique_id=595433506 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.49999973, 1.5999479e-08, -0.86602503, 2.1855687e-08, 1, 5.8562155e-09, 0.86602503, -1.5999479e-08, -0.49999973, -122.98145, 1.3750002, -31.522055)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Freezer corridor" type="Node" parent="Environment" unique_id=1762299931]
+
+[node name="Obstacle11" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=958843829]
+transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -179.28958, 1.7000004, -60.814262)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle12" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=642975310]
+transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -212.5296, 1.7000004, -59.254257)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle13" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1402652981]
+transform = Transform3D(4.12356, 0, 0.9575573, 0, 0.77999985, 0, -2.3807383, 0, 1.658538, -244.08957, 1.7000004, -56.374252)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle14" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1883315473]
+transform = Transform3D(1.2323612, 0, 1.8498588, 0, 0.77999985, 0, -4.599233, 0, 0.4956682, -259.80957, 1.7000004, -35.614258)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle15" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=603949613]
+transform = Transform3D(2.8610228e-07, 0, 1.9151149, 0, 0.77999985, 0, -4.7614775, 0, 3.5762785e-08, -262.3296, 1.7000004, -3.8142548)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle23" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=904610504]
+transform = Transform3D(-1.2323607, 0, 1.8498589, 0, 0.77999985, 0, -4.5992336, 0, -0.49566814, -258.96957, 1.7000004, 28.585743)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle24" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=256329577]
+transform = Transform3D(-2.3807383, 0, 1.658538, 0, 0.77999985, 0, -4.12356, 0, -0.95755744, -246.48956, 1.7000004, 57.14574)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle18" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2080177195]
+transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -171.84958, 1.7000004, -9.454262)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle19" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=396071400]
+transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -205.0896, 1.7000004, -7.8942566)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle20" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1683307475]
+transform = Transform3D(2.3807383, 0, -1.658538, 0, 0.77999985, 0, 4.1235604, 0, 0.9575573, -172.64954, 1.7000004, 91.10574)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle21" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2144070413]
+transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -202.28955, 1.7000004, 41.265736)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle22" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=673466743]
+transform = Transform3D(1.2323602, 0, -1.8498589, 0, 0.77999985, 0, 4.5992336, 0, 0.495668, -212.96957, 1.7000004, 11.865738)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Obstacle25" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2010892437]
+transform = Transform3D(-2.3807378, 0, 1.6585379, 0, 0.77999973, 0, -4.1235595, 0, -0.95755726, -213.84955, 1.7000004, 109.26575)
+material_override = ExtResource("2_8gbba")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+
+[node name="Checkpoint10" parent="Environment/Freezer corridor" unique_id=15658267 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.25881895, 1.7763568e-15, -0.96592534, 2.1855685e-08, 1, 5.8562146e-09, 0.96592534, -2.262668e-08, 0.25881895, -156.78145, 1.3750002, -40.322056)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint12" parent="Environment/Freezer corridor" unique_id=284166286 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.49999964, -1.0927845e-08, 2.9802322e-08, 1.0927842e-08, 0.5, 2.928107e-09, -2.9802322e-08, -2.9281064e-09, 0.49999964, -244.98145, 1.3750002, -13.122051)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint13" parent="Environment/Freezer corridor" unique_id=615715794 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.48296255, -1.1313337e-08, 0.12940948, 1.0927841e-08, 0.5, 2.9281066e-09, -0.12940948, 1.2253422e-15, 0.48296255, -223.18146, 1.3750002, 34.677948)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint14" parent="Environment/Freezer corridor" unique_id=19338337 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -173.2034, 1.3750002, 138.46637)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint15" parent="Environment/Freezer corridor" unique_id=1341043589 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -175.39185, 1.3750002, 177.22226)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint16" parent="Environment/Freezer corridor" unique_id=292631881 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.49999994, 0, -0.86602527, 0, 1, 0, 0.86602527, 0, 0.49999994, -203.14915, 1.3750002, 199.94522)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint17" parent="Environment/Freezer corridor" unique_id=1458806432 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, -2.9802322e-08, -244.3148, 1.3750002, 199.54463)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint18" parent="Environment/Freezer corridor" unique_id=89338172 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.7071068, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071068, -271.5148, 1.3750002, 181.54463)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint19" parent="Environment/Freezer corridor" unique_id=805267528 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.9999998, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -0.9999998, -281.5148, 1.3750002, 144.14462)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint20" parent="Environment/Freezer corridor" unique_id=83121002 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -268.9642, 1.3750002, 109.96764)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint11" parent="Environment/Freezer corridor" unique_id=1448121730 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(0.86602485, -2.1855692e-08, 0.49999973, 2.1855685e-08, 1, 5.8562146e-09, -0.49999973, 5.8562137e-09, 0.86602485, -185.58145, 1.3750002, 114.07795)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint21" parent="Environment/Freezer corridor" unique_id=854307457 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("8_k12tt")]
+transform = Transform3D(-0.49999994, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999994, -240.33763, 1.3750002, 90.7532)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Can tower" type="Node" parent="Environment" unique_id=55374815]
+
+[node name="TurnAround" type="CSGCylinder3D" parent="Environment/Can tower" unique_id=1157037493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -166.40001, 11.900001, 308.2)
 material_override = ExtResource("5_6bp64")
 use_collision = true
@@ -866,10 +349,11 @@ height = 25.800001
 sides = 16
 
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4000092, 1.2702271, 3.1999989)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -235.79999, 1.2702271, -28.800001)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4000092, 1.2702271, 3.1999989)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -235.79999, 1.2702271, -28.800001)
+collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1
 script = ExtResource("2_jjvhh")
