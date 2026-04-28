@@ -19,6 +19,8 @@ func _process(_delta: float) -> void:
 	var kartVelocity = kart.global_basis.z.dot(kart.linear_velocity)
 	var kartSpeedRatio = kartVelocity / kart.maxSpeed
 	
+	print(kartSpeedRatio)
+	
 	# Progress bar indle increment
 	progressBar.value += progressBarIdleIncrement * kartSpeedRatio
 	score += scoreIdleIncrement * scoreMultiplier

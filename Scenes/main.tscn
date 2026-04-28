@@ -11,11 +11,48 @@
 [ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://drj44uym4mtsc" path="res://Assets/Player/Wheel.glb" id="11_d1ilt"]
+[ext_resource type="Shader" uid="uid://dpwobn4545xq5" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="12_jkdf5"]
+[ext_resource type="Shader" uid="uid://cwerfsw544do6" path="res://addons/GPUTrail-main/shaders/trail_draw_pass.gdshader" id="13_wsu2k"]
+[ext_resource type="Script" uid="uid://bg21kqevdu4kt" path="res://addons/GPUTrail-main/GPUTrail3D.gd" id="14_k12tt"]
+[ext_resource type="Texture2D" uid="uid://crk6pkb7e5rwc" path="res://addons/GPUTrail-main/defaults/texture.tres" id="15_wsu2k"]
 
 [sub_resource type="Curve" id="Curve_kry3j"]
 _data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(0.4, 0.90000004), 0.0, 0.0, 0, 0, Vector2(0.7, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
 point_count = 4
 metadata/_snap_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkdf5"]
+shader = ExtResource("12_jkdf5")
+
+[sub_resource type="Gradient" id="Gradient_wsu2k"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k12tt"]
+gradient = SubResource("Gradient_wsu2k")
+
+[sub_resource type="Curve" id="Curve_h1bgf"]
+bake_resolution = 16
+_data = [Vector2(0, 0.4), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+metadata/_snap_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_b3802"]
+curve = SubResource("Curve_h1bgf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fevyy"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("13_wsu2k")
+shader_parameter/mask_strength = 0.4
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/color_ramp = SubResource("GradientTexture1D_k12tt")
+shader_parameter/curve = SubResource("CurveTexture_b3802")
+shader_parameter/emmission_transform = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/flags = 40
+
+[sub_resource type="QuadMesh" id="QuadMesh_hibaj"]
+material = SubResource("ShaderMaterial_fevyy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(2.5, 3.4, 4.2000003)
@@ -25,6 +62,39 @@ _data = [Vector2(0, 0.9999999), 0.0, 0.0, 0, 0, Vector2(0.5, 0.85), 0.0, 0.0, 0,
 point_count = 3
 metadata/_snap_count = 20
 metadata/_snap_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wsu2k"]
+shader = ExtResource("12_jkdf5")
+
+[sub_resource type="Gradient" id="Gradient_k12tt"]
+colors = PackedColorArray(0.07450981, 0.07450981, 0.07450981, 1, 0.072842635, 0.072842635, 0.072842635, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h1bgf"]
+gradient = SubResource("Gradient_k12tt")
+
+[sub_resource type="Curve" id="Curve_b3802"]
+bake_resolution = 16
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[sub_resource type="CurveTexture" id="CurveTexture_fevyy"]
+curve = SubResource("Curve_b3802")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hibaj"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("13_wsu2k")
+shader_parameter/tex = ExtResource("15_wsu2k")
+shader_parameter/mask_strength = 1.0
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/color_ramp = SubResource("GradientTexture1D_h1bgf")
+shader_parameter/curve = SubResource("CurveTexture_fevyy")
+shader_parameter/emmission_transform = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/flags = 40
+
+[sub_resource type="QuadMesh" id="QuadMesh_pdsj5"]
+material = SubResource("ShaderMaterial_hibaj")
 
 [node name="Main" type="Node3D" unique_id=759719230]
 
@@ -813,6 +883,26 @@ driftingTraction = 0.1
 slippingTraction = 0.13
 defaultPosition = NodePath("../Default position")
 
+[node name="Shopping kart" parent="Kart" unique_id=20112755 instance=ExtResource("9_hptm8")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.5000001, -0.3000002)
+
+[node name="Kart Trail" type="GPUParticles3D" parent="Kart/Shopping kart" unique_id=1054694135]
+transform = Transform3D(-1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0, 0, 0, 0.25, 0, 0.050000012, -0.575)
+amount = 70
+lifetime = 70.0
+explosiveness = 1.0
+fixed_fps = 239
+process_material = SubResource("ShaderMaterial_jkdf5")
+draw_pass_1 = SubResource("QuadMesh_hibaj")
+script = ExtResource("14_k12tt")
+length = 70
+length_seconds = 0.2928870292887029
+mask_strength = 0.4
+color_ramp = SubResource("GradientTexture1D_k12tt")
+curve = SubResource("CurveTexture_b3802")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://bg21kqevdu4kt"
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kart" unique_id=1614464709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4500002, -0.10000014)
 shape = SubResource("BoxShape3D_7u77a")
@@ -829,6 +919,22 @@ gripCurve = SubResource("Curve_21xkr")
 [node name="Wheel" parent="Kart/WheelFL" unique_id=676079980 instance=ExtResource("11_d1ilt")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.10000014, -0.44, 9.536743e-07)
 
+[node name="SkidMark" type="GPUParticles3D" parent="Kart/WheelFL" unique_id=371089992]
+transform = Transform3D(-4.371139e-11, -0.001, 0, 0.001, -4.371139e-11, 0, 0, 0, 0.001, 0, -0.7, 0)
+amount = 956
+lifetime = 956.0
+explosiveness = 1.0
+fixed_fps = 239
+process_material = SubResource("ShaderMaterial_wsu2k")
+draw_pass_1 = SubResource("QuadMesh_pdsj5")
+script = ExtResource("14_k12tt")
+length = 956
+length_seconds = 4.0
+color_ramp = SubResource("GradientTexture1D_h1bgf")
+curve = SubResource("CurveTexture_fevyy")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://bg21kqevdu4kt"
+
 [node name="WheelFR" type="RayCast3D" parent="Kart" unique_id=2012831264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90000004, 0, 1.0999999)
 enabled = false
@@ -840,6 +946,22 @@ gripCurve = SubResource("Curve_21xkr")
 
 [node name="Wheel" parent="Kart/WheelFR" unique_id=1639981490 instance=ExtResource("11_d1ilt")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.10000014, -0.44, 9.536743e-07)
+
+[node name="SkidMark" type="GPUParticles3D" parent="Kart/WheelFR" unique_id=942803418]
+transform = Transform3D(-4.371139e-11, -0.001, 0, 0.001, -4.371139e-11, 0, 0, 0, 0.001, 0, -0.7, 0)
+amount = 956
+lifetime = 956.0
+explosiveness = 1.0
+fixed_fps = 239
+process_material = SubResource("ShaderMaterial_wsu2k")
+draw_pass_1 = SubResource("QuadMesh_pdsj5")
+script = ExtResource("14_k12tt")
+length = 956
+length_seconds = 4.0
+color_ramp = SubResource("GradientTexture1D_h1bgf")
+curve = SubResource("CurveTexture_fevyy")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://bg21kqevdu4kt"
 
 [node name="WheelRL" type="RayCast3D" parent="Kart" unique_id=1961143901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0999999, 0, -1.2)
@@ -854,6 +976,22 @@ gripCurve = SubResource("Curve_21xkr")
 [node name="Wheel" parent="Kart/WheelRL" unique_id=1942741371 instance=ExtResource("11_d1ilt")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.10000014, -0.44, 9.536743e-07)
 
+[node name="SkidMark" type="GPUParticles3D" parent="Kart/WheelRL" unique_id=1906124814]
+transform = Transform3D(-4.371139e-11, -0.001, 0, 0.001, -4.371139e-11, 0, 0, 0, 0.001, 0, -0.7, 0)
+amount = 956
+lifetime = 956.0
+explosiveness = 1.0
+fixed_fps = 239
+process_material = SubResource("ShaderMaterial_wsu2k")
+draw_pass_1 = SubResource("QuadMesh_pdsj5")
+script = ExtResource("14_k12tt")
+length = 956
+length_seconds = 4.0
+color_ramp = SubResource("GradientTexture1D_h1bgf")
+curve = SubResource("CurveTexture_fevyy")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://bg21kqevdu4kt"
+
 [node name="WheelRR" type="RayCast3D" parent="Kart" unique_id=120439592]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90000004, 0, -1.2)
 enabled = false
@@ -867,7 +1005,20 @@ gripCurve = SubResource("Curve_21xkr")
 [node name="Wheel" parent="Kart/WheelRR" unique_id=277508285 instance=ExtResource("11_d1ilt")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.10000014, -0.44, 9.536743e-07)
 
-[node name="Shopping kart" parent="Kart" unique_id=20112755 instance=ExtResource("9_hptm8")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.5000001, -0.3000002)
+[node name="SkidMark" type="GPUParticles3D" parent="Kart/WheelRR" unique_id=1037473560]
+transform = Transform3D(-4.371139e-11, -0.001, 0, 0.001, -4.371139e-11, 0, 0, 0, 0.001, 0, -0.7, 0)
+amount = 956
+lifetime = 956.0
+explosiveness = 1.0
+fixed_fps = 239
+process_material = SubResource("ShaderMaterial_wsu2k")
+draw_pass_1 = SubResource("QuadMesh_pdsj5")
+script = ExtResource("14_k12tt")
+length = 956
+length_seconds = 4.0
+color_ramp = SubResource("GradientTexture1D_h1bgf")
+curve = SubResource("CurveTexture_fevyy")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://bg21kqevdu4kt"
 
 [connection signal="POSITION_RESET" from="Kart" to="Camera3D" method="_on_kart_position_reset"]

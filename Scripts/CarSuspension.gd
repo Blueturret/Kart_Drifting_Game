@@ -102,8 +102,18 @@ func DoSingleWheelTraction(ray: RaycastWheel) -> void:
 	if not isDrifting and gripFactor < 0.2: isSlipping = false
 	
 	# Handle drifting
-	if isDrifting: xTraction = driftingTraction
-	elif isSlipping: xTraction = slippingTraction
+	if isDrifting: 
+		
+		xTraction = driftingTraction
+		
+		if(ray.get_child_count() >= 2):
+			ray.get_child(1).scale = Vector3.ONE
+		
+	elif isSlipping:
+		xTraction = slippingTraction
+		
+		if(ray.get_child_count() >= 2):
+			ray.get_child(1).scale = Vector3.ONE * 0.001
 	
 	var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
 	var xForce := -global_basis.x * steeringVelocityX * xTraction * ((mass * gravity)/4)
