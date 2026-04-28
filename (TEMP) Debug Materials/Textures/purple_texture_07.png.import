@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg5b0skaxyig5"
-path.s3tc="res://.godot/imported/orange_02.png-19c63f3277d7bdd5b5ffe962498f8b17.s3tc.ctex"
+uid="uid://cdkam7intjxqq"
+path.s3tc="res://.godot/imported/purple_texture_07.png-7425f2bdc1c1363017c0bed0d46d2bba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://(TEMP) Debug Materials/Textures/orange_02.png"
-dest_files=["res://.godot/imported/orange_02.png-19c63f3277d7bdd5b5ffe962498f8b17.s3tc.ctex"]
+source_file="res://(TEMP) Debug Materials/Textures/purple_texture_07.png"
+dest_files=["res://.godot/imported/purple_texture_07.png-7425f2bdc1c1363017c0bed0d46d2bba.s3tc.ctex"]
 
 [params]
 

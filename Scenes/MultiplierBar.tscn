@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://do6khdhg44qnv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sugk"]
+bg_color = Color(0.19, 0.19, 0.19, 0.84313726)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.19650194, 0.19650197, 0.19650176, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8onh8"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhey5"]
+bg_color = Color(0.9594731, 0.9594731, 0.9594731, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 8
+
+[node name="Multiplier bar" type="Control" unique_id=1272900993]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1765612233]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -780.0
+offset_top = 43.0
+offset_right = 780.0
+offset_bottom = 133.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4sugk")
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel" unique_id=618653042]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -18.5
+offset_right = 1370.0
+offset_bottom = 18.5
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_8onh8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bhey5")
+value = 40.46
+exp_edit = true
+show_percentage = false
+
+[node name="Multiplier" type="Label" parent="Panel" unique_id=416526719]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -37.5
+offset_right = -64.0
+offset_bottom = 37.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 50
+text = "x1"
+horizontal_alignment = 1
+vertical_alignment = 1

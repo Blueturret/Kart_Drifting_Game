@@ -4,12 +4,20 @@ extends RigidBody3D
 
 @export var wheels : Array[RaycastWheel]
 
-@export_category("Car Properties")
+@export_category("Car acceleration")
 @export var acceleration := 600.0
 @export var accelerationCurve : Curve
 @export var maxSpeed := 20.0
+
+@export_category("Drifting")
 @export var tireTurnSpeed := 2.0
 @export var tireMaxRotation := 25.0
+@export var driftingTraction := 0.08
+@export var slippingTraction := 0.1
+
+@export_category("DEBUG")
+@export var defaultPosition : Node3D
+signal POSITION_RESET
 
 var motorInput := 0
 var isDrifting := false
@@ -18,14 +26,27 @@ var isSlipping := false
 # Input detection
 func _unhandled_input(event: InputEvent) -> void:
 	
-	if(event.is_action_pressed("Drift")): isDrifting = true ; isSlipping = true
-	elif(event.is_action_released("Drift")): isDrifting = false
-	
+	# Acceleration
 	if(event.is_action_pressed("Accelerate")): motorInput = 1
 	elif(event.is_action_released("Accelerate")): motorInput = 0
 	
+	# Deceleration
 	if(event.is_action_pressed("Decelerate")): motorInput = -1
 	elif(event.is_action_released("Decelerate")): motorInput = 0
+	
+	# Drifting
+	if(event.is_action_pressed("Drift")): isDrifting = true ; isSlipping = true
+	elif(event.is_action_released("Drift")): isDrifting = false
+	
+	### DEBUG ###
+	# Reset to global position
+	if(event.is_action("ResetPos")):
+		global_position = defaultPosition.global_position
+		linear_velocity = Vector3.ZERO
+		isDrifting = false
+		isSlipping = false
+		global_rotation = Vector3(0, 0, 0)
+		POSITION_RESET.emit()
 
 func _physics_process(delta: float) -> void:
 	
@@ -81,8 +102,8 @@ func DoSingleWheelTraction(ray: RaycastWheel) -> void:
 	if not isDrifting and gripFactor < 0.2: isSlipping = false
 	
 	# Handle drifting
-	if isDrifting: xTraction = 0.08
-	elif isSlipping: xTraction = 0.1
+	if isDrifting: xTraction = driftingTraction
+	elif isSlipping: xTraction = slippingTraction
 	
 	var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
 	var xForce := -global_basis.x * steeringVelocityX * xTraction * ((mass * gravity)/4)

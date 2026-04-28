@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dr56ux5ksdeio"]
+
+[ext_resource type="Script" uid="uid://b14oyiiu4j1j" path="res://Scenes/trail.gd" id="1_dnoxm"]
+
+[sub_resource type="Curve" id="Curve_dnoxm"]
+_data = [Vector2(0, 0.8063608), 0.0, 0.0, 0, 0, Vector2(0.35254693, 0.49758458), -1.431535, -1.431535, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Trail" type="Line2D" unique_id=1972328357]
+width = 50.0
+width_curve = SubResource("Curve_dnoxm")
+script = ExtResource("1_dnoxm")
+MAX_LENGTH = 75

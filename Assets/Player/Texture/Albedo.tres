@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://diemnlrijc6ow"]
+
+[ext_resource type="Texture2D" uid="uid://biscn0m5wc2nn" path="res://Assets/Player/Texture/Shopping kart_ImphenziaPalette01-256-Gradient.png" id="1_df5lj"]
+
+[resource]
+resource_name = "Albedo"
+cull_mode = 2
+albedo_texture = ExtResource("1_df5lj")
+roughness = 0.5

@@ -1,4 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ca25em8s42y1l"]
 
+[ext_resource type="Texture2D" uid="uid://cdkam7intjxqq" path="res://(TEMP) Debug Materials/Textures/purple_texture_07.png" id="1_2jmyu"]
+
 [resource]
-albedo_color = Color(0, 0, 1, 1)
+albedo_color = Color(0.79030275, 0.79030275, 0.79030275, 1)
+albedo_texture = ExtResource("1_2jmyu")
