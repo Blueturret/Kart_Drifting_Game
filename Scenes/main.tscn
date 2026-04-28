@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://ch5cqdsptxbaf"]
 
 [ext_resource type="Material" uid="uid://d2ssb20fodra3" path="res://(TEMP) Debug Materials/Grey.tres" id="1_8gbba"]
-[ext_resource type="Script" uid="uid://ds8jkuw3utkt0" path="res://Scenes/FollowPlayer.gd" id="1_21xkr"]
+[ext_resource type="Script" uid="uid://ds8jkuw3utkt0" path="res://Scripts/FollowPlayer.gd" id="1_21xkr"]
 [ext_resource type="Material" uid="uid://svybax08fit0" path="res://(TEMP) Debug Materials/Red.tres" id="1_bo1nx"]
 [ext_resource type="Material" uid="uid://isbdqotqp8ok" path="res://(TEMP) Debug Materials/Green.tres" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://do6khdhg44qnv" path="res://Scenes/MultiplierBar.tscn" id="2_344ge"]
 [ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="2_jjvhh"]
+[ext_resource type="Script" uid="uid://bb11cw1dt8yqb" path="res://Scripts/multiplierBar.gd" id="3_d1ilt"]
 [ext_resource type="Material" uid="uid://ca25em8s42y1l" path="res://(TEMP) Debug Materials/Blue.tres" id="5_6bp64"]
 [ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_hptm8"]
@@ -31,11 +32,12 @@ metadata/_snap_enabled = true
 transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 1.4000092, 60, 3.1999989)
 fov = 45.0
 script = ExtResource("1_21xkr")
-yOffset = 70.0
+yOffset = 75.0
 moveSpeed = 40.0
 rotationSpeed = 0.0
 
 [node name="Multiplier bar" parent="." unique_id=1272900993 instance=ExtResource("2_344ge")]
+script = ExtResource("3_d1ilt")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=761540082]
 transform = Transform3D(-0.67421114, 0.42148158, -0.6064592, 0.060712084, 0.850012, 0.52325314, 0.73603904, 0.31596366, -0.5986765, -17.210289, 27.903875, -37.222466)

@@ -122,9 +122,6 @@ func DoSingleWheelAcceleration(ray: RaycastWheel) -> void:
 	var forward := ray.global_basis.z
 	var velocity := forward.dot(linear_velocity)
 	
-	# Wheels rotation
-	ray.wheel.rotate_x((-velocity * get_process_delta_time()) / ray.wheelRadius)
-	
 	if(ray.is_colliding() and ray.isMotor):
 		
 		# Formula variables
