@@ -7,22 +7,19 @@
 height = 1.2
 radius = 12.1
 
-[node name="Checkpoint" type="Node3D" unique_id=686523835]
+[node name="Checkpoint" type="Area3D" unique_id=1250411050]
+collision_mask = 2
 script = ExtResource("1_i3j2t")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1079458272]
+[node name="Placeholder" type="CSGCylinder3D" parent="." unique_id=1150537576]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-collision_layer = 0
-collision_mask = 2
-
-[node name="Placeholder" type="CSGCylinder3D" parent="Area3D" unique_id=1150537576]
 material_override = ExtResource("1_wp6dl")
 radius = 14.6
 height = 2.8000002
 sides = 20
 metadata/_edit_group_ = true
 
-[node name="Substract" type="CSGCylinder3D" parent="Area3D/Placeholder" unique_id=816704923]
+[node name="Substract" type="CSGCylinder3D" parent="Placeholder" unique_id=816704923]
 transform = Transform3D(0.99999976, -2.9802322e-08, 5.6132876e-13, 2.9802322e-08, 0.99999976, -3.2684966e-13, -6.3948846e-13, 1.7763568e-15, 1, 0, 0, 0)
 material_override = ExtResource("1_wp6dl")
 operation = 2
@@ -30,7 +27,8 @@ radius = 12.2
 height = 4.8
 sides = 20
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1917646216]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1917646216]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_i3j2t")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

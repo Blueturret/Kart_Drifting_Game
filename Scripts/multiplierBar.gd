@@ -59,6 +59,7 @@ func AddToScore(toAdd : int) -> void:
 	
 	progressBar.value += toAdd
 	
+## Update the score multiplier, UI included
 func UpdateMultiplier(newMultiplier : int) -> void:
 	
 	scoreMultiplier = newMultiplier

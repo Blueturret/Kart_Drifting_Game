@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://g7o8a0ouefmm"]
+
+[ext_resource type="Script" uid="uid://dijro04uu1r1y" path="res://Scripts/buttonTrigger.gd" id="1_k7676"]
+[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://(TEMP) Debug Materials/Button_green.tres" id="2_g3noo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_imld1"]
+size = Vector3(4, 0.2, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_imld1"]
+size = Vector3(4, 2.3, 4)
+
+[node name="Button trigger" type="Area3D" unique_id=1352849728]
+script = ExtResource("1_k7676")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1770404039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = ExtResource("2_g3noo")
+mesh = SubResource("BoxMesh_imld1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=833802907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 0)
+shape = SubResource("BoxShape3D_imld1")
+
+[node name="Timer" type="Timer" parent="." unique_id=218529885]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
