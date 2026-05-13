@@ -18,7 +18,3 @@ func _physics_process(delta: float) -> void:
 			
 	global_position = global_transform.origin.move_toward(
 				kart.global_position + globalOffset, delta * moveSpeed)
-
-
-func _on_kart_position_reset() -> void:
-	get_tree().reload_current_scene()

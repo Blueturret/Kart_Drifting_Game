@@ -1,22 +1,34 @@
 [gd_scene format=3 uid="uid://g7o8a0ouefmm"]
 
 [ext_resource type="Script" uid="uid://dijro04uu1r1y" path="res://Scripts/buttonTrigger.gd" id="1_k7676"]
-[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://(TEMP) Debug Materials/Button_green.tres" id="2_g3noo"]
+[ext_resource type="Material" uid="uid://bj0m0ocux674g" path="res://(TEMP) Debug Materials/Button_red.tres" id="2_g3noo"]
+[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://(TEMP) Debug Materials/Button_green.tres" id="3_12cg8"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_imld1"]
-size = Vector3(4, 0.2, 4)
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_12cg8"]
+particle_flag_rotate_y = true
+angular_velocity_min = 49.99998
+angular_velocity_max = 49.99998
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_axoy3"]
+material = ExtResource("2_g3noo")
+size = Vector2(21, 21)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_imld1"]
-size = Vector3(4, 6.5, 4)
+size = Vector3(20, 6.5, 20)
 
 [node name="Button trigger" type="Area3D" unique_id=1352849728]
 collision_mask = 2
 script = ExtResource("1_k7676")
+redMat = ExtResource("2_g3noo")
+greenMat = ExtResource("3_12cg8")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1770404039]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-material_override = ExtResource("2_g3noo")
-mesh = SubResource("BoxMesh_imld1")
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1268805183]
+amount = 1
+lifetime = 2.88
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_12cg8")
+draw_pass_1 = SubResource("PlaneMesh_axoy3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=833802907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.25, 0)

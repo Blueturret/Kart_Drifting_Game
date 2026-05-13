@@ -1,28 +1,89 @@
 [gd_scene format=3 uid="uid://db21gy5e5v6fo"]
 
 [ext_resource type="Script" uid="uid://cm6mfmdn0fid3" path="res://Scripts/checkpoint.gd" id="1_i3j2t"]
-[ext_resource type="Material" uid="uid://svybax08fit0" path="res://(TEMP) Debug Materials/Red.tres" id="1_wp6dl"]
+[ext_resource type="ArrayMesh" uid="uid://d2eibu2byphbb" path="res://Assets/Meshes/Arch mesh_Circle.res" id="2_i3j2t"]
+
+[sub_resource type="Curve" id="Curve_d41ab"]
+_data = [Vector2(0, 0), 0.0, -0.077752545, 0, 0, Vector2(0.5211039, 1), 2.1692247, -0.10743793, 0, 0, Vector2(0.66071427, 0), -3.9504118, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_vyhkm"]
+curve = SubResource("Curve_d41ab")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7oj4b"]
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 8.0
+initial_velocity_max = 8.0
+gravity = Vector3(0, 0, 0)
+scale_min = 12.0
+scale_max = 12.0
+color = Color(0.84705883, 0, 0.84705883, 1)
+alpha_curve = SubResource("CurveTexture_vyhkm")
+
+[sub_resource type="Curve" id="Curve_i3j2t"]
+_data = [Vector2(0.004870124, 0.37490606), 0.0, 3.3425157, 0, 0, Vector2(0.2646104, 1), 0.0, 0.0, 0, 0, Vector2(0.8198052, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.97245, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_14q6d"]
+curve = SubResource("Curve_i3j2t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d41ab"]
+direction = Vector3(0, 1, -0.2)
+spread = 8.0
+initial_velocity_min = 9.0
+initial_velocity_max = 21.0
+scale_min = 0.5
+scale_max = 1.1
+color = Color(0.9715095, 0.26600528, 1, 1)
+alpha_curve = SubResource("CurveTexture_14q6d")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+collision_mode = 1
+collision_friction = 0.2
+collision_bounce = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyhkm"]
+transparency = 1
+vertex_color_use_as_albedo = true
+emission_enabled = true
+emission = Color(1, 0.3385812, 0.9533307, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7oj4b"]
+material = SubResource("StandardMaterial3D_vyhkm")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_i3j2t"]
 height = 1.1
 radius = 12.1
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_wp6dl"]
-top_radius = 12.1
-bottom_radius = 12.1
-height = 1.2
-
 [node name="Checkpoint" type="Area3D" unique_id=1250411050]
 collision_mask = 2
 script = ExtResource("1_i3j2t")
+
+[node name="particle_constant" type="GPUParticles3D" parent="." unique_id=1679009968]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -5.1000004)
+amount = 3
+lifetime = 2.0
+explosiveness = 0.6
+process_material = SubResource("ParticleProcessMaterial_7oj4b")
+draw_pass_1 = ExtResource("2_i3j2t")
+
+[node name="particle_disappear" type="GPUParticles3D" parent="." unique_id=86777381]
+emitting = false
+amount = 12
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.95
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_d41ab")
+draw_pass_1 = SubResource("SphereMesh_7oj4b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1917646216]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_i3j2t")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1974698414]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-material_override = ExtResource("1_wp6dl")
-mesh = SubResource("CylinderMesh_wp6dl")
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=725187537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15, -10.95)
+size = Vector3(37.100002, 1.9, 30.5)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

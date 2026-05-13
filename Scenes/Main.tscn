@@ -9,9 +9,7 @@
 [ext_resource type="Script" uid="uid://cgsm8laa2lmlx" path="res://Scripts/door.gd" id="7_0sclb"]
 [ext_resource type="PackedScene" uid="uid://g7o8a0ouefmm" path="res://Scenes/ButtonTrigger.tscn" id="7_erwvk"]
 [ext_resource type="Material" uid="uid://ca25em8s42y1l" path="res://(TEMP) Debug Materials/Blue.tres" id="7_fq0cl"]
-[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://(TEMP) Debug Materials/Button_green.tres" id="8_346fj"]
 [ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="8_hwpts"]
-[ext_resource type="Material" uid="uid://bj0m0ocux674g" path="res://(TEMP) Debug Materials/Button_red.tres" id="9_0sclb"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_jyqft"]
 [ext_resource type="Shader" uid="uid://dpwobn4545xq5" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="10_3tgeq"]
 [ext_resource type="Shader" uid="uid://cwerfsw544do6" path="res://addons/GPUTrail-main/shaders/trail_draw_pass.gdshader" id="11_c4ay3"]
@@ -103,10 +101,10 @@ material = SubResource("ShaderMaterial_hibaj")
 [node name="Main" type="Node3D" unique_id=759719230]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -197.79999, 85, 89.4)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 47.80002, 85, 6.4000015)
 fov = 45.0
 script = ExtResource("1_h1m7h")
-moveSpeed = 40.0
+moveSpeed = 38.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=761540082]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 106.200005, 0)
@@ -115,6 +113,7 @@ light_specular = 0.15
 shadow_enabled = true
 
 [node name="Multiplier bar" parent="." unique_id=1272900993 instance=ExtResource("2_erwvk")]
+visible = false
 script = ExtResource("3_2w5on")
 
 [node name="Environment" type="Node" parent="." unique_id=273938321]
@@ -290,14 +289,14 @@ size = Vector3(7, 8.8, 6.6)
 
 [node name="Door" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=528795012]
 transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -187.19727, 1.7000004, 66.640305)
-material_override = ExtResource("5_0sclb")
+material_override = ExtResource("7_fq0cl")
 use_collision = true
 size = Vector3(7, 8.8, 6.6)
 script = ExtResource("7_0sclb")
 
 [node name="Door2" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=34249387]
 transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -231.2875, 1.7000004, 82.19927)
-material_override = ExtResource("5_0sclb")
+material_override = ExtResource("7_fq0cl")
 use_collision = true
 size = Vector3(7, 8.8, 6.6)
 script = ExtResource("7_0sclb")
@@ -323,7 +322,7 @@ transform = Transform3D(0.49999964, -1.0927845e-08, 2.9802322e-08, 1.0927842e-08
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint13" parent="Environment/Freezer corridor" unique_id=615715794 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.48296255, -1.1313337e-08, 0.12940948, 1.0927841e-08, 0.5, 2.9281066e-09, -0.12940948, 1.2253422e-15, 0.48296255, -223.18146, 1.3750002, 34.677948)
+transform = Transform3D(0.48296255, -1.1313337e-08, 0.12940948, 1.0927841e-08, 0.5, 2.9281066e-09, -0.12940948, 1.2253422e-15, 0.48296255, -235.38145, 1.3750002, 37.477947)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint14" parent="Environment/Freezer corridor" unique_id=19338337 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -355,7 +354,7 @@ transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.707
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint11" parent="Environment/Freezer corridor" unique_id=1448121730 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.86602485, -2.1855692e-08, 0.49999973, 2.1855685e-08, 1, 5.8562146e-09, -0.49999973, 5.8562137e-09, 0.86602485, -181.98145, 1.3750002, 119.27795)
+transform = Transform3D(0.8660248, -2.185569e-08, 0.4999997, 2.1855683e-08, 1, 5.856214e-09, -0.4999997, 5.8562133e-09, 0.8660248, -181.98145, 1.3750002, 119.27795)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint21" parent="Environment/Freezer corridor" unique_id=854307457 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -402,8 +401,6 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -186.05685, 0.4, 112.37923)
 toTrigger = [NodePath("../Door"), NodePath("../Door2")]
 onEnterMethod = "Open"
-redMat = ExtResource("8_346fj")
-greenMat = ExtResource("9_0sclb")
 
 [node name="Can tower" type="Node" parent="Environment" unique_id=55374815]
 
@@ -416,22 +413,51 @@ height = 25.800001
 sides = 16
 
 [node name="Checkpoint32" parent="Environment/Can tower" unique_id=1672164845 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -52.795036, 1.3750002, 277.39874)
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -40.595036, 1.3750002, 268.59875)
 multiplierBar = NodePath("../../../Multiplier bar")
 
-[node name="Button trigger" parent="Environment/Can tower" unique_id=172600749 instance=ExtResource("7_erwvk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 7.02, -135.6, 0.4, 343.80002)
+[node name="Button trigger" parent="Environment/Can tower" unique_id=172600749 node_paths=PackedStringArray("toTrigger") instance=ExtResource("7_erwvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135.6, 0.4, 343.80002)
 collision_mask = 3
-redMat = ExtResource("8_346fj")
-greenMat = ExtResource("9_0sclb")
-useTimer = true
-timeToReset = 2
+toTrigger = [NodePath("../Door3")]
+onEnterMethod = "Open"
+
+[node name="Door3" type="CSGBox3D" parent="Environment/Can tower" unique_id=168679686]
+transform = Transform3D(-7.1525574e-07, 0, -1.9151151, 0, 0.77999985, 0, 4.7614775, 0, -2.3841858e-07, -58.6875, 1.7000004, 269.39926)
+material_override = ExtResource("7_fq0cl")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+script = ExtResource("7_0sclb")
+
+[node name="Obstacle9" type="CSGBox3D" parent="Environment/Can tower" unique_id=699404565]
+transform = Transform3D(-4.599234, 0, 0.4956685, 0, 0.66, 0, -1.2323617, 0, -1.8498591, -150.45802, 1.4609997, 368.54703)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4.2000003, 8.8, 3.6000001)
+
+[node name="Obstacle10" type="CSGBox3D" parent="Environment/Can tower" unique_id=1118931426]
+transform = Transform3D(-4.599234, 0, -0.49566805, 0, 0.65999997, 0, 1.2323605, 0, -1.8498591, -121.87747, 1.4609997, 366.8444)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle11" type="CSGBox3D" parent="Environment/Can tower" unique_id=324141754]
+transform = Transform3D(-4.7614775, 0, 2.0318745e-07, 0, 0.65999997, 0, -7.023639e-07, 0, -1.915115, -136.27747, 1.4609997, 378.60437)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle12" type="CSGBox3D" parent="Environment/Can tower" unique_id=521090391]
+transform = Transform3D(-4.599234, 0, -0.49566805, 0, 0.65999997, 0, 1.2323605, 0, -1.8498591, -134.95747, 5.817, 373.80438)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4, 8.8, 3.6000001)
 
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -197.79999, 1.2702271, 89.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, 6.4000015)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -197.79999, 1.2702271, 89.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, 6.4000015)
 collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1
@@ -440,10 +466,12 @@ wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePat
 acceleration = 2500.0
 accelerationCurve = SubResource("Curve_kry3j")
 maxSpeed = 40.0
-tireTurnSpeed = 1.0
-tireMaxRotation = 10.0
-driftingTraction = 0.1
-slippingTraction = 0.13
+turnSpeed = 0.5
+driftTurnSpeed = 3.0
+maxRotation = 2.0
+driftMaxRotation = 8.0
+driftingTraction = 0.13
+slippingTraction = 0.15
 defaultPosition = NodePath("../Default position")
 
 [node name="Shopping kart" parent="Kart" unique_id=20112755 instance=ExtResource("9_jyqft")]
@@ -585,4 +613,3 @@ _defaults_have_been_set = true
 metadata/_custom_type_script = "uid://bg21kqevdu4kt"
 
 [connection signal="body_exited" from="Environment/Freezer corridor/Button trigger" to="Camera3D" method="_on_button_trigger_body_exited"]
-[connection signal="POSITION_RESET" from="Kart" to="Camera3D" method="_on_kart_position_reset"]
