@@ -4,23 +4,30 @@ extends RigidBody3D
 
 @export var wheels : Array[RaycastWheel]
 
-@export_category("Car acceleration")
+##### CAR ACCELERATION #####
+@export_category("Kart controls")
 @export var acceleration := 600.0
 @export var accelerationCurve : Curve
 @export var maxSpeed := 20.0
 
-@export_category("Drifting")
 @export var turnSpeed := 0.8
-@export var driftTurnSpeed := 2.0
-var tireTurnSpeed : float
-
 @export var maxRotation := 12.5
-@export var driftMaxRotation := 25.0
-var tireMaxRotation : float
-
-@export var driftingTraction := 0.08
 @export var slippingTraction := 0.1
 
+var tireTurnSpeed : float
+var tireMaxRotation : float
+
+##### DRIFTING #####
+@export_category("Drifting")
+@export var driftTurnSpeed := 2.0
+@export var driftMaxRotation := 25.0
+@export var driftingTraction := 0.08
+
+@onready var driftTimer: Timer = $"MaxDriftTimer"
+@onready var driftCooldown: Timer = $"DriftCooldown"
+var canDrift : bool = true
+
+##### DEBUG #####
 @export_category("DEBUG")
 @export var defaultPosition : Node3D
 
@@ -39,25 +46,54 @@ func _unhandled_input(event: InputEvent) -> void:
 	if(event.is_action_pressed("Decelerate")): motorInput = -1
 	elif(event.is_action_released("Decelerate")): motorInput = 0
 	
-	# Drifting
-	if(event.is_action_pressed("Drift")): 
-		
-		isDrifting = true
-		isSlipping = true
-		
-		tireMaxRotation = driftMaxRotation
-		tireTurnSpeed = driftTurnSpeed
-		
-	elif(event.is_action_released("Drift")): 
-		
-		isDrifting = false
-		
-		tireMaxRotation = maxRotation
-		tireTurnSpeed = turnSpeed
-	
 	# Reset to global position
-	if(event.is_action("ResetPos")):
+	if(event.is_action("Reload")):
 		get_tree().reload_current_scene()
+	
+	# Drifting
+	if(canDrift):
+	
+		if(event.is_action_pressed("Drift")): 
+			
+			isDrifting = true
+			isSlipping = true
+			
+			tireMaxRotation = driftMaxRotation
+			tireTurnSpeed = driftTurnSpeed
+			
+			# Prevent drifting forever
+			driftTimer.start()
+			
+		elif(event.is_action_released("Drift")): 
+			
+			# Check if isDrifting is true to prevent timer from
+			# starting if key is pressed while in cooldown
+			if(isDrifting): StopDrift()
+
+func StopDrift() -> void:
+	
+	isDrifting = false
+		
+	tireMaxRotation = maxRotation
+	tireTurnSpeed = turnSpeed
+	
+	canDrift = false
+	
+	# Stop the timer to prevent unexpected behavior
+	driftTimer.stop()
+	
+	# Start the cooldown timer
+	driftCooldown.start()
+
+func _on_drift_timer_timeout() -> void:
+	
+	StopDrift()
+	driftTimer.stop()
+	
+func _on_drift_cooldown_timeout() -> void:
+	
+	canDrift = true
+	driftCooldown.stop()
 
 func _ready() -> void:
 	

@@ -62,6 +62,7 @@ script = ExtResource("1_i3j2t")
 
 [node name="particle_constant" type="GPUParticles3D" parent="." unique_id=1679009968]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -5.1000004)
+emitting = false
 amount = 3
 lifetime = 2.0
 explosiveness = 0.6
@@ -85,5 +86,11 @@ shape = SubResource("CylinderShape3D_i3j2t")
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=725187537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15, -10.95)
 size = Vector3(37.100002, 1.9, 30.5)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1444603743]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+radius = 12.6
+height = 1.0
+sides = 20
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

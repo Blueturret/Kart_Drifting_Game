@@ -101,7 +101,7 @@ material = SubResource("ShaderMaterial_hibaj")
 [node name="Main" type="Node3D" unique_id=759719230]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 47.80002, 85, 6.4000015)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -32.19998, 85, 269.8)
 fov = 45.0
 script = ExtResource("1_h1m7h")
 moveSpeed = 38.0
@@ -453,11 +453,215 @@ material_override = ExtResource("5_0sclb")
 use_collision = true
 size = Vector3(4, 8.8, 3.6000001)
 
+[node name="Fruit split" type="Node" parent="Environment" unique_id=2094165635]
+
+[node name="Obstacle9" type="CSGBox3D" parent="Environment/Fruit split" unique_id=566189126]
+transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -133.3272, 1.4609997, 496.75305)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4.2000003, 8.8, 3.6000001)
+
+[node name="Obstacle10" type="CSGBox3D" parent="Environment/Fruit split" unique_id=863564363]
+transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -161.90775, 1.4609997, 498.45575)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle11" type="CSGBox3D" parent="Environment/Fruit split" unique_id=60087542]
+transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -147.50775, 1.4609997, 486.69574)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle12" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1325942162]
+transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -148.82776, 5.817, 491.49573)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4, 8.8, 3.6000001)
+
+[node name="Obstacle17" type="CSGBox3D" parent="Environment/Fruit split" unique_id=482836954]
+transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -228.1272, 1.4609997, 499.95306)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4.2000003, 8.8, 3.6000001)
+
+[node name="Obstacle18" type="CSGBox3D" parent="Environment/Fruit split" unique_id=951604027]
+transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -242.30775, 1.4609997, 489.89575)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle19" type="CSGBox3D" parent="Environment/Fruit split" unique_id=34314696]
+transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -243.62776, 5.817, 494.69574)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4, 8.8, 3.6000001)
+
+[node name="Obstacle13" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1413738550]
+transform = Transform3D(4.5992336, 0, -0.49566832, 0, 0.65999997, 0, 1.2323613, 0, 1.849859, -193.97156, 1.4609997, 492.31952)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle14" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1450057641]
+transform = Transform3D(4.5992336, 0, -0.49566832, 0, 0.65999997, 0, 1.2323613, 0, 1.849859, -179.16394, 5.817, 492.83197)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4, 8.8, 3.6000001)
+
+[node name="Obstacle15" type="CSGBox3D" parent="Environment/Fruit split" unique_id=2009105975]
+transform = Transform3D(4.7614775, 0, -8.940697e-08, 0, 0.66, 0, 3.5762787e-07, 0, 1.9151151, -214.58562, 1.4609997, 497.8445)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(5.8, 8.8, 3.6000001)
+
+[node name="Obstacle16" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1709939661]
+transform = Transform3D(4.7614775, 0, -8.940697e-08, 0, 0.66, 0, 3.5762787e-07, 0, 1.9151151, -200.14992, 5.817, 494.507)
+material_override = ExtResource("5_0sclb")
+use_collision = true
+size = Vector3(4, 8.8, 3.6000001)
+
+[node name="Checkpoint13" parent="Environment/Fruit split" unique_id=1488605737 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.70710665, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, 0.70710665, 82.93455, 1.3750002, 289.30197)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint14" parent="Environment/Fruit split" unique_id=2041119325 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 101.31933, 1.3750002, 322.96027)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint16" parent="Environment/Fruit split" unique_id=1978678686 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.70710653, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710653, 75.02727, 1.3750002, 483.58508)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint17" parent="Environment/Fruit split" unique_id=618447288 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-4.371137e-08, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -4.371137e-08, 46.968975, 1.3750002, 493.5699)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint23" parent="Environment/Fruit split" unique_id=1349065296 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-4.371137e-08, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -4.371137e-08, 14.168973, 1.3750002, 493.5699)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint24" parent="Environment/Fruit split" unique_id=954852152 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-4.371137e-08, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -4.371137e-08, -18.231028, 1.3750002, 493.5699)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint39" parent="Environment/Fruit split" unique_id=1313100647 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -333.43106, 1.3750002, 491.16983)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint40" parent="Environment/Fruit split" unique_id=735518770 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.49999982, 0, -0.86602503, 0, 1, 0, 0.86602503, 0, -0.49999982, -305.29773, 1.3750002, 513.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint41" parent="Environment/Fruit split" unique_id=1681710877 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.258819, 0, -0.96592546, 0, 1, 0, 0.96592546, 0, -0.258819, -281.4977, 1.3750002, 524.7364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint48" parent="Environment/Fruit split" unique_id=306415044 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.2588188, 0, -0.96592534, 0, 1, 0, 0.96592534, 0, 0.2588188, -67.29768, 1.3750002, 529.3364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint49" parent="Environment/Fruit split" unique_id=530830837 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.49999976, 0, -0.8660249, 0, 1, 0, 0.8660249, 0, 0.49999976, -45.297688, 1.3750002, 519.7364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint50" parent="Environment/Fruit split" unique_id=159966186 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -94.09771, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint51" parent="Environment/Fruit split" unique_id=1250411050 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -126.49771, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint54" parent="Environment/Fruit split" unique_id=1906909198 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -159.09772, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint55" parent="Environment/Fruit split" unique_id=773650421 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -191.69772, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint56" parent="Environment/Fruit split" unique_id=1067098532 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -224.69772, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint57" parent="Environment/Fruit split" unique_id=519138784 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -257.29773, 1.3750002, 530.9364)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint42" parent="Environment/Fruit split" unique_id=1207219934 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.49999982, 0, -0.8660251, 0, 1, 0, 0.8660251, 0, 0.49999982, -303.49774, 1.3750002, 461.1366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint43" parent="Environment/Fruit split" unique_id=405886215 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.25881886, 0, -0.96592546, 0, 1, 0, 0.96592546, 0, 0.25881886, -279.89777, 1.3750002, 456.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint58" parent="Environment/Fruit split" unique_id=1930828847 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.25881904, 0, -0.96592534, 0, 1, 0, 0.96592534, 0, -0.25881904, -67.354645, 1.3750002, 456.2103)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint59" parent="Environment/Fruit split" unique_id=1094552028 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.4999997, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.4999997, -44.640774, 1.3750002, 470.06287)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint60" parent="Environment/Fruit split" unique_id=760866525 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -93.297745, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint61" parent="Environment/Fruit split" unique_id=1344238784 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -125.69774, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint62" parent="Environment/Fruit split" unique_id=1567376612 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -158.29774, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint63" parent="Environment/Fruit split" unique_id=1377034279 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -190.89775, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint64" parent="Environment/Fruit split" unique_id=2073597105 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -223.89775, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint65" parent="Environment/Fruit split" unique_id=1036589878 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 1, 2.1855675e-08, 0.9999995, -8.1566554e-08, -8.940697e-08, -256.49774, 1.3750002, 454.5366)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint32" parent="Environment/Fruit split" unique_id=460393163 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -6.195035, 1.3750002, 268.59875)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint34" parent="Environment/Fruit split" unique_id=1669484209 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, 28.004965, 1.3750002, 268.59875)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint53" parent="Environment/Fruit split" unique_id=290592407 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.2588191, 5.3535288e-08, 0.9659257, -4.3711385e-08, 1, -4.371137e-08, -0.9659257, -3.0908613e-08, 0.2588191, 57.604965, 1.3750002, 273.79877)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint35" parent="Environment/Fruit split" unique_id=1814279899 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 101.33049, 1.3750002, 355.85553)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint36" parent="Environment/Fruit split" unique_id=909045349 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 101.33049, 1.3750002, 389.0555)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint37" parent="Environment/Fruit split" unique_id=836941510 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 100.53049, 1.3750002, 422.4555)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint52" parent="Environment/Fruit split" unique_id=1022963564 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.96592563, 3.0908605e-08, -0.25881916, -4.371138e-08, 1, -4.3711367e-08, 0.25881916, 5.353528e-08, 0.96592563, 91.33048, 1.3750002, 459.4555)
+multiplierBar = NodePath("../../../Multiplier bar")
+
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, 6.4000015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.19998, 1.2702271, 269.8)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, 6.4000015)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.19998, 1.2702271, 269.8)
 collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1
@@ -467,11 +671,11 @@ acceleration = 2500.0
 accelerationCurve = SubResource("Curve_kry3j")
 maxSpeed = 40.0
 turnSpeed = 0.5
-driftTurnSpeed = 3.0
 maxRotation = 2.0
+slippingTraction = 0.15
+driftTurnSpeed = 3.0
 driftMaxRotation = 8.0
 driftingTraction = 0.13
-slippingTraction = 0.15
 defaultPosition = NodePath("../Default position")
 
 [node name="Shopping kart" parent="Kart" unique_id=20112755 instance=ExtResource("9_jyqft")]
@@ -612,4 +816,12 @@ curve = SubResource("CurveTexture_fevyy")
 _defaults_have_been_set = true
 metadata/_custom_type_script = "uid://bg21kqevdu4kt"
 
+[node name="MaxDriftTimer" type="Timer" parent="Kart" unique_id=1446946310]
+wait_time = 2.0
+
+[node name="DriftCooldown" type="Timer" parent="Kart" unique_id=453174280]
+wait_time = 1.25
+
 [connection signal="body_exited" from="Environment/Freezer corridor/Button trigger" to="Camera3D" method="_on_button_trigger_body_exited"]
+[connection signal="timeout" from="Kart/MaxDriftTimer" to="Kart" method="_on_drift_timer_timeout"]
+[connection signal="timeout" from="Kart/DriftCooldown" to="Kart" method="_on_drift_cooldown_timeout"]
