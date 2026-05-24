@@ -1,5 +1,5 @@
 extends RigidBody3D
-
+class_name CarSuspension
 # LINK TO TUTORIAL : https://www.youtube.com/watch?v=9MqmFSn1Rlw&list=PLiRELyH-yJivTRnpjr0nHeGWncLiMmD2D&index=14
 
 @export var wheels : Array[RaycastWheel]
@@ -26,6 +26,10 @@ var tireMaxRotation : float
 @onready var driftTimer: Timer = $"MaxDriftTimer"
 @onready var driftCooldown: Timer = $"DriftCooldown"
 var canDrift : bool = true
+
+# Emitted when kart has stopped drifting to calculate points based on drift time
+signal HAS_STOPPED_DRIFTING
+var driftTimeLeft : float = 0
 
 ##### DEBUG #####
 @export_category("DEBUG")
@@ -68,7 +72,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 			# Check if isDrifting is true to prevent timer from
 			# starting if key is pressed while in cooldown
-			if(isDrifting): StopDrift()
+			if(isDrifting): 
+				driftTimeLeft = driftTimer.time_left
+				StopDrift()
 
 func StopDrift() -> void:
 	
@@ -79,7 +85,8 @@ func StopDrift() -> void:
 	
 	canDrift = false
 	
-	# Stop the timer to prevent unexpected behavior
+	# Emit signal and stop the timer to prevent unexpected behavior
+	HAS_STOPPED_DRIFTING.emit()
 	driftTimer.stop()
 	
 	# Start the cooldown timer
@@ -87,8 +94,8 @@ func StopDrift() -> void:
 
 func _on_drift_timer_timeout() -> void:
 	
+	driftTimeLeft = 0.0        
 	StopDrift()
-	driftTimer.stop()
 	
 func _on_drift_cooldown_timeout() -> void:
 	

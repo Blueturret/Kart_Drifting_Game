@@ -670,8 +670,8 @@ wheels = [NodePath("WheelFL"), NodePath("WheelRL"), NodePath("WheelFR"), NodePat
 acceleration = 2500.0
 accelerationCurve = SubResource("Curve_kry3j")
 maxSpeed = 40.0
-turnSpeed = 0.5
-maxRotation = 2.0
+turnSpeed = 0.25
+maxRotation = 2.2
 slippingTraction = 0.15
 driftTurnSpeed = 3.0
 driftMaxRotation = 8.0
@@ -823,5 +823,6 @@ wait_time = 2.0
 wait_time = 1.25
 
 [connection signal="body_exited" from="Environment/Freezer corridor/Button trigger" to="Camera3D" method="_on_button_trigger_body_exited"]
+[connection signal="HAS_STOPPED_DRIFTING" from="Kart" to="Multiplier bar" method="_on_kart_has_stopped_drifting"]
 [connection signal="timeout" from="Kart/MaxDriftTimer" to="Kart" method="_on_drift_timer_timeout"]
 [connection signal="timeout" from="Kart/DriftCooldown" to="Kart" method="_on_drift_cooldown_timeout"]

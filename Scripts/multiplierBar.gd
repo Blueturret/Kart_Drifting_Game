@@ -3,7 +3,9 @@ class_name MultiplierBar
 
 # References
 @onready var kart: RigidBody3D = $"../Kart"
+@onready var kartScript : CarSuspension = get_node("../Kart")
 @onready var progressBar: ProgressBar = $Panel/ProgressBar
+
 @onready var multiplierLabel: Label = $Panel/Multiplier
 @onready var scoreLabel: Label = $Score
 
@@ -12,8 +14,6 @@ class_name MultiplierBar
 var score := 0
 var scoreMultiplier := 1
 var maxMultiplierValue := 32
-
-var driftStartTime : int # The Unix time at which the player started a new drift
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -32,7 +32,6 @@ func _process(_delta: float) -> void:
 	if(kartSpeedRatio < 0.4):
 		
 		progressBar.value -= progressBarIdleIncrement * 4
-		
 	
 	# Increase multiplier when bar gets full
 	if(progressBar.value >= 100.0):
@@ -49,8 +48,9 @@ func _process(_delta: float) -> void:
 		if(scoreMultiplier > 1): 
 		
 			progressBar.value = 99.0
-			print("Decreasing")
-			UpdateMultiplier(scoreMultiplier / 2)
+			
+			# floor() is there to remove unnecessary warning
+			UpdateMultiplier(scoreMultiplier / floor(2))
 			
 		else: progressBar.value = 0.0
 		
@@ -59,8 +59,17 @@ func AddToScore(toAdd : int) -> void:
 	
 	progressBar.value += toAdd
 	
-## Update the score multiplier, UI included
+## Update the score multiplier and the UI
 func UpdateMultiplier(newMultiplier : int) -> void:
 	
 	scoreMultiplier = newMultiplier
 	multiplierLabel.text = "x" + str(newMultiplier)
+
+func _on_kart_has_stopped_drifting() -> void:
+	
+	# Compute time left for drift
+	var percentOfMaxDrift : float = 1 - \
+	kartScript.driftTimeLeft / kartScript.driftTimer.wait_time
+	
+	# Add score based on time left
+	AddToScore(500 * percentOfMaxDrift)
