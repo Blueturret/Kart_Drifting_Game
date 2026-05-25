@@ -53,11 +53,6 @@ func _process(_delta: float) -> void:
 			UpdateMultiplier(scoreMultiplier / floor(2))
 			
 		else: progressBar.value = 0.0
-		
-## Add an integer value to the progress bar
-func AddToScore(toAdd : int) -> void:
-	
-	progressBar.value += toAdd
 	
 ## Update the score multiplier and the UI
 func UpdateMultiplier(newMultiplier : int) -> void:
@@ -72,4 +67,5 @@ func _on_kart_has_stopped_drifting() -> void:
 	kartScript.driftTimeLeft / kartScript.driftTimer.wait_time
 	
 	# Add score based on time left
-	AddToScore(500 * percentOfMaxDrift)
+	score += 1200 * percentOfMaxDrift
+	progressBar.value += 40 * percentOfMaxDrift

@@ -113,7 +113,6 @@ light_specular = 0.15
 shadow_enabled = true
 
 [node name="Multiplier bar" parent="." unique_id=1272900993 instance=ExtResource("2_erwvk")]
-visible = false
 script = ExtResource("3_2w5on")
 
 [node name="Environment" type="Node" parent="." unique_id=273938321]

@@ -6,7 +6,7 @@ extends Node3D
 
 func _on_body_entered(_body: Node3D) -> void:
 	
-	multiplierBar.AddToScore(25)
+	multiplierBar.progressBar.value += 25
 	particle_constant.emitting = false
 	particle_disappear.emitting = true
 	
