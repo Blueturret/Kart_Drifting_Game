@@ -4,6 +4,8 @@ class_name CarSuspension
 
 @export var wheels : Array[RaycastWheel]
 
+var inputStopped : bool = false
+
 ##### CAR ACCELERATION #####
 @export_category("Kart controls")
 @export var acceleration := 600.0
@@ -41,6 +43,8 @@ var isSlipping := false
 
 # Input detection
 func _unhandled_input(event: InputEvent) -> void:
+	
+	if(inputStopped): return
 	
 	# Acceleration
 	if(event.is_action_pressed("Accelerate")): motorInput = 1

@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="8_hwpts"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_jyqft"]
 [ext_resource type="Shader" uid="uid://dpwobn4545xq5" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="10_3tgeq"]
+[ext_resource type="PackedScene" uid="uid://dirbk1ijhcmjj" path="res://Scenes/FinishLine.tscn" id="10_346fj"]
 [ext_resource type="Shader" uid="uid://cwerfsw544do6" path="res://addons/GPUTrail-main/shaders/trail_draw_pass.gdshader" id="11_c4ay3"]
 [ext_resource type="Script" uid="uid://bg21kqevdu4kt" path="res://addons/GPUTrail-main/GPUTrail3D.gd" id="12_aht7i"]
 [ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="13_5jffn"]
@@ -101,7 +102,7 @@ material = SubResource("ShaderMaterial_hibaj")
 [node name="Main" type="Node3D" unique_id=759719230]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -32.19998, 85, 269.8)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -316.19998, 85, 490.2)
 fov = 45.0
 script = ExtResource("1_h1m7h")
 moveSpeed = 38.0
@@ -548,6 +549,14 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -333.43106, 1.3750002, 491.16983)
 multiplierBar = NodePath("../../../Multiplier bar")
 
+[node name="Checkpoint44" parent="Environment/Fruit split" unique_id=1250411050 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -366.23105, 1.3750002, 491.16983)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint45" parent="Environment/Fruit split" unique_id=420134663 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -399.43106, 1.3750002, 491.16983)
+multiplierBar = NodePath("../../../Multiplier bar")
+
 [node name="Checkpoint40" parent="Environment/Fruit split" unique_id=735518770 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(-0.49999982, 0, -0.86602503, 0, 1, 0, 0.86602503, 0, -0.49999982, -305.29773, 1.3750002, 513.9364)
 multiplierBar = NodePath("../../../Multiplier bar")
@@ -568,7 +577,7 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -94.09771, 1.3750002, 530.9364)
 multiplierBar = NodePath("../../../Multiplier bar")
 
-[node name="Checkpoint51" parent="Environment/Fruit split" unique_id=1250411050 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+[node name="Checkpoint51" parent="Environment/Fruit split" unique_id=626567517 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -126.49771, 1.3750002, 530.9364)
 multiplierBar = NodePath("../../../Multiplier bar")
 
@@ -589,11 +598,11 @@ transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08,
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint42" parent="Environment/Fruit split" unique_id=1207219934 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.49999982, 0, -0.8660251, 0, 1, 0, 0.8660251, 0, 0.49999982, -303.49774, 1.3750002, 461.1366)
+transform = Transform3D(0.49999982, 0, -0.8660251, 0, 1, 0, 0.8660251, 0, 0.49999982, -302.89774, 1.3750002, 470.5366)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint43" parent="Environment/Fruit split" unique_id=405886215 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.25881886, 0, -0.96592546, 0, 1, 0, 0.96592546, 0, 0.25881886, -279.89777, 1.3750002, 456.5366)
+transform = Transform3D(0.25881886, 0, -0.96592546, 0, 1, 0, 0.96592546, 0, 0.25881886, -280.49777, 1.3750002, 459.7366)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint58" parent="Environment/Fruit split" unique_id=1930828847 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -656,11 +665,14 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(0.96592563, 3.0908605e-08, -0.25881916, -4.371138e-08, 1, -4.3711367e-08, 0.25881916, 5.353528e-08, 0.96592563, 91.33048, 1.3750002, 459.4555)
 multiplierBar = NodePath("../../../Multiplier bar")
 
+[node name="EndTrigger" parent="Environment" unique_id=1025551307 instance=ExtResource("10_346fj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -447, 0, 490)
+
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.19998, 1.2702271, 269.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -316.19998, 1.2702271, 490.2)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.19998, 1.2702271, 269.8)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -316.19998, 1.2702271, 490.2)
 collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1

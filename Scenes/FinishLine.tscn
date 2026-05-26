@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dirbk1ijhcmjj"]
+
+[ext_resource type="Script" uid="uid://7q0qm7x3cfiv" path="res://Scripts/finishLine.gd" id="1_58aop"]
+[ext_resource type="PackedScene" uid="uid://capv7t77m2bl1" path="res://Scenes/EndScreen.tscn" id="2_yeeye"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_svihk"]
+size = Vector3(15, 15, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_svihk"]
+size = Vector3(15, 15, 15)
+
+[node name="EndTrigger" type="Area3D" unique_id=1025551307]
+collision_mask = 2
+script = ExtResource("1_58aop")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=37197972]
+mesh = SubResource("BoxMesh_svihk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1412160989]
+shape = SubResource("BoxShape3D_svihk")
+
+[node name="Control" parent="." unique_id=1237733052 instance=ExtResource("2_yeeye")]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="Control/Panel/Button" to="." method="_on_button_pressed"]
+
+[editable path="Control"]

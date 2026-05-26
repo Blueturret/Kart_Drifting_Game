@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://capv7t77m2bl1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrx8a"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqcs3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.010220325, 0.2759186, 0.5123059, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcms0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0054165144, 0.18536097, 0.35993123, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ohhu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.018907636, 0.33720773, 0.6215567, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=1237733052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1181498713]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_top = 200.0
+offset_right = -400.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jrx8a")
+
+[node name="Win text" type="Label" parent="Panel" unique_id=204143743]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -214.5
+offset_top = 61.0
+offset_right = 214.5
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 83
+text = "YOU WON!"
+
+[node name="Stats" type="VBoxContainer" parent="Panel" unique_id=1707074248]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -116.0
+offset_right = 469.0
+offset_bottom = 116.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Win text2" type="Label" parent="Panel/Stats" unique_id=986564856]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "Score: <SCORE>"
+
+[node name="Win text3" type="Label" parent="Panel/Stats" unique_id=76550126]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "Checkpoint: <x / len(Checkpoint)>"
+
+[node name="Button" type="Button" parent="Panel" unique_id=394312747]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -107.0
+offset_right = 366.0
+offset_bottom = -26.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_sqcs3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gcms0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ohhu")
+text = "Restart"
