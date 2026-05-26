@@ -93,12 +93,12 @@ offset_bottom = 116.0
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Win text2" type="Label" parent="Panel/Stats" unique_id=986564856]
+[node name="Score" type="Label" parent="Panel/Stats" unique_id=986564856]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "Score: <SCORE>"
 
-[node name="Win text3" type="Label" parent="Panel/Stats" unique_id=76550126]
+[node name="Checkpoints" type="Label" parent="Panel/Stats" unique_id=76550126]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "Checkpoint: <x / len(Checkpoint)>"

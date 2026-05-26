@@ -10,6 +10,8 @@ func _on_body_entered(_body: Node3D) -> void:
 	particle_constant.emitting = false
 	particle_disappear.emitting = true
 	
+	GameManager.instance.checkPointsCollected += 1
+	
 	await get_tree().create_timer(6).timeout
 	
 	queue_free()

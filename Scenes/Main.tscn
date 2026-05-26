@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ch5cqdsptxbaf"]
 
+[ext_resource type="Script" uid="uid://d1vnu3q0pk5sy" path="res://Scripts/gameManager.gd" id="1_0sclb"]
 [ext_resource type="Script" uid="uid://ds8jkuw3utkt0" path="res://Scripts/FollowPlayer.gd" id="1_h1m7h"]
 [ext_resource type="PackedScene" uid="uid://do6khdhg44qnv" path="res://Scenes/MultiplierBar.tscn" id="2_erwvk"]
 [ext_resource type="Script" uid="uid://bb11cw1dt8yqb" path="res://Scripts/multiplierBar.gd" id="3_2w5on"]
@@ -101,8 +102,11 @@ material = SubResource("ShaderMaterial_hibaj")
 
 [node name="Main" type="Node3D" unique_id=759719230]
 
+[node name="GameManager" type="Node" parent="." unique_id=1204374736]
+script = ExtResource("1_0sclb")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, -316.19998, 85, 490.2)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 47.80002, 85, -8.600006)
 fov = 45.0
 script = ExtResource("1_h1m7h")
 moveSpeed = 38.0
@@ -669,10 +673,10 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -447, 0, 490)
 
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -316.19998, 1.2702271, 490.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, -8.600006)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -316.19998, 1.2702271, 490.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, -8.600006)
 collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1
@@ -828,7 +832,7 @@ _defaults_have_been_set = true
 metadata/_custom_type_script = "uid://bg21kqevdu4kt"
 
 [node name="MaxDriftTimer" type="Timer" parent="Kart" unique_id=1446946310]
-wait_time = 2.0
+wait_time = 6.0
 
 [node name="DriftCooldown" type="Timer" parent="Kart" unique_id=453174280]
 wait_time = 1.25

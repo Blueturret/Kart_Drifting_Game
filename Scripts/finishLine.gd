@@ -20,8 +20,12 @@ func _on_body_entered(body: Node3D) -> void:
 	# Display the end screen
 	endScreen.visible = true
 	
-	print("RACE ENDED WITH SCORE OF ", scoreToDisplay, "! :3")
+		# Update stats
+	endScreen.find_child("Score").text = "Score : " + str(scoreToDisplay) 
+	endScreen.find_child("Checkpoints").text = \
+		"Checkpoints : " + str(GameManager.instance.checkPointsCollected)
 
+## Functionality for the restart level button
 func _on_button_pressed() -> void:
 	
 	get_tree().reload_current_scene()
