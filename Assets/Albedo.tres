@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://diemnlrijc6ow"]
+
+[ext_resource type="Texture2D" uid="uid://f7xr0tbmj72q" path="res://Assets/Supermarket asset pack_ImphenziaPalette01-256-Gradient.png" id="1_c0m6r"]
+
+[resource]
+resource_name = "Albedo"
+cull_mode = 2
+albedo_texture = ExtResource("1_c0m6r")
+roughness = 0.5

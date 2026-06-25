@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biscn0m5wc2nn"
-path.s3tc="res://.godot/imported/Shopping kart_ImphenziaPalette01-256-Gradient.png-500a0d4fab778d72a1a7992a3cdd9db2.s3tc.ctex"
+uid="uid://drii8jk4v6m2a"
+path.s3tc="res://.godot/imported/Can.jpg-4a550243d89edfc88b9774164c7da470.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "507b00d35d0f3012a9e79196c4d862cf"
-}
 
 [deps]
 
-source_file="res://Assets/Player/Texture/Shopping kart_ImphenziaPalette01-256-Gradient.png"
-dest_files=["res://.godot/imported/Shopping kart_ImphenziaPalette01-256-Gradient.png-500a0d4fab778d72a1a7992a3cdd9db2.s3tc.ctex"]
+source_file="res://Assets/Asset pack/Asset pack textures/Can.jpg"
+dest_files=["res://.godot/imported/Can.jpg-4a550243d89edfc88b9774164c7da470.s3tc.ctex"]
 
 [params]
 

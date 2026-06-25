@@ -4,13 +4,15 @@
 [ext_resource type="Script" uid="uid://ds8jkuw3utkt0" path="res://Scripts/FollowPlayer.gd" id="1_h1m7h"]
 [ext_resource type="PackedScene" uid="uid://do6khdhg44qnv" path="res://Scenes/MultiplierBar.tscn" id="2_erwvk"]
 [ext_resource type="Script" uid="uid://bb11cw1dt8yqb" path="res://Scripts/multiplierBar.gd" id="3_2w5on"]
-[ext_resource type="Material" uid="uid://d2ssb20fodra3" path="res://(TEMP) Debug Materials/Grey.tres" id="4_346fj"]
-[ext_resource type="Material" uid="uid://isbdqotqp8ok" path="res://(TEMP) Debug Materials/Green.tres" id="5_0sclb"]
+[ext_resource type="Material" uid="uid://bblg3rxirt42l" path="res://Assets/Environment materials/Tiles012_2K-JPG/Checkered_Floor.tres" id="6_fq0cl"]
 [ext_resource type="PackedScene" uid="uid://db21gy5e5v6fo" path="res://Scenes/Checkpoint.tscn" id="6_sxkr1"]
 [ext_resource type="Script" uid="uid://cgsm8laa2lmlx" path="res://Scripts/door.gd" id="7_0sclb"]
 [ext_resource type="PackedScene" uid="uid://g7o8a0ouefmm" path="res://Scenes/ButtonTrigger.tscn" id="7_erwvk"]
 [ext_resource type="Material" uid="uid://ca25em8s42y1l" path="res://(TEMP) Debug Materials/Blue.tres" id="7_fq0cl"]
+[ext_resource type="PackedScene" uid="uid://cubfxthnt2g50" path="res://Assets/Asset pack/cardboard_box_1.tscn" id="7_hwpts"]
 [ext_resource type="Script" uid="uid://bj6w3v8rej6jv" path="res://Scripts/CarSuspension.gd" id="8_hwpts"]
+[ext_resource type="PackedScene" uid="uid://pp301pmtxy44" path="res://Assets/Asset pack/cardboard_box_open_1.tscn" id="8_jyqft"]
+[ext_resource type="PackedScene" uid="uid://c54878cddcnxd" path="res://Assets/Asset pack/cardboard_box_2.tscn" id="9_3tgeq"]
 [ext_resource type="PackedScene" uid="uid://xg26ptgu6enl" path="res://Assets/Player/Shopping kart.glb" id="9_jyqft"]
 [ext_resource type="Shader" uid="uid://dpwobn4545xq5" path="res://addons/GPUTrail-main/shaders/trail.gdshader" id="10_3tgeq"]
 [ext_resource type="PackedScene" uid="uid://dirbk1ijhcmjj" path="res://Scenes/FinishLine.tscn" id="10_346fj"]
@@ -19,6 +21,18 @@
 [ext_resource type="Script" uid="uid://bukwtw131aj45" path="res://Scripts/wheel.gd" id="13_5jffn"]
 [ext_resource type="PackedScene" uid="uid://drj44uym4mtsc" path="res://Assets/Player/Wheel.glb" id="14_kpo4j"]
 [ext_resource type="Texture2D" uid="uid://crk6pkb7e5rwc" path="res://addons/GPUTrail-main/defaults/texture.tres" id="15_4n42c"]
+[ext_resource type="Texture2D" uid="uid://cn4ke1ouw1bxt" path="res://Assets/Decals indicators/Drift.svg" id="21_c5snn"]
+[ext_resource type="Texture2D" uid="uid://bdws4ramcepfg" path="res://Assets/Decals indicators/U-Turn.svg" id="22_xvtyr"]
+[ext_resource type="PackedScene" uid="uid://m24335ex2x4w" path="res://Assets/Asset pack/shelf.tscn" id="23_jyqft"]
+[ext_resource type="Texture2D" uid="uid://drenii651cvaq" path="res://Assets/Decals indicators/TurnAround.svg" id="23_u7mjy"]
+[ext_resource type="PackedScene" uid="uid://b6gyiqilqbjy3" path="res://Assets/Asset pack/cardboard_box_open_2.tscn" id="24_c4ay3"]
+[ext_resource type="PackedScene" uid="uid://ctjhmbw8majro" path="res://Assets/Asset pack/cardboard_box_3.tscn" id="25_4yxf6"]
+[ext_resource type="PackedScene" uid="uid://cb4kpghasfk1e" path="res://Assets/Asset pack/cardboard_box_open_3.tscn" id="25_aht7i"]
+[ext_resource type="PackedScene" uid="uid://cbo2htifmsyow" path="res://Assets/Asset pack/fridge.tscn" id="26_aht7i"]
+[ext_resource type="PackedScene" uid="uid://c12wtrq3g3m6s" path="res://Assets/Asset pack/soda_can_tower.tscn" id="27_5jffn"]
+[ext_resource type="PackedScene" uid="uid://bj8qvrocngw48" path="res://Assets/Asset pack/banana_basket.tscn" id="27_kpo4j"]
+[ext_resource type="PackedScene" uid="uid://d2d2oqs0mxxta" path="res://Assets/Asset pack/apple_basket.tscn" id="28_4n42c"]
+[ext_resource type="Texture2D" uid="uid://d3cqpfvhil7lc" path="res://Assets/Decals indicators/Forward.png" id="29_4n42c"]
 
 [sub_resource type="Curve" id="Curve_kry3j"]
 _data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(0.4, 0.90000004), 0.0, 0.0, 0, 0, Vector2(0.7, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
@@ -106,7 +120,7 @@ material = SubResource("ShaderMaterial_hibaj")
 script = ExtResource("1_0sclb")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1901270284]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 47.80002, 85, -8.600006)
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 49.200024, 85, 4)
 fov = 45.0
 script = ExtResource("1_h1m7h")
 moveSpeed = 38.0
@@ -124,60 +138,36 @@ script = ExtResource("3_2w5on")
 
 [node name="Ground" type="CSGBox3D" parent="Environment" unique_id=1324775706]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199.2, 0, 226.8)
-material_override = ExtResource("4_346fj")
+material_override = ExtResource("6_fq0cl")
 use_collision = true
 size = Vector3(700, 0.75, 700)
 metadata/_edit_lock_ = true
 
 [node name="Start section" type="Node" parent="Environment" unique_id=378411993]
 
-[node name="Obstacle" type="CSGBox3D" parent="Environment/Start section" unique_id=1829327430]
-transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 60.028427, 2.7, 24.727922)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 6.4, 3.6000001)
+[node name="CardboardBox1" parent="Environment/Start section" unique_id=313020225 instance=ExtResource("7_hwpts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.200005, 0.53, 21.400002)
 
-[node name="Obstacle2" type="CSGBox3D" parent="Environment/Start section" unique_id=563216820]
-transform = Transform3D(-0.50000006, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, -0.50000006, 28.628428, 1.5, 24.727922)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 4, 3.6000001)
+[node name="CardboardBox2" parent="Environment/Start section" unique_id=1919912573 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 69.2, 0.53, 23.399998)
 
-[node name="Obstacle3" type="CSGBox3D" parent="Environment/Start section" unique_id=107952222]
-transform = Transform3D(-0.9659258, 0, -0.25881895, 0, 1, 0, 0.25881895, 0, -0.9659258, 29.495375, 1.5, 55.440678)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 4, 3.6000001)
+[node name="CardboardBoxOpen1" parent="Environment/Start section" unique_id=1569912107 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.8, 2.4, 21.600002)
 
-[node name="Obstacle4" type="CSGBox3D" parent="Environment/Start section" unique_id=940370570]
-transform = Transform3D(-3.967898, 0, -2.76423, 0, 1, 0, 6.8726006, 0, -1.5959291, 81.748856, 3.9, 50.859486)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
+[node name="CardboardBox3" parent="Environment/Start section" unique_id=1222884227 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 68.600006, 0.5, 19.999998)
 
-[node name="Obstacle5" type="CSGBox3D" parent="Environment/Start section" unique_id=661792746]
-transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -30.12719, 1.4609997, -71.64694)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4.2000003, 8.8, 3.6000001)
+[node name="CardboardBox4" parent="Environment/Start section" unique_id=282486212 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 65.15681, 0.53, 18.760963)
 
-[node name="Obstacle6" type="CSGBox3D" parent="Environment/Start section" unique_id=88523652]
-transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -58.70774, 1.4609997, -69.9443)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
+[node name="CardboardBox5" parent="Environment/Start section" unique_id=2007724498 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 65.88885, 0.53, 21.49302)
 
-[node name="Obstacle7" type="CSGBox3D" parent="Environment/Start section" unique_id=1323337225]
-transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -44.307747, 1.4609997, -81.70429)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
+[node name="CardboardBoxOpen2" parent="Environment/Start section" unique_id=1694411210 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 64.63001, 2.4, 20.0734)
 
-[node name="Obstacle8" type="CSGBox3D" parent="Environment/Start section" unique_id=317590925]
-transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -45.627747, 5.817, -76.9043)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
+[node name="CardboardBox6" parent="Environment/Start section" unique_id=636363537 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.9659258, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.9659258, 62.644367, 0.5, 20.312626)
 
 [node name="Checkpoint" parent="Environment/Start section" unique_id=686523835 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.418545, 1.3750002, 40.477936)
@@ -223,115 +213,148 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(0.08715573, 3.9290837e-09, -0.9961941, 2.1855685e-08, 1, 5.856214e-09, 0.9961941, -2.2282926e-08, 0.08715573, -131.98146, 1.3750002, -43.12206)
 multiplierBar = NodePath("../../../Multiplier bar")
 
+[node name="StaticBody3D" parent="Environment/Start section" unique_id=968616543 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 67.200005, 2.4, 22)
+
+[node name="CardboardBox7" parent="Environment/Start section" unique_id=1696217568 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 27.715515, 0.53, 27.217285)
+
+[node name="CardboardBox8" parent="Environment/Start section" unique_id=910938567 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, 26.301306, 0.53, 24.76779)
+
+[node name="CardboardBoxOpen3" parent="Environment/Start section" unique_id=979169055 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 27.884676, 2.4, 25.813225)
+
+[node name="CardboardBox9" parent="Environment/Start section" unique_id=1230152279 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660253, 29.740744, 0.5, 25.068228)
+
+[node name="CardboardBox10" parent="Environment/Start section" unique_id=1241169568 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071068, 31.828724, 0.53, 22.063038)
+
+[node name="CardboardBox11" parent="Environment/Start section" unique_id=1170621780 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659258, 29.000296, 0.53, 22.063026)
+
+[node name="CardboardBoxOpen4" parent="Environment/Start section" unique_id=1662420927 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071068, 30.697351, 2.4, 21.21451)
+
+[node name="CardboardBox12" parent="Environment/Start section" unique_id=1531262385 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 30.9802, 0.5, 19.234608)
+
+[node name="StaticBody3D2" parent="Environment/Start section" unique_id=1866865300 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660253, 28.171236, 2.4, 23.198292)
+
+[node name="CardboardBox13" parent="Environment/Start section" unique_id=500392271 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, -0.86602545, 15.038606, 0.53, 70.08855)
+
+[node name="CardboardBox14" parent="Environment/Start section" unique_id=733761548 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.5, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.5, 15.770662, 0.53, 67.3565)
+
+[node name="CardboardBoxOpen5" parent="Environment/Start section" unique_id=1584389686 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, -0.86602545, 16.151041, 2.4, 69.21535)
+
+[node name="CardboardBox15" parent="Environment/Start section" unique_id=649297141 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592575, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, -0.96592575, 17.99027, 0.5, 70.00099)
+
+[node name="CardboardBox16" parent="Environment/Start section" unique_id=107741896 instance=ExtResource("7_hwpts")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 21.591686, 0.53, 69.352425)
+
+[node name="CardboardBox17" parent="Environment/Start section" unique_id=1264982331 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.5, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.5, 19.591694, 0.53, 67.35242)
+
+[node name="CardboardBoxOpen6" parent="Environment/Start section" unique_id=1651441561 instance=ExtResource("8_jyqft")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 21.391685, 2.4, 67.95242)
+
+[node name="CardboardBox18" parent="Environment/Start section" unique_id=1344734141 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, 22.991692, 0.5, 66.752426)
+
+[node name="StaticBody3D3" parent="Environment/Start section" unique_id=1696222324 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 18.202707, 2.4, 67.56894)
+
+[node name="CardboardBox19" parent="Environment/Start section" unique_id=1337177891 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.7071068, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.7071068, 9.36024, 0.53, 67.858604)
+
+[node name="CardboardBox20" parent="Environment/Start section" unique_id=1126207148 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9659259, 0, 0.25881898, 0, 1, 0, -0.25881898, 0, -0.9659259, 12.188666, 0.53, 67.85861)
+
+[node name="CardboardBoxOpen7" parent="Environment/Start section" unique_id=217738245 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.7071068, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.7071068, 10.491606, 2.4, 68.70714)
+
+[node name="CardboardBox21" parent="Environment/Start section" unique_id=999815191 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 10.208759, 0.5, 70.687035)
+
+[node name="CardboardBox22" parent="Environment/Start section" unique_id=918057586 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, -0.9659258, 11.767342, 0.53, 73.99788)
+
+[node name="CardboardBox23" parent="Environment/Start section" unique_id=1715537856 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.70710665, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710665, 13.181564, 0.53, 71.54839)
+
+[node name="CardboardBoxOpen8" parent="Environment/Start section" unique_id=1090413604 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, -0.9659258, 13.067876, 2.4, 73.442345)
+
+[node name="CardboardBox24" parent="Environment/Start section" unique_id=1470226278 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.86602545, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, -0.86602545, 14.641095, 0.5, 74.677246)
+
+[node name="StaticBody3D4" parent="Environment/Start section" unique_id=444888146 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.86602545, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602545, 12.612924, 2.4, 70.26277)
+
+[node name="CardboardBox25" parent="Environment/Start section" unique_id=400989316 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9659258, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659258, 10.529077, 0.53, 64.27145)
+
+[node name="CardboardBox26" parent="Environment/Start section" unique_id=1835561269 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.7071067, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, -0.7071067, 11.943296, 0.53, 61.821957)
+
+[node name="CardboardBoxOpen9" parent="Environment/Start section" unique_id=1446342240 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659258, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659258, 11.829612, 2.4, 63.71592)
+
+[node name="CardboardBox27" parent="Environment/Start section" unique_id=778331252 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.86602545, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.86602545, 13.40283, 0.5, 64.95082)
+
+[node name="CardboardBox28" parent="Environment/Start section" unique_id=970344547 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.25881892, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881892, 17.049397, 0.53, 65.25647)
+
+[node name="CardboardBox29" parent="Environment/Start section" unique_id=1713261186 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.25881916, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881916, 15.635191, 0.53, 62.806973)
+
+[node name="CardboardBoxOpen10" parent="Environment/Start section" unique_id=593464916 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.25881892, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881892, 17.218555, 2.4, 63.852406)
+
+[node name="CardboardBox30" parent="Environment/Start section" unique_id=511097571 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.86602545, 0, -0.50000024, 0, 1, 0, 0.50000024, 0, -0.86602545, 19.074621, 0.5, 63.10741)
+
+[node name="StaticBody3D5" parent="Environment/Start section" unique_id=1449488374 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(8.940697e-08, 0, -1, 0, 1, 0, 1, 0, 8.940697e-08, 14.237488, 2.4, 62.65662)
+
+[node name="StaticBody3D6" parent="Environment/Start section" unique_id=1283912764 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 69.674995, 0.4, 66.189125)
+
+[node name="StaticBody3D7" parent="Environment/Start section" unique_id=1830241447 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 74.274994, 0.4, 58.221703)
+
+[node name="StaticBody3D8" parent="Environment/Start section" unique_id=467256037 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 78.975, 0.4, 50.081055)
+
+[node name="StaticBody3D9" parent="Environment/Start section" unique_id=279164845 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 83.674995, 0.4, 41.940422)
+
+[node name="StaticBody3D10" parent="Environment/Start section" unique_id=1611851150 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 88.275, 0.4, 33.972977)
+
+[node name="StaticBody3D12" parent="Environment/Start section" unique_id=119603892 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 88.6, 14, 32)
+
+[node name="StaticBody3D13" parent="Environment/Start section" unique_id=2073817679 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 87.299995, 14, 34.251667)
+
+[node name="StaticBody3D14" parent="Environment/Start section" unique_id=1785515193 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.25881898, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881898, 85.94471, 14, 36.909683)
+
+[node name="StaticBody3D15" parent="Environment/Start section" unique_id=456853751 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 78.6, 14.2, 49.4)
+
+[node name="StaticBody3D16" parent="Environment/Start section" unique_id=463621024 instance=ExtResource("25_aht7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.4, 14.2, 59.2)
+
 [node name="Freezer corridor" type="Node" parent="Environment" unique_id=1762299931]
-
-[node name="Obstacle11" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=958843829]
-transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -179.28958, 1.7000004, -60.814262)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle12" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=642975310]
-transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -212.5296, 1.7000004, -59.254257)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle13" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1402652981]
-transform = Transform3D(4.12356, 0, 0.9575573, 0, 0.77999985, 0, -2.3807383, 0, 1.658538, -244.08957, 1.7000004, -56.374252)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle14" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1883315473]
-transform = Transform3D(1.2323612, 0, 1.8498588, 0, 0.77999985, 0, -4.599233, 0, 0.4956682, -259.80957, 1.7000004, -35.614258)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle15" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=603949613]
-transform = Transform3D(2.8610228e-07, 0, 1.9151149, 0, 0.77999985, 0, -4.7614775, 0, 3.5762785e-08, -262.3296, 1.7000004, -3.8142548)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle23" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=904610504]
-transform = Transform3D(-1.2323607, 0, 1.8498589, 0, 0.77999985, 0, -4.5992336, 0, -0.49566814, -258.96957, 1.7000004, 28.585743)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle24" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=256329577]
-transform = Transform3D(-2.3807383, 0, 1.658538, 0, 0.77999985, 0, -4.12356, 0, -0.95755744, -246.48956, 1.7000004, 57.14574)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle18" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2080177195]
-transform = Transform3D(4.5992336, 0, 0.49566814, 0, 0.77999985, 0, -1.2323607, 0, 1.8498589, -171.84958, 1.7000004, -9.454262)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle19" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=396071400]
-transform = Transform3D(4.5992336, 0, -0.4956683, 0, 0.77999985, 0, 1.2323612, 0, 1.8498589, -205.0896, 1.7000004, -7.8942566)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle20" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=1683307475]
-transform = Transform3D(2.3807383, 0, -1.658538, 0, 0.77999985, 0, 4.1235604, 0, 0.9575573, -172.64954, 1.7000004, 91.10574)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle21" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2144070413]
-transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -202.28955, 1.7000004, 41.265736)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Door" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=528795012]
-transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -187.19727, 1.7000004, 66.640305)
-material_override = ExtResource("7_fq0cl")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-script = ExtResource("7_0sclb")
-
-[node name="Door2" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=34249387]
-transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -231.2875, 1.7000004, 82.19927)
-material_override = ExtResource("7_fq0cl")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-script = ExtResource("7_0sclb")
-
-[node name="Obstacle22" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=673466743]
-transform = Transform3D(1.2323602, 0, -1.8498589, 0, 0.77999985, 0, 4.5992336, 0, 0.495668, -212.96957, 1.7000004, 11.865738)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Obstacle25" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=2010892437]
-transform = Transform3D(-2.3807378, 0, 1.6585379, 0, 0.77999973, 0, -4.1235595, 0, -0.95755726, -213.84955, 1.7000004, 109.26575)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(7, 8.8, 6.6)
-
-[node name="Checkpoint10" parent="Environment/Freezer corridor" unique_id=15658267 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.25881895, 1.7763568e-15, -0.96592534, 2.1855685e-08, 1, 5.8562146e-09, 0.96592534, -2.262668e-08, 0.25881895, -156.78145, 1.3750002, -40.322056)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint12" parent="Environment/Freezer corridor" unique_id=284166286 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.49999964, -1.0927845e-08, 2.9802322e-08, 1.0927842e-08, 0.5, 2.928107e-09, -2.9802322e-08, -2.9281064e-09, 0.49999964, -244.98145, 1.3750002, -13.122051)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint13" parent="Environment/Freezer corridor" unique_id=615715794 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.48296255, -1.1313337e-08, 0.12940948, 1.0927841e-08, 0.5, 2.9281066e-09, -0.12940948, 1.2253422e-15, 0.48296255, -235.38145, 1.3750002, 37.477947)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint14" parent="Environment/Freezer corridor" unique_id=19338337 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -172.80339, 1.3750002, 144.66637)
-multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint15" parent="Environment/Freezer corridor" unique_id=1341043589 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -175.39185, 1.3750002, 177.22226)
@@ -347,30 +370,6 @@ multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint18" parent="Environment/Freezer corridor" unique_id=89338172 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(-0.7071068, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071068, -271.5148, 1.3750002, 181.54463)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint19" parent="Environment/Freezer corridor" unique_id=805267528 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.9999998, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -0.9999998, -281.5148, 1.3750002, 144.14462)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint20" parent="Environment/Freezer corridor" unique_id=83121002 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -268.9642, 1.3750002, 109.96764)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint11" parent="Environment/Freezer corridor" unique_id=1448121730 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.8660248, -2.185569e-08, 0.4999997, 2.1855683e-08, 1, 5.856214e-09, -0.4999997, 5.8562133e-09, 0.8660248, -181.98145, 1.3750002, 119.27795)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint21" parent="Environment/Freezer corridor" unique_id=854307457 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.49999994, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999994, -240.33763, 1.3750002, 90.7532)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint22" parent="Environment/Freezer corridor" unique_id=258745063 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.49999994, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999994, -240.33763, 1.3750002, 90.7532)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint23" parent="Environment/Freezer corridor" unique_id=1195987265 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.49999994, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, -0.49999994, -177.42357, 1.3750002, 61.785362)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint24" parent="Environment/Freezer corridor" unique_id=1323819167 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -401,23 +400,678 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(0.99999994, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, 0.99999994, -95.99504, 1.3750002, 254.19873)
 multiplierBar = NodePath("../../../Multiplier bar")
 
+[node name="CardboardBox31" parent="Environment/Freezer corridor" unique_id=2063761831 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, -75.04889, 0.53, 127.25778)
+
+[node name="CardboardBox32" parent="Environment/Freezer corridor" unique_id=1793728621 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.50000006, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.50000006, -77.048874, 0.53, 125.257774)
+
+[node name="CardboardBoxOpen11" parent="Environment/Freezer corridor" unique_id=2056846821 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, -75.24889, 2.4, 125.85777)
+
+[node name="CardboardBox33" parent="Environment/Freezer corridor" unique_id=1247394011 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.7071067, -73.64888, 0.5, 124.657776)
+
+[node name="CardboardBox34" parent="Environment/Freezer corridor" unique_id=299126698 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.86602545, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, 0.86602545, -72.40985, 0.53, 121.21458)
+
+[node name="CardboardBox35" parent="Environment/Freezer corridor" unique_id=1040806547 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -75.1419, 0.53, 121.94662)
+
+[node name="CardboardBoxOpen12" parent="Environment/Freezer corridor" unique_id=1412573593 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.86602545, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, 0.86602545, -73.72228, 2.4, 120.68779)
+
+[node name="CardboardBox36" parent="Environment/Freezer corridor" unique_id=1817937672 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588191, -73.9615, 0.5, 118.70214)
+
+[node name="StaticBody3D86" parent="Environment/Freezer corridor" unique_id=250275823 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.9659257, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659257, -75.64889, 2.4, 123.25778)
+
+[node name="CardboardBox37" parent="Environment/Freezer corridor" unique_id=1355500136 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.25881916, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, -0.25881916, -124.12033, 0.53, 142.98683)
+
+[node name="CardboardBox38" parent="Environment/Freezer corridor" unique_id=121003980 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710695, -121.67085, 0.53, 144.40106)
+
+[node name="CardboardBoxOpen13" parent="Environment/Freezer corridor" unique_id=1182576743 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.25881916, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, -0.25881916, -123.5648, 2.4, 144.28737)
+
+[node name="CardboardBox39" parent="Environment/Freezer corridor" unique_id=260643369 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.49999988, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.49999988, -124.799706, 0.5, 145.8606)
+
+[node name="CardboardBox40" parent="Environment/Freezer corridor" unique_id=1218397242 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9659259, 0, 0.2588189, 0, 1, 0, -0.2588189, 0, -0.9659259, -125.10535, 0.53, 149.50716)
+
+[node name="CardboardBox41" parent="Environment/Freezer corridor" unique_id=1379596403 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9659257, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659257, -122.65587, 0.53, 148.09296)
+
+[node name="CardboardBoxOpen14" parent="Environment/Freezer corridor" unique_id=1711588508 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659259, 0, 0.2588189, 0, 1, 0, -0.2588189, 0, -0.9659259, -123.7013, 2.4, 149.67632)
+
+[node name="CardboardBox42" parent="Environment/Freezer corridor" unique_id=480640719 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5000001, -122.9563, 0.5, 151.5324)
+
+[node name="StaticBody3D87" parent="Environment/Freezer corridor" unique_id=400625569 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, -122.50551, 2.4, 146.69525)
+
+[node name="CardboardBox43" parent="Environment/Freezer corridor" unique_id=1692316544 instance=ExtResource("7_hwpts")]
+transform = Transform3D(1.0000001, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, 1.0000001, -68.600006, 0.53, 189.8)
+
+[node name="CardboardBox44" parent="Environment/Freezer corridor" unique_id=1133414958 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.8660253, 0, 0.5000002, 0, 1, 0, -0.5000002, 0, 0.8660253, -70.600006, 0.53, 191.79999)
+
+[node name="CardboardBoxOpen15" parent="Environment/Freezer corridor" unique_id=1485059340 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1.0000001, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, 1.0000001, -70.000015, 2.4, 190)
+
+[node name="CardboardBox45" parent="Environment/Freezer corridor" unique_id=504372975 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.70710677, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.70710677, -71.2, 0.5, 188.39998)
+
+[node name="CardboardBox46" parent="Environment/Freezer corridor" unique_id=1328252524 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999985, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999985, -74.64322, 0.53, 187.16096)
+
+[node name="CardboardBox47" parent="Environment/Freezer corridor" unique_id=445088665 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-1.1920929e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -1.1920929e-07, -73.91116, 0.53, 189.893)
+
+[node name="CardboardBoxOpen16" parent="Environment/Freezer corridor" unique_id=1688003365 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.49999985, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999985, -75.170006, 2.4, 188.47337)
+
+[node name="CardboardBox48" parent="Environment/Freezer corridor" unique_id=146926019 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.96592575, 0, 0.25881916, 0, 1, 0, -0.25881916, 0, 0.96592575, -77.15566, 0.5, 188.71262)
+
+[node name="StaticBody3D88" parent="Environment/Freezer corridor" unique_id=1736523703 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881898, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881898, -72.6, 2.4, 190.4)
+
+[node name="CardboardBox61" parent="Environment/Freezer corridor" unique_id=1335781698 instance=ExtResource("7_hwpts")]
+transform = Transform3D(8.7422784e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 8.7422784e-08, 81.742226, 0.53, 384.1511)
+
+[node name="CardboardBox62" parent="Environment/Freezer corridor" unique_id=12395520 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.49999997, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999997, 83.74221, 0.53, 386.1511)
+
+[node name="CardboardBoxOpen24" parent="Environment/Freezer corridor" unique_id=2045022421 instance=ExtResource("8_jyqft")]
+transform = Transform3D(8.7422784e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 8.7422784e-08, 81.94223, 2.4, 385.5511)
+
+[node name="CardboardBox63" parent="Environment/Freezer corridor" unique_id=1125127098 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.7071067, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, 0.7071067, 80.34222, 0.5, 386.75107)
+
+[node name="CardboardBox64" parent="Environment/Freezer corridor" unique_id=563087760 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, -0.8660254, 79.10319, 0.53, 390.19427)
+
+[node name="CardboardBox65" parent="Environment/Freezer corridor" unique_id=2097169411 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.9999999, 0, 2.7818121e-08, 0, 1, 0, -2.7818121e-08, 0, -0.9999999, 81.835236, 0.53, 389.46225)
+
+[node name="CardboardBoxOpen25" parent="Environment/Freezer corridor" unique_id=708010915 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, -0.8660254, 80.41562, 2.4, 390.72107)
+
+[node name="CardboardBox66" parent="Environment/Freezer corridor" unique_id=1135375915 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.258819, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.258819, 80.65484, 0.5, 392.70673)
+
+[node name="StaticBody3D140" parent="Environment/Freezer corridor" unique_id=1765846715 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.9659258, 0, 0.25881916, 0, 1, 0, -0.25881916, 0, -0.9659258, 82.342224, 2.4, 388.1511)
+
+[node name="CardboardBox85" parent="Environment/Freezer corridor" unique_id=522700789 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.86602557, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602557, 10.367152, 0.53, 262.41418)
+
+[node name="CardboardBoxOpen32" parent="Environment/Freezer corridor" unique_id=2036229688 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.86602557, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602557, 11.47958, 2.4, 261.541)
+
+[node name="CardboardBox86" parent="Environment/Freezer corridor" unique_id=1596552341 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592563, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.96592563, 13.318801, 0.5, 262.32666)
+
+[node name="CardboardBox87" parent="Environment/Freezer corridor" unique_id=1466100773 instance=ExtResource("7_hwpts")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 16.92022, 0.53, 261.67807)
+
+[node name="CardboardBox88" parent="Environment/Freezer corridor" unique_id=1194993632 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999997, 0, -0.86602527, 0, 1, 0, 0.86602527, 0, 0.49999997, 14.920243, 0.53, 259.67807)
+
+[node name="CardboardBoxOpen33" parent="Environment/Freezer corridor" unique_id=1581927888 instance=ExtResource("8_jyqft")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 16.72022, 2.4, 260.27808)
+
+[node name="CardboardBox89" parent="Environment/Freezer corridor" unique_id=462497116 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.7071068, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, -0.7071068, 18.32024, 0.5, 259.0781)
+
+[node name="StaticBody3D144" parent="Environment/Freezer corridor" unique_id=910519311 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, 0.25881898, 13.531255, 2.4, 259.8946)
+
+[node name="CardboardBox90" parent="Environment/Freezer corridor" unique_id=2023857546 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.86602557, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602557, 21.567152, 0.53, 518.6142)
+
+[node name="CardboardBoxOpen34" parent="Environment/Freezer corridor" unique_id=915320807 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.86602557, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602557, 22.67958, 2.4, 517.74097)
+
+[node name="CardboardBox91" parent="Environment/Freezer corridor" unique_id=1572068132 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592563, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.96592563, 24.5188, 0.5, 518.5267)
+
+[node name="CardboardBox92" parent="Environment/Freezer corridor" unique_id=4000716 instance=ExtResource("7_hwpts")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 28.12022, 0.53, 517.87805)
+
+[node name="CardboardBox93" parent="Environment/Freezer corridor" unique_id=1607650014 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999997, 0, -0.86602527, 0, 1, 0, 0.86602527, 0, 0.49999997, 26.120243, 0.53, 515.87805)
+
+[node name="CardboardBoxOpen35" parent="Environment/Freezer corridor" unique_id=819382569 instance=ExtResource("8_jyqft")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 27.92022, 2.4, 516.4781)
+
+[node name="CardboardBox94" parent="Environment/Freezer corridor" unique_id=1532652935 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.7071068, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, -0.7071068, 29.52024, 0.5, 515.2781)
+
+[node name="StaticBody3D145" parent="Environment/Freezer corridor" unique_id=801969864 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, 0.25881898, 24.731255, 2.4, 516.0946)
+
+[node name="CardboardBox95" parent="Environment/Freezer corridor" unique_id=2079710033 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.96592593, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592593, -12.16954, 0.53, 466.44794)
+
+[node name="CardboardBoxOpen36" parent="Environment/Freezer corridor" unique_id=71239743 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.96592593, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592593, -13.573614, 2.4, 466.2788)
+
+[node name="CardboardBox96" parent="Environment/Freezer corridor" unique_id=1326287078 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.4999999, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.4999999, -14.318562, 0.5, 464.4227)
+
+[node name="CardboardBox97" parent="Environment/Freezer corridor" unique_id=867613668 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -17.323793, 0.53, 462.33475)
+
+[node name="CardboardBox98" parent="Environment/Freezer corridor" unique_id=1913098651 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.25881895, 0, 0.9659256, 0, 1, 0, -0.9659256, 0, 0.25881895, -17.323809, 0.53, 465.16315)
+
+[node name="CardboardBoxOpen37" parent="Environment/Freezer corridor" unique_id=1147402600 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -18.172295, 2.4, 463.4661)
+
+[node name="CardboardBox99" parent="Environment/Freezer corridor" unique_id=1952104273 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, -20.152218, 0.5, 463.18326)
+
+[node name="StaticBody3D146" parent="Environment/Freezer corridor" unique_id=1102573177 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.50000006, -16.18852, 2.4, 465.9922)
+
+[node name="CardboardBox67" parent="Environment/Freezer corridor" unique_id=882716713 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.25881907, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, 0.25881907, 130.81366, 0.53, 368.42203)
+
+[node name="CardboardBox68" parent="Environment/Freezer corridor" unique_id=615094385 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.7071069, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071069, 128.36418, 0.53, 367.00778)
+
+[node name="CardboardBoxOpen26" parent="Environment/Freezer corridor" unique_id=1371704954 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.25881907, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, 0.25881907, 130.25812, 2.4, 367.1215)
+
+[node name="CardboardBox69" parent="Environment/Freezer corridor" unique_id=992104166 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.49999997, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, -0.49999997, 131.49304, 0.5, 365.54825)
+
+[node name="CardboardBox70" parent="Environment/Freezer corridor" unique_id=313401503 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.9659259, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659259, 131.79868, 0.53, 361.9017)
+
+[node name="CardboardBox71" parent="Environment/Freezer corridor" unique_id=387407815 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, 129.3492, 0.53, 363.3159)
+
+[node name="CardboardBoxOpen27" parent="Environment/Freezer corridor" unique_id=2002472573 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.9659259, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659259, 130.39462, 2.4, 361.73254)
+
+[node name="CardboardBox72" parent="Environment/Freezer corridor" unique_id=415130384 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.50000006, 129.64963, 0.5, 329.87646)
+
+[node name="StaticBody3D141" parent="Environment/Freezer corridor" unique_id=1033332490 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(1, 0, -2.7818132e-08, 0, 1, 0, 2.7818132e-08, 0, 1, 129.19884, 2.4, 364.7136)
+
+[node name="CardboardBox73" parent="Environment/Freezer corridor" unique_id=492862524 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-1.0000001, 0, -1.9841835e-09, 0, 1, 0, 1.9841835e-09, 0, -1.0000001, 75.29334, 0.53, 291.60886)
+
+[node name="CardboardBox74" parent="Environment/Freezer corridor" unique_id=2133151809 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.8660254, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660254, 77.29334, 0.53, 289.60886)
+
+[node name="CardboardBoxOpen28" parent="Environment/Freezer corridor" unique_id=61886788 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-1.0000001, 0, -1.9841835e-09, 0, 1, 0, 1.9841835e-09, 0, -1.0000001, 76.69335, 2.4, 291.40884)
+
+[node name="CardboardBox75" parent="Environment/Freezer corridor" unique_id=1961259195 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.70710665, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710665, 77.89333, 0.5, 293.00888)
+
+[node name="CardboardBox76" parent="Environment/Freezer corridor" unique_id=351222730 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.49999994, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.49999994, 81.336555, 0.53, 294.2479)
+
+[node name="CardboardBox77" parent="Environment/Freezer corridor" unique_id=1286879414 instance=ExtResource("7_hwpts")]
+transform = Transform3D(3.178652e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 3.178652e-08, 80.6045, 0.53, 291.51584)
+
+[node name="CardboardBoxOpen29" parent="Environment/Freezer corridor" unique_id=1893093015 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.49999994, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.49999994, 81.86334, 2.4, 292.9355)
+
+[node name="CardboardBox78" parent="Environment/Freezer corridor" unique_id=142315129 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592575, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.96592575, 83.849, 0.5, 292.69626)
+
+[node name="StaticBody3D142" parent="Environment/Freezer corridor" unique_id=1162893619 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881907, 79.29334, 2.4, 291.00888)
+
+[node name="CardboardBox79" parent="Environment/Freezer corridor" unique_id=885686907 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-1.0000001, 0, -1.9841835e-09, 0, 1, 0, 1.9841835e-09, 0, -1.0000001, -26.906662, 0.53, 216.20886)
+
+[node name="CardboardBox80" parent="Environment/Freezer corridor" unique_id=58028867 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.8660254, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660254, -24.906662, 0.53, 214.20886)
+
+[node name="CardboardBoxOpen30" parent="Environment/Freezer corridor" unique_id=1605582894 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-1.0000001, 0, -1.9841835e-09, 0, 1, 0, 1.9841835e-09, 0, -1.0000001, -25.506653, 2.4, 216.00885)
+
+[node name="CardboardBox81" parent="Environment/Freezer corridor" unique_id=570835545 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.70710665, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710665, -24.306671, 0.5, 217.60889)
+
+[node name="CardboardBox82" parent="Environment/Freezer corridor" unique_id=1905876945 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.49999994, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.49999994, -20.86345, 0.53, 218.8479)
+
+[node name="CardboardBox83" parent="Environment/Freezer corridor" unique_id=354663807 instance=ExtResource("7_hwpts")]
+transform = Transform3D(3.178652e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, 3.178652e-08, -21.595505, 0.53, 216.11584)
+
+[node name="CardboardBoxOpen31" parent="Environment/Freezer corridor" unique_id=1759313920 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.49999994, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.49999994, -20.336662, 2.4, 217.53549)
+
+[node name="CardboardBox84" parent="Environment/Freezer corridor" unique_id=240639284 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592575, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.96592575, -18.351006, 0.5, 217.29626)
+
+[node name="StaticBody3D143" parent="Environment/Freezer corridor" unique_id=120414934 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881907, -22.906662, 2.4, 215.60889)
+
+[node name="CardboardBox49" parent="Environment/Freezer corridor" unique_id=1691000506 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.86602557, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.86602557, -213.94083, 0.53, 259.3737)
+
+[node name="CardboardBox50" parent="Environment/Freezer corridor" unique_id=74026085 instance=ExtResource("7_hwpts")]
+transform = Transform3D(1, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 1, -216.67288, 0.53, 260.1057)
+
+[node name="CardboardBoxOpen17" parent="Environment/Freezer corridor" unique_id=392590532 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.86602557, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.86602557, -215.25327, 2.4, 258.84686)
+
+[node name="CardboardBox51" parent="Environment/Freezer corridor" unique_id=711139111 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881907, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881907, -215.4925, 0.5, 256.86124)
+
+[node name="CardboardBox52" parent="Environment/Freezer corridor" unique_id=957438574 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.8660253, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660253, -217.85489, 0.53, 254.0666)
+
+[node name="CardboardBox53" parent="Environment/Freezer corridor" unique_id=52000525 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999985, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999985, -218.58691, 0.53, 256.79865)
+
+[node name="CardboardBoxOpen18" parent="Environment/Freezer corridor" unique_id=1192131737 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.8660253, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660253, -218.96732, 2.4, 254.93979)
+
+[node name="CardboardBox54" parent="Environment/Freezer corridor" unique_id=538285074 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.9659258, 0, -0.25881892, 0, 1, 0, 0.25881892, 0, 0.9659258, -220.80655, 0.5, 254.15413)
+
+[node name="StaticBody3D125" parent="Environment/Freezer corridor" unique_id=623407119 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -217.70493, 2.4, 257.89328)
+
+[node name="CardboardBox55" parent="Environment/Freezer corridor" unique_id=2003831511 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.86602557, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.86602557, -220.74084, 0.53, 259.3737)
+
+[node name="CardboardBox56" parent="Environment/Freezer corridor" unique_id=976793206 instance=ExtResource("7_hwpts")]
+transform = Transform3D(1, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 1, -223.47287, 0.53, 260.1057)
+
+[node name="CardboardBoxOpen19" parent="Environment/Freezer corridor" unique_id=412333306 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.86602557, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.86602557, -222.05328, 2.4, 258.84686)
+
+[node name="CardboardBoxOpen21" parent="Environment/Freezer corridor" unique_id=2013208008 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659259, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659259, -224.35706, 4.4, 257.3018)
+
+[node name="CardboardBoxOpen22" parent="Environment/Freezer corridor" unique_id=863736003 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.25881895, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881895, -218.96811, 4.4, 257.4383)
+
+[node name="CardboardBoxOpen23" parent="Environment/Freezer corridor" unique_id=1524368005 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659259, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659259, -219.34872, 4.6, 254.09348)
+
+[node name="CardboardBox57" parent="Environment/Freezer corridor" unique_id=1933155878 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.25881907, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881907, -222.29248, 0.5, 256.86124)
+
+[node name="CardboardBox58" parent="Environment/Freezer corridor" unique_id=395880705 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.8660253, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660253, -224.6549, 0.53, 254.0666)
+
+[node name="CardboardBox59" parent="Environment/Freezer corridor" unique_id=633591991 instance=ExtResource("7_hwpts")]
+transform = Transform3D(0.49999985, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999985, -225.38693, 0.53, 256.79865)
+
+[node name="CardboardBoxOpen20" parent="Environment/Freezer corridor" unique_id=1828752772 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.8660253, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, 0.8660253, -225.7673, 2.4, 254.93979)
+
+[node name="CardboardBox60" parent="Environment/Freezer corridor" unique_id=1358666502 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.9659258, 0, -0.25881892, 0, 1, 0, 0.25881892, 0, 0.9659258, -227.60657, 0.5, 254.15413)
+
+[node name="StaticBody3D126" parent="Environment/Freezer corridor" unique_id=993895530 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -224.50491, 2.4, 257.89328)
+
+[node name="Door" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=528795012]
+transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -187.19727, 1.7000004, 66.640305)
+material_override = ExtResource("7_fq0cl")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+script = ExtResource("7_0sclb")
+
+[node name="Door2" type="CSGBox3D" parent="Environment/Freezer corridor" unique_id=34249387]
+transform = Transform3D(2.380738, 0, -1.6585386, 0, 0.77999985, 0, 4.123561, 0, 0.95755744, -231.2875, 1.7000004, 82.19927)
+material_override = ExtResource("7_fq0cl")
+use_collision = true
+size = Vector3(7, 8.8, 6.6)
+script = ExtResource("7_0sclb")
+
+[node name="Checkpoint10" parent="Environment/Freezer corridor" unique_id=15658267 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.25881895, 1.7763568e-15, -0.96592534, 2.1855685e-08, 1, 5.8562146e-09, 0.96592534, -2.262668e-08, 0.25881895, -156.78145, 1.3750002, -40.322056)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint13" parent="Environment/Freezer corridor" unique_id=615715794 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.48296255, -1.1313337e-08, 0.12940948, 1.0927841e-08, 0.5, 2.9281066e-09, -0.12940948, 1.2253422e-15, 0.48296255, -235.38145, 1.3750002, 37.477947)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint14" parent="Environment/Freezer corridor" unique_id=19338337 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -172.80339, 1.3750002, 144.66637)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint19" parent="Environment/Freezer corridor" unique_id=805267528 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.9999998, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -0.9999998, -281.5148, 1.3750002, 144.14462)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint20" parent="Environment/Freezer corridor" unique_id=83121002 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -268.9642, 1.3750002, 109.96764)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint21" parent="Environment/Freezer corridor" unique_id=854307457 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.49999994, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999994, -240.33763, 1.3750002, 90.7532)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint22" parent="Environment/Freezer corridor" unique_id=258745063 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.49999994, 0, 0.8660255, 0, 1, 0, -0.8660255, 0, -0.49999994, -240.33763, 1.3750002, 90.7532)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint23" parent="Environment/Freezer corridor" unique_id=1195987265 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(-0.49999994, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, -0.49999994, -177.42357, 1.3750002, 61.785362)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="StaticBody3D22" parent="Environment/Freezer corridor" unique_id=888684123 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-1, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1, -42.904865, 0.4000001, -67.889206)
+
+[node name="StaticBody3D25" parent="Environment/Freezer corridor" unique_id=996298260 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-1, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1, -44.77601, 14, -67.18417)
+
+[node name="StaticBody3D26" parent="Environment/Freezer corridor" unique_id=437098732 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-1, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1, -42.17601, 14, -67.18417)
+
+[node name="StaticBody3D27" parent="Environment/Freezer corridor" unique_id=1860761637 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.96592575, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.96592575, -39.196457, 14, -67.33947)
+
+[node name="StaticBody3D23" parent="Environment/Freezer corridor" unique_id=523663083 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.96592575, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.96592575, -166.96251, 0.39999962, -60.48355)
+
+[node name="StaticBody3D28" parent="Environment/Freezer corridor" unique_id=1393191131 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.96592575, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.96592575, -168.58742, 14, -59.318256)
+
+[node name="StaticBody3D29" parent="Environment/Freezer corridor" unique_id=991071021 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.96592575, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.96592575, -166.07602, 14, -59.991184)
+
+[node name="StaticBody3D30" parent="Environment/Freezer corridor" unique_id=1651696946 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.86602527, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.86602527, -163.23819, 14, -60.912354)
+
+[node name="StaticBody3D35" parent="Environment/Freezer corridor" unique_id=1443520206 instance=ExtResource("23_jyqft")]
+transform = Transform3D(1, 0, 3.1786513e-08, 0, 1, 0, -3.1786513e-08, 0, 1, -89.33989, 0.4000001, -67.84411)
+
+[node name="StaticBody3D36" parent="Environment/Freezer corridor" unique_id=148929717 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.9659258, -79.479416, 0.4000001, -69.11806)
+
+[node name="StaticBody3D37" parent="Environment/Freezer corridor" unique_id=66491419 instance=ExtResource("23_jyqft")]
+transform = Transform3D(1, 0, 3.1786513e-08, 0, 1, 0, -3.1786513e-08, 0, 1, -70.33989, 0.4000001, -67.64411)
+
+[node name="StaticBody3D38" parent="Environment/Freezer corridor" unique_id=1706411267 instance=ExtResource("23_jyqft")]
+transform = Transform3D(1, 0, 3.1786513e-08, 0, 1, 0, -3.1786513e-08, 0, 1, -61.339893, 0.4000001, -66.24411)
+
+[node name="StaticBody3D39" parent="Environment/Freezer corridor" unique_id=1835769218 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, -52.44978, 0.39999962, -69.2775)
+
+[node name="StaticBody3D42" parent="Environment/Freezer corridor" unique_id=1841967978 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, -50.476807, 14, -68.95251)
+
+[node name="StaticBody3D43" parent="Environment/Freezer corridor" unique_id=728044124 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, -52.728462, 14, -70.25251)
+
+[node name="StaticBody3D44" parent="Environment/Freezer corridor" unique_id=475775112 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.96592575, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.96592575, -55.38648, 14, -71.607796)
+
+[node name="StaticBody3D45" parent="Environment/Freezer corridor" unique_id=347932942 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.9659258, -69.93758, 14.2, -68.309395)
+
+[node name="StaticBody3D46" parent="Environment/Freezer corridor" unique_id=2008386390 instance=ExtResource("25_aht7i")]
+transform = Transform3D(0.70710677, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.70710677, -80.789894, 14.2, -69.045006)
+
+[node name="StaticBody3D52" parent="Environment/Freezer corridor" unique_id=1747519565 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, -203.60786, 0.4000001, -53.452583)
+
+[node name="StaticBody3D53" parent="Environment/Freezer corridor" unique_id=1210859688 instance=ExtResource("23_jyqft")]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, -193.93031, 0.4000001, -53.308376)
+
+[node name="StaticBody3D54" parent="Environment/Freezer corridor" unique_id=962403135 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.9659258, -184.41133, 0.4000001, -54.49923)
+
+[node name="StaticBody3D55" parent="Environment/Freezer corridor" unique_id=915083528 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.96592575, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.96592575, -176.60925, 0.39999962, -59.730183)
+
+[node name="StaticBody3D58" parent="Environment/Freezer corridor" unique_id=1994653644 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.96592575, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.96592575, -174.61938, 14, -59.92691)
+
+[node name="StaticBody3D59" parent="Environment/Freezer corridor" unique_id=1836475275 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.96592575, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.96592575, -177.1308, 14, -60.599842)
+
+[node name="StaticBody3D60" parent="Environment/Freezer corridor" unique_id=1355484906 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, -180.049, 14, -61.221004)
+
+[node name="StaticBody3D61" parent="Environment/Freezer corridor" unique_id=1719397079 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.9659258, -193.528, 14.199999, -53.97366)
+
+[node name="StaticBody3D62" parent="Environment/Freezer corridor" unique_id=2011985302 instance=ExtResource("25_aht7i")]
+transform = Transform3D(0.25881898, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881898, -204.7793, 14.199999, -54.044556)
+
+[node name="StaticBody3D92" parent="Environment/Freezer corridor" unique_id=378243856 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.5, -2.654183e-08, -0.8660255, 4.2221956e-08, 1, -5.5024735e-08, 0.8660255, -6.407766e-08, -0.5, -253.52011, 0.39999914, -43.244217)
+
+[node name="StaticBody3D93" parent="Environment/Freezer corridor" unique_id=1961737096 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.258819, -2.6541834e-08, -0.9659258, 5.502473e-08, 1, -4.222196e-08, 0.9659258, -6.407765e-08, -0.258819, -257.2483, 0.39999962, -34.405106)
+
+[node name="StaticBody3D94" parent="Environment/Freezer corridor" unique_id=1191209933 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.70710677, -2.6541834e-08, -0.7071068, 2.6541834e-08, 1, -6.407765e-08, 0.7071068, -6.407767e-08, -0.70710677, -260.2192, 0.39999962, -25.432821)
+
+[node name="StaticBody3D96" parent="Environment/Freezer corridor" unique_id=894667436 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.70710677, -2.6541834e-08, -0.7071068, 2.6541834e-08, 1, -6.407765e-08, 0.7071068, -6.407767e-08, -0.70710677, -261.0438, 14, -23.611181)
+
+[node name="StaticBody3D97" parent="Environment/Freezer corridor" unique_id=667505843 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.70710677, -2.6541834e-08, -0.7071068, 2.6541834e-08, 1, -6.407765e-08, 0.7071068, -6.407767e-08, -0.70710677, -259.2053, 14, -25.449667)
+
+[node name="StaticBody3D98" parent="Environment/Freezer corridor" unique_id=355595147 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.5, -2.654183e-08, -0.8660255, 4.2221956e-08, 1, -5.5024735e-08, 0.8660255, -6.407766e-08, -0.5, -257.20822, 14, -27.666327)
+
+[node name="StaticBody3D99" parent="Environment/Freezer corridor" unique_id=1546018249 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(-0.70710677, -2.6541834e-08, -0.7071067, 2.6541825e-08, 1, -6.407765e-08, 0.7071067, -6.407765e-08, -0.70710677, -253.14513, 14.199998, -42.56316)
+
+[node name="StaticBody3D24" parent="Environment/Freezer corridor" unique_id=1502676147 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.70710653, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710653, -247.75195, 0.39999962, -51.237617)
+
+[node name="StaticBody3D67" parent="Environment/Freezer corridor" unique_id=1609652800 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.70710653, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710653, -246.9274, 14, -53.059242)
+
+[node name="StaticBody3D68" parent="Environment/Freezer corridor" unique_id=1333737620 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.70710653, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710653, -248.76587, 14, -51.22077)
+
+[node name="StaticBody3D71" parent="Environment/Freezer corridor" unique_id=762842171 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-1.0000001, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1.0000001, -212.49556, 0.4000001, -54.756386)
+
+[node name="StaticBody3D72" parent="Environment/Freezer corridor" unique_id=315729957 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.9659258, 0, 0.25881892, 0, 1, 0, -0.25881892, 0, -0.9659258, -220.9422, 0.4000001, -58.545593)
+
+[node name="StaticBody3D73" parent="Environment/Freezer corridor" unique_id=914028556 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-1.0000001, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, -1.0000001, -230.44502, 0.4000001, -59.85901)
+
+[node name="StaticBody3D74" parent="Environment/Freezer corridor" unique_id=81819781 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.9659259, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659259, -239.77432, 0.39999962, -56.71342)
+
+[node name="StaticBody3D77" parent="Environment/Freezer corridor" unique_id=769701014 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659259, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659259, -241.39923, 14, -55.548115)
+
+[node name="StaticBody3D78" parent="Environment/Freezer corridor" unique_id=1840819824 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659259, 0, -0.25881916, 0, 1, 0, 0.25881916, 0, -0.9659259, -238.88782, 14, -56.221054)
+
+[node name="StaticBody3D79" parent="Environment/Freezer corridor" unique_id=1104703730 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.86602527, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.86602527, -236.04999, 14, -57.142216)
+
+[node name="StaticBody3D80" parent="Environment/Freezer corridor" unique_id=779069929 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(-0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, -0.8660254, -221.50298, 14.199999, -58.007107)
+
+[node name="StaticBody3D81" parent="Environment/Freezer corridor" unique_id=468149079 instance=ExtResource("25_aht7i")]
+transform = Transform3D(-0.50000006, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.50000006, -211.21085, 14.199999, -54.48777)
+
+[node name="StaticBody3D103" parent="Environment/Freezer corridor" unique_id=1783450921 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, -2.654185e-08, 0.25881892, 4.2221952e-08, 1, -5.5024742e-08, -0.25881892, 6.407764e-08, 0.9659257, -172.39955, 0.39999914, -8.85201)
+
+[node name="StaticBody3D104" parent="Environment/Freezer corridor" unique_id=675232258 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.96592593, -4.2221984e-08, 0.25881892, 5.502473e-08, 1, -4.222196e-08, -0.25881892, 5.5024746e-08, 0.96592593, -163.88249, 0.39999962, -11.081118)
+
+[node name="StaticBody3D106" parent="Environment/Freezer corridor" unique_id=785870407 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(1, -2.6541837e-08, -2.9802322e-08, 2.654183e-08, 1, -6.407766e-08, 2.9802322e-08, 6.407765e-08, 1, -172.18312, 14.199997, -9.598736)
+
+[node name="StaticBody3D89" parent="Environment/Freezer corridor" unique_id=1491134527 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.9659255, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659255, -181.08885, 0.39999962, -6.677416)
+
+[node name="StaticBody3D90" parent="Environment/Freezer corridor" unique_id=1909202708 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659255, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659255, -182.71376, 14, -5.5121193)
+
+[node name="StaticBody3D91" parent="Environment/Freezer corridor" unique_id=1858214443 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.9659255, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659255, -180.20236, 14, -6.185051)
+
+[node name="StaticBody3D110" parent="Environment/Freezer corridor" unique_id=388971837 instance=ExtResource("23_jyqft")]
+transform = Transform3D(-0.86602545, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.86602545, -215.657, 0.4000001, -11.821737)
+
+[node name="StaticBody3D111" parent="Environment/Freezer corridor" unique_id=891192857 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071068, -209.24553, 0.4000001, -8.420234)
+
+[node name="StaticBody3D112" parent="Environment/Freezer corridor" unique_id=1340233218 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, -200.10168, 0.4000001, -6.498346)
+
+[node name="StaticBody3D113" parent="Environment/Freezer corridor" unique_id=1743632328 instance=ExtResource("23_jyqft")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -190.07616, 0.39999962, -4.9221516)
+
+[node name="StaticBody3D116" parent="Environment/Freezer corridor" unique_id=407153023 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, 1, -188.20502, 14, -5.627199)
+
+[node name="StaticBody3D119" parent="Environment/Freezer corridor" unique_id=1034993832 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.86602545, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, 0.86602545, -209.43147, 14.199999, -9.175126)
+
+[node name="StaticBody3D120" parent="Environment/Freezer corridor" unique_id=1252297437 instance=ExtResource("25_aht7i")]
+transform = Transform3D(-0.8660252, 0, 0.49999988, 0, 1, 0, -0.49999988, 0, -0.8660252, -214.41008, 14.199999, -12.231473)
+
+[node name="Checkpoint12" parent="Environment/Freezer corridor" unique_id=284166286 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.49999964, -1.0927845e-08, 2.9802322e-08, 1.0927842e-08, 0.5, 2.928107e-09, -2.9802322e-08, -2.9281064e-09, 0.49999964, -244.98145, 1.3750002, -13.122051)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint11" parent="Environment/Freezer corridor" unique_id=1448121730 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.8660248, -2.185569e-08, 0.4999997, 2.1855683e-08, 1, 5.856214e-09, -0.4999997, 5.8562133e-09, 0.8660248, -181.98145, 1.3750002, 119.27795)
+multiplierBar = NodePath("../../../Multiplier bar")
+
 [node name="Button trigger" parent="Environment/Freezer corridor" unique_id=1352849728 node_paths=PackedStringArray("toTrigger") instance=ExtResource("7_erwvk")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -186.05685, 0.4, 112.37923)
 toTrigger = [NodePath("../Door"), NodePath("../Door2")]
 onEnterMethod = "Open"
 
+[node name="StaticBody3D117" parent="Environment/Freezer corridor" unique_id=2019225218 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, 1, -190.80502, 14, -5.6271925)
+
+[node name="StaticBody3D118" parent="Environment/Freezer corridor" unique_id=433611454 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.9659258, -193.78458, 14, -5.471903)
+
+[node name="StaticBody3D4" parent="Environment/Freezer corridor" unique_id=468950330 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -261.6, 0.4, -9.6)
+
+[node name="StaticBody3D5" parent="Environment/Freezer corridor" unique_id=122846381 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -261.6, 0.4, -2.6000004)
+
+[node name="StaticBody3D6" parent="Environment/Freezer corridor" unique_id=284390548 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -261.6, 0.4, 4.3999996)
+
+[node name="StaticBody3D7" parent="Environment/Freezer corridor" unique_id=1601263608 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -261.6, 0.4, 11.199999)
+
+[node name="StaticBody3D8" parent="Environment/Freezer corridor" unique_id=1108619498 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881907, -260.61176, 0.4, 18.838518)
+
+[node name="StaticBody3D9" parent="Environment/Freezer corridor" unique_id=1021072279 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881907, -258.80002, 0.4, 25.599998)
+
+[node name="StaticBody3D10" parent="Environment/Freezer corridor" unique_id=250974810 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881907, -256.98828, 0.4, 32.361477)
+
+[node name="StaticBody3D11" parent="Environment/Freezer corridor" unique_id=1219409032 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.42261827, 0, 0.9063077, 0, 1, 0, -0.9063077, 0, -0.42261827, -254.35835, 0.4, 39.455845)
+
+[node name="StaticBody3D12" parent="Environment/Freezer corridor" unique_id=1716858371 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.42261827, 0, 0.9063077, 0, 1, 0, -0.9063077, 0, -0.42261827, -251.40001, 0.4, 45.8)
+
+[node name="StaticBody3D13" parent="Environment/Freezer corridor" unique_id=1647002567 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.42261827, 0, 0.9063077, 0, 1, 0, -0.9063077, 0, -0.42261827, -248.44168, 0.4, 52.14415)
+
+[node name="StaticBody3D14" parent="Environment/Freezer corridor" unique_id=1874536157 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, -245.10002, 0.4, 58.537823)
+
+[node name="StaticBody3D21" parent="Environment/Freezer corridor" unique_id=153300647 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4226184, 0, -0.9063077, 0, 1, 0, 0.9063077, 0, 0.4226184, -201.28032, 0.4, 43.49029)
+
+[node name="StaticBody3D127" parent="Environment/Freezer corridor" unique_id=2100219463 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4226184, 0, -0.9063077, 0, 1, 0, 0.9063077, 0, 0.4226184, -198.08032, 0.4, 49.690292)
+
+[node name="StaticBody3D128" parent="Environment/Freezer corridor" unique_id=200724334 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4226184, 0, -0.9063077, 0, 1, 0, 0.9063077, 0, 0.4226184, -204.23865, 0.4, 37.146137)
+
+[node name="StaticBody3D129" parent="Environment/Freezer corridor" unique_id=1951446421 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4226184, 0, -0.9063077, 0, 1, 0, 0.9063077, 0, 0.4226184, -207.19698, 0.4, 30.801981)
+
+[node name="StaticBody3D130" parent="Environment/Freezer corridor" unique_id=1464897012 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.25881913, 0, -0.96592563, 0, 1, 0, 0.96592563, 0, 0.25881913, -209.44473, 0.4, 23.946726)
+
+[node name="StaticBody3D131" parent="Environment/Freezer corridor" unique_id=1980765589 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.25881913, 0, -0.96592563, 0, 1, 0, 0.96592563, 0, 0.25881913, -211.25647, 0.4, 17.185244)
+
+[node name="StaticBody3D132" parent="Environment/Freezer corridor" unique_id=88094658 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.17364828, 0, -0.98480755, 0, 1, 0, 0.98480755, 0, 0.17364828, -212.5739, 0.4, 10.425509)
+
+[node name="StaticBody3D133" parent="Environment/Freezer corridor" unique_id=603162801 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.25881913, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881913, -214.1469, 0.4, 3.3848033)
+
+[node name="StaticBody3D134" parent="Environment/Freezer corridor" unique_id=491422189 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.25881913, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881913, -215.95863, 0.4, -3.3766694)
+
+[node name="StaticBody3D16" parent="Environment/Freezer corridor" unique_id=1193078708 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, -220.03752, 0.4, 99.04247)
+
+[node name="StaticBody3D17" parent="Environment/Freezer corridor" unique_id=1719183170 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, -216.5375, 0.4, 105.104645)
+
+[node name="StaticBody3D18" parent="Environment/Freezer corridor" unique_id=983979033 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, -213.0375, 0.4, 111.166824)
+
+[node name="StaticBody3D19" parent="Environment/Freezer corridor" unique_id=1232037456 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.57357645, 0, 0.819152, 0, 1, 0, -0.819152, 0, -0.57357645, -209.1513, 0.4, 117.24492)
+
+[node name="StaticBody3D20" parent="Environment/Freezer corridor" unique_id=80513588 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.57357645, 0, 0.819152, 0, 1, 0, -0.819152, 0, -0.57357645, -205.13626, 0.4, 122.97897)
+
+[node name="StaticBody3D135" parent="Environment/Freezer corridor" unique_id=376510859 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4999999, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.4999999, -161.52252, 0.4, 107.57266)
+
+[node name="StaticBody3D136" parent="Environment/Freezer corridor" unique_id=847768312 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4999999, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.4999999, -165.02252, 0.4, 101.51049)
+
+[node name="StaticBody3D137" parent="Environment/Freezer corridor" unique_id=2089196558 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.4999999, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.4999999, -168.52252, 0.4, 95.44831)
+
+[node name="StaticBody3D138" parent="Environment/Freezer corridor" unique_id=1156224776 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.5735764, 0, -0.81915206, 0, 1, 0, 0.81915206, 0, 0.5735764, -172.40872, 0.4, 89.37022)
+
+[node name="StaticBody3D139" parent="Environment/Freezer corridor" unique_id=1685901578 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.5735764, 0, -0.81915206, 0, 1, 0, 0.81915206, 0, 0.5735764, -176.42377, 0.4, 83.63616)
+
+[node name="StaticBody3D2" parent="Environment/Freezer corridor" unique_id=846575159 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -52, 0.4, -59.8)
+
+[node name="StaticBody3D3" parent="Environment/Freezer corridor" unique_id=939153920 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -261.6, 0.4, -16.6)
+
+[node name="StaticBody3D15" parent="Environment/Freezer corridor" unique_id=1793044691 instance=ExtResource("26_aht7i")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, -241.6, 0.4, 64.6)
+
+[node name="StaticBody3D" parent="Environment/Freezer corridor" unique_id=2101887619 instance=ExtResource("26_aht7i")]
+transform = Transform3D(0.24680215, -0.81735265, -0.5205987, 0.958941, 0.1285349, 0.25280583, -0.1397163, -0.56161666, 0.81551564, -90, 3.4, -59.200005)
+
 [node name="Can tower" type="Node" parent="Environment" unique_id=55374815]
 
-[node name="TurnAround" type="CSGCylinder3D" parent="Environment/Can tower" unique_id=1157037493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135.6, 11.900001, 307.80002)
-material_override = ExtResource("7_fq0cl")
-use_collision = true
-radius = 17.2
-height = 25.800001
-sides = 16
-
 [node name="Checkpoint32" parent="Environment/Can tower" unique_id=1672164845 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -40.595036, 1.3750002, 268.59875)
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -40.595036, 1.3750002, 238.59875)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Button trigger" parent="Environment/Can tower" unique_id=172600749 node_paths=PackedStringArray("toTrigger") instance=ExtResource("7_erwvk")]
@@ -427,110 +1081,83 @@ toTrigger = [NodePath("../Door3")]
 onEnterMethod = "Open"
 
 [node name="Door3" type="CSGBox3D" parent="Environment/Can tower" unique_id=168679686]
-transform = Transform3D(-7.1525574e-07, 0, -1.9151151, 0, 0.77999985, 0, 4.7614775, 0, -2.3841858e-07, -58.6875, 1.7000004, 269.39926)
+transform = Transform3D(-7.1525574e-07, 0, -1.9151151, 0, 0.77999985, 0, 4.7614775, 0, -2.3841858e-07, -58.6875, 1.7000004, 239.39926)
 material_override = ExtResource("7_fq0cl")
 use_collision = true
-size = Vector3(7, 8.8, 6.6)
+size = Vector3(13.8, 8.8, 6.6)
 script = ExtResource("7_0sclb")
 
-[node name="Obstacle9" type="CSGBox3D" parent="Environment/Can tower" unique_id=699404565]
-transform = Transform3D(-4.599234, 0, 0.4956685, 0, 0.66, 0, -1.2323617, 0, -1.8498591, -150.45802, 1.4609997, 368.54703)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4.2000003, 8.8, 3.6000001)
+[node name="StaticBody3D23" parent="Environment/Can tower" unique_id=1400203163 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -170.13995, 0.4000001, 370.55582)
 
-[node name="Obstacle10" type="CSGBox3D" parent="Environment/Can tower" unique_id=1118931426]
-transform = Transform3D(-4.599234, 0, -0.49566805, 0, 0.65999997, 0, 1.2323605, 0, -1.8498591, -121.87747, 1.4609997, 366.8444)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
+[node name="StaticBody3D24" parent="Environment/Can tower" unique_id=444121719 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -160.93997, 0.4000001, 370.55585)
 
-[node name="Obstacle11" type="CSGBox3D" parent="Environment/Can tower" unique_id=324141754]
-transform = Transform3D(-4.7614775, 0, 2.0318745e-07, 0, 0.65999997, 0, -7.023639e-07, 0, -1.915115, -136.27747, 1.4609997, 378.60437)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
+[node name="StaticBody3D25" parent="Environment/Can tower" unique_id=221816436 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -151.53995, 0.4000001, 370.55582)
 
-[node name="Obstacle12" type="CSGBox3D" parent="Environment/Can tower" unique_id=521090391]
-transform = Transform3D(-4.599234, 0, -0.49566805, 0, 0.65999997, 0, 1.2323605, 0, -1.8498591, -134.95747, 5.817, 373.80438)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
+[node name="StaticBody3D26" parent="Environment/Can tower" unique_id=779383041 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -142.13995, 0.4000001, 370.55582)
+
+[node name="StaticBody3D27" parent="Environment/Can tower" unique_id=1697118460 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -132.93997, 0.4000001, 370.55582)
+
+[node name="StaticBody3D30" parent="Environment/Can tower" unique_id=1287536829 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -131.06879, 14, 369.8508)
+
+[node name="StaticBody3D31" parent="Environment/Can tower" unique_id=1304337527 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -133.66882, 14, 369.85077)
+
+[node name="StaticBody3D32" parent="Environment/Can tower" unique_id=1705110137 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.9659257, -136.64838, 14, 370.00607)
+
+[node name="StaticBody3D33" parent="Environment/Can tower" unique_id=992313198 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.96592575, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.96592575, -151.1376, 14.2, 369.89056)
+
+[node name="StaticBody3D34" parent="Environment/Can tower" unique_id=1919305454 instance=ExtResource("25_aht7i")]
+transform = Transform3D(0.5, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.5, -162.2247, 14.2, 370.28723)
+
+[node name="StaticBody3D40" parent="Environment/Can tower" unique_id=668401016 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -135.36482, 0.4000001, 376.3984)
+
+[node name="StaticBody3D41" parent="Environment/Can tower" unique_id=78005578 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -126.47831, 0.4000001, 374.0173)
+
+[node name="StaticBody3D42" parent="Environment/Can tower" unique_id=546865765 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -117.39859, 0.4000001, 371.58438)
+
+[node name="StaticBody3D43" parent="Environment/Can tower" unique_id=2042019879 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -108.31889, 0.4000001, 369.1515)
+
+[node name="StaticBody3D44" parent="Environment/Can tower" unique_id=1069367655 instance=ExtResource("23_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -99.432396, 0.4000001, 366.77036)
+
+[node name="StaticBody3D47" parent="Environment/Can tower" unique_id=1820794382 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -97.80744, 14, 365.60504)
+
+[node name="StaticBody3D48" parent="Environment/Can tower" unique_id=1733302553 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.9659257, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659257, -100.31889, 14, 366.27795)
+
+[node name="StaticBody3D49" parent="Environment/Can tower" unique_id=1654574377 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.8660252, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660252, -103.15672, 14, 367.19916)
+
+[node name="StaticBody3D50" parent="Environment/Can tower" unique_id=970080539 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, -117.18214, 14.2, 370.83765)
+
+[node name="StaticBody3D51" parent="Environment/Can tower" unique_id=1682863540 instance=ExtResource("25_aht7i")]
+transform = Transform3D(0.70710677, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.70710677, -127.78879, 14.2, 374.09036)
+
+[node name="StaticBody3D3" parent="Environment/Can tower" unique_id=901324777 instance=ExtResource("27_5jffn")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -146, 0.4, 302.00003)
 
 [node name="Fruit split" type="Node" parent="Environment" unique_id=2094165635]
 
-[node name="Obstacle9" type="CSGBox3D" parent="Environment/Fruit split" unique_id=566189126]
-transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -133.3272, 1.4609997, 496.75305)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4.2000003, 8.8, 3.6000001)
-
-[node name="Obstacle10" type="CSGBox3D" parent="Environment/Fruit split" unique_id=863564363]
-transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -161.90775, 1.4609997, 498.45575)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
-
-[node name="Obstacle11" type="CSGBox3D" parent="Environment/Fruit split" unique_id=60087542]
-transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -147.50775, 1.4609997, 486.69574)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
-
-[node name="Obstacle12" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1325942162]
-transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -148.82776, 5.817, 491.49573)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
-
-[node name="Obstacle17" type="CSGBox3D" parent="Environment/Fruit split" unique_id=482836954]
-transform = Transform3D(4.599234, 0, -0.49566835, 0, 0.65999997, 0, 1.2323613, 0, 1.8498591, -228.1272, 1.4609997, 499.95306)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4.2000003, 8.8, 3.6000001)
-
-[node name="Obstacle18" type="CSGBox3D" parent="Environment/Fruit split" unique_id=951604027]
-transform = Transform3D(4.7614775, 0, -3.576279e-08, 0, 0.65999997, 0, 2.861023e-07, 0, 1.915115, -242.30775, 1.4609997, 489.89575)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
-
-[node name="Obstacle19" type="CSGBox3D" parent="Environment/Fruit split" unique_id=34314696]
-transform = Transform3D(4.599234, 0, 0.4956682, 0, 0.65999997, 0, -1.2323608, 0, 1.8498591, -243.62776, 5.817, 494.69574)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
-
-[node name="Obstacle13" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1413738550]
-transform = Transform3D(4.5992336, 0, -0.49566832, 0, 0.65999997, 0, 1.2323613, 0, 1.849859, -193.97156, 1.4609997, 492.31952)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
-
-[node name="Obstacle14" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1450057641]
-transform = Transform3D(4.5992336, 0, -0.49566832, 0, 0.65999997, 0, 1.2323613, 0, 1.849859, -179.16394, 5.817, 492.83197)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
-
-[node name="Obstacle15" type="CSGBox3D" parent="Environment/Fruit split" unique_id=2009105975]
-transform = Transform3D(4.7614775, 0, -8.940697e-08, 0, 0.66, 0, 3.5762787e-07, 0, 1.9151151, -214.58562, 1.4609997, 497.8445)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(5.8, 8.8, 3.6000001)
-
-[node name="Obstacle16" type="CSGBox3D" parent="Environment/Fruit split" unique_id=1709939661]
-transform = Transform3D(4.7614775, 0, -8.940697e-08, 0, 0.66, 0, 3.5762787e-07, 0, 1.9151151, -200.14992, 5.817, 494.507)
-material_override = ExtResource("5_0sclb")
-use_collision = true
-size = Vector3(4, 8.8, 3.6000001)
-
 [node name="Checkpoint13" parent="Environment/Fruit split" unique_id=1488605737 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.70710665, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, 0.70710665, 82.93455, 1.3750002, 289.30197)
+transform = Transform3D(0.70710665, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, 0.70710665, 82.93455, 1.3750002, 259.30197)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint14" parent="Environment/Fruit split" unique_id=2041119325 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 101.31933, 1.3750002, 322.96027)
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 101.31933, 1.3750002, 292.96027)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint16" parent="Environment/Fruit split" unique_id=1978678686 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -553,52 +1180,12 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -333.43106, 1.3750002, 491.16983)
 multiplierBar = NodePath("../../../Multiplier bar")
 
-[node name="Checkpoint44" parent="Environment/Fruit split" unique_id=1250411050 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+[node name="Checkpoint44" parent="Environment/Fruit split" unique_id=1328931246 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -366.23105, 1.3750002, 491.16983)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint45" parent="Environment/Fruit split" unique_id=420134663 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
 transform = Transform3D(1.4901161e-08, 0, -0.99999946, 0, 1, 0, 0.99999946, 0, 1.4901161e-08, -399.43106, 1.3750002, 491.16983)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint40" parent="Environment/Fruit split" unique_id=735518770 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.49999982, 0, -0.86602503, 0, 1, 0, 0.86602503, 0, -0.49999982, -305.29773, 1.3750002, 513.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint41" parent="Environment/Fruit split" unique_id=1681710877 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-0.258819, 0, -0.96592546, 0, 1, 0, 0.96592546, 0, -0.258819, -281.4977, 1.3750002, 524.7364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint48" parent="Environment/Fruit split" unique_id=306415044 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.2588188, 0, -0.96592534, 0, 1, 0, 0.96592534, 0, 0.2588188, -67.29768, 1.3750002, 529.3364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint49" parent="Environment/Fruit split" unique_id=530830837 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.49999976, 0, -0.8660249, 0, 1, 0, 0.8660249, 0, 0.49999976, -45.297688, 1.3750002, 519.7364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint50" parent="Environment/Fruit split" unique_id=159966186 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -94.09771, 1.3750002, 530.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint51" parent="Environment/Fruit split" unique_id=626567517 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -126.49771, 1.3750002, 530.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint54" parent="Environment/Fruit split" unique_id=1906909198 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -159.09772, 1.3750002, 530.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint55" parent="Environment/Fruit split" unique_id=773650421 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -191.69772, 1.3750002, 530.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint56" parent="Environment/Fruit split" unique_id=1067098532 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -224.69772, 1.3750002, 530.9364)
-multiplierBar = NodePath("../../../Multiplier bar")
-
-[node name="Checkpoint57" parent="Environment/Fruit split" unique_id=519138784 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.1566526e-08, 1, 2.1855675e-08, 0.9999995, -8.156656e-08, -8.940697e-08, -257.29773, 1.3750002, 530.9364)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint42" parent="Environment/Fruit split" unique_id=1207219934 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -642,19 +1229,23 @@ transform = Transform3D(-8.940697e-08, 2.1855692e-08, -0.9999995, 8.156651e-08, 
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint32" parent="Environment/Fruit split" unique_id=460393163 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -6.195035, 1.3750002, 268.59875)
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, -6.195035, 1.3750002, 238.59875)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint34" parent="Environment/Fruit split" unique_id=1669484209 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, 28.004965, 1.3750002, 268.59875)
+transform = Transform3D(1.0530022e-07, 4.371138e-08, 0.9999999, -4.371139e-08, 1, -4.3711374e-08, -0.9999999, -4.371138e-08, 1.0530022e-07, 28.004965, 1.3750002, 238.59875)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint53" parent="Environment/Fruit split" unique_id=290592407 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.2588191, 5.3535288e-08, 0.9659257, -4.3711385e-08, 1, -4.371137e-08, -0.9659257, -3.0908613e-08, 0.2588191, 57.604965, 1.3750002, 273.79877)
+transform = Transform3D(0.2588191, 5.3535288e-08, 0.9659257, -4.3711385e-08, 1, -4.371137e-08, -0.9659257, -3.0908613e-08, 0.2588191, 57.604965, 1.3750002, 243.79877)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint35" parent="Environment/Fruit split" unique_id=1814279899 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
-transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 101.33049, 1.3750002, 355.85553)
+transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 101.33049, 1.3750002, 325.85553)
+multiplierBar = NodePath("../../../Multiplier bar")
+
+[node name="Checkpoint38" parent="Environment/Fruit split" unique_id=1250411050 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
+transform = Transform3D(0.9999999, 4.3711374e-08, -1.490116e-07, -4.3711385e-08, 1, -4.371137e-08, 1.490116e-07, 4.3711378e-08, 0.9999999, 101.33049, 1.3750002, 358.85553)
 multiplierBar = NodePath("../../../Multiplier bar")
 
 [node name="Checkpoint36" parent="Environment/Fruit split" unique_id=909045349 node_paths=PackedStringArray("multiplierBar") instance=ExtResource("6_sxkr1")]
@@ -669,14 +1260,274 @@ multiplierBar = NodePath("../../../Multiplier bar")
 transform = Transform3D(0.96592563, 3.0908605e-08, -0.25881916, -4.371138e-08, 1, -4.3711367e-08, 0.25881916, 5.353528e-08, 0.96592563, 91.33048, 1.3750002, 459.4555)
 multiplierBar = NodePath("../../../Multiplier bar")
 
+[node name="StaticBody3D" parent="Environment/Fruit split" unique_id=522712429 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -91, 0.4, 478.80002)
+
+[node name="StaticBody3D2" parent="Environment/Fruit split" unique_id=580675216 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -107.2, 0.4, 478.80002)
+
+[node name="StaticBody3D3" parent="Environment/Fruit split" unique_id=694008462 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -123, 0.4, 478.80002)
+
+[node name="StaticBody3D4" parent="Environment/Fruit split" unique_id=741408037 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -139.2, 0.4, 478.80002)
+
+[node name="StaticBody3D5" parent="Environment/Fruit split" unique_id=575082729 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -155, 0.4, 478.80002)
+
+[node name="StaticBody3D12" parent="Environment/Fruit split" unique_id=1862959474 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -171.2, 0.4, 478.80002)
+
+[node name="StaticBody3D10" parent="Environment/Fruit split" unique_id=1757065385 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-0.86602545, 0, 0.4999999, 0, 1, 0, -0.4999999, 0, -0.86602545, -75.2, 0.4, 482.40002)
+
+[node name="StaticBody3D11" parent="Environment/Fruit split" unique_id=203456475 instance=ExtResource("27_kpo4j")]
+transform = Transform3D(-0.86602545, 0, 0.4999999, 0, 1, 0, -0.4999999, 0, -0.86602545, -61.6, 0.4, 489.60004)
+
+[node name="StaticBody3D6" parent="Environment/Fruit split" unique_id=901564820 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -186.80002, 0.4, 479)
+
+[node name="StaticBody3D7" parent="Environment/Fruit split" unique_id=1636060749 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -202.40002, 0.4, 479)
+
+[node name="StaticBody3D8" parent="Environment/Fruit split" unique_id=26006312 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -217.80002, 0.4, 479)
+
+[node name="StaticBody3D13" parent="Environment/Fruit split" unique_id=1926724536 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -233.40002, 0.4, 479)
+
+[node name="StaticBody3D14" parent="Environment/Fruit split" unique_id=1605155841 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -248.60002, 0.4, 479)
+
+[node name="StaticBody3D15" parent="Environment/Fruit split" unique_id=706259437 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -264.2, 0.4, 479)
+
+[node name="StaticBody3D9" parent="Environment/Fruit split" unique_id=2095668579 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-0.86602545, 0, -0.4999999, 0, 1, 0, 0.4999999, 0, -0.86602545, -279.8, 0.4, 483.2)
+
+[node name="StaticBody3D16" parent="Environment/Fruit split" unique_id=1273433503 instance=ExtResource("28_4n42c")]
+transform = Transform3D(-0.86602545, 0, -0.4999999, 0, 1, 0, 0.4999999, 0, -0.86602545, -293.19998, 0.4, 490.80002)
+
+[node name="Decals" type="Node" parent="Environment" unique_id=856938633]
+
+[node name="Decal2" type="Decal" parent="Environment/Decals" unique_id=656878799]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, -1, 0, 4.371139e-08, -49.80001, 0, 28.300003)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal3" type="Decal" parent="Environment/Decals" unique_id=1993667733]
+transform = Transform3D(-1, 0, 2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -189.90001, 0, -31.1)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal16" type="Decal" parent="Environment/Decals" unique_id=895611089]
+transform = Transform3D(0.8660254, -7.5710346e-08, 0.5, 8.742278e-08, 1, 0, -0.5, 4.371139e-08, 0.8660254, -187.8, 0, 67.00001)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal9" type="Decal" parent="Environment/Decals" unique_id=1173900335]
+transform = Transform3D(1, -8.742278e-08, -8.742278e-08, 8.742278e-08, 1, 0, 8.742278e-08, -7.642742e-15, 1, 18.899994, 0, 238.9)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal11" type="Decal" parent="Environment/Decals" unique_id=1926437874]
+transform = Transform3D(-1.3113416e-07, 1.1464113e-14, -1, 8.742278e-08, 1, 0, 1, -8.742278e-08, -1.3113416e-07, 101.1, 0, 419.2)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal12" type="Decal" parent="Environment/Decals" unique_id=731320529]
+transform = Transform3D(-1, 1.5099579e-07, 5.9604645e-08, 1.509958e-07, 1, 6.7762636e-21, -5.9604645e-08, 1.0658141e-14, -1, -1.2000027, 0, 493.6)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal13" type="Decal" parent="Environment/Decals" unique_id=1189412103]
+transform = Transform3D(-1, -1.509958e-07, -1.1920929e-07, -1.509958e-07, 1, 1.6580924e-15, -1.1920929e-07, -1.9658195e-14, 1, -252.00002, 0, 455.8)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("21_c5snn")
+texture_emission = ExtResource("21_c5snn")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal4" type="Decal" parent="Environment/Decals" unique_id=1997040090]
+transform = Transform3D(0.2588191, 2.2626677e-08, 0.9659258, 8.742278e-08, -1, 0, 0.9659258, 8.444392e-08, -0.2588191, -241.50002, 0, 11.200003)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("29_4n42c")
+texture_emission = ExtResource("29_4n42c")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal7" type="Decal" parent="Environment/Decals" unique_id=8951484]
+transform = Transform3D(5.9604645e-08, -1.7763568e-15, 1, 8.742278e-08, -1, 0, 1, 8.742278e-08, -5.9604645e-08, -96.30002, 0, 162.40001)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("29_4n42c")
+texture_emission = ExtResource("29_4n42c")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal10" type="Decal" parent="Environment/Decals" unique_id=540075261]
+transform = Transform3D(5.9604645e-08, -1.7763568e-15, 1, 8.742278e-08, -1, 0, 1, 8.742278e-08, -5.9604645e-08, 101.39999, 0, 372.10004)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("29_4n42c")
+texture_emission = ExtResource("29_4n42c")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal14" type="Decal" parent="Environment/Decals" unique_id=1818289466]
+transform = Transform3D(-1, -8.742278e-08, 1.5893256e-08, 8.742278e-08, -1, 0, 1.5893256e-08, -5.597728e-15, 1, -169.50002, 0, 454.60004)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("29_4n42c")
+texture_emission = ExtResource("29_4n42c")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal15" type="Decal" parent="Environment/Decals" unique_id=1819430978]
+transform = Transform3D(-1, -8.742278e-08, 1.5893256e-08, 8.742278e-08, -1, 0, 1.5893256e-08, -5.597728e-15, 1, -369.90002, 0, 491.50003)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("29_4n42c")
+texture_emission = ExtResource("29_4n42c")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal5" type="Decal" parent="Environment/Decals" unique_id=1058955378]
+transform = Transform3D(0.25881892, -3.908057e-08, 0.9659259, 1.509958e-07, 1, -7.1077817e-16, -0.9659259, 1.4585075e-07, 0.25881892, -185.70003, 0, 112.600006)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("23_u7mjy")
+texture_emission = ExtResource("23_u7mjy")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal6" type="Decal" parent="Environment/Decals" unique_id=1691434040]
+transform = Transform3D(0.7071067, -1.0677014e-07, 0.7071068, 1.509958e-07, 1, -1.4215564e-15, -0.7071068, 1.0677017e-07, 0.7071067, -96.000015, 0, 269.80002)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("23_u7mjy")
+texture_emission = ExtResource("23_u7mjy")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
+[node name="Decal" type="Decal" parent="Environment/Decals" unique_id=1818015752]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 48.999992, 0, 27.700003)
+size = Vector3(12, 2, 12)
+texture_albedo = ExtResource("22_xvtyr")
+texture_emission = ExtResource("22_xvtyr")
+emission_energy = 2.5
+modulate = Color(0.8719936, 0.30607134, 0.7965885, 1)
+
 [node name="EndTrigger" parent="Environment" unique_id=1025551307 instance=ExtResource("10_346fj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -447, 0, 490)
 
+[node name="StaticBody3D" parent="Environment" unique_id=419301920 instance=ExtResource("7_hwpts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.6, 0.3, 91.8)
+
+[node name="StaticBody3D2" parent="Environment" unique_id=2112581041 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -182.70001, 0.3, 93.9)
+
+[node name="StaticBody3D3" parent="Environment" unique_id=1335870157 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -183.3, 0.3, 90.9)
+
+[node name="StaticBody3D4" parent="Environment" unique_id=1946006478 instance=ExtResource("25_4yxf6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -185.1, 0.6, 95.100006)
+
+[node name="StaticBody3D5" parent="Environment" unique_id=1289504732 instance=ExtResource("25_4yxf6")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -185.1, 3.9, 95.100006)
+
+[node name="StaticBody3D6" parent="Environment" unique_id=521541543 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182.40001, 1.8000001, 92.4)
+
+[node name="StaticBody3D7" parent="Environment" unique_id=1063381955 instance=ExtResource("8_jyqft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -187.8, 0.6, 95.100006)
+
+[node name="StaticBody3D8" parent="Environment" unique_id=1329552524 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190.5, 0.6, 97.200005)
+
+[node name="StaticBody3D9" parent="Environment" unique_id=1998904894 instance=ExtResource("8_jyqft")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -191.1, 0.6, 93.9)
+
+[node name="StaticBody3D10" parent="Environment" unique_id=1366706807 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189.6, 2.4, 94.5)
+
+[node name="StaticBody3D11" parent="Environment" unique_id=272809269 instance=ExtResource("25_aht7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192.90001, 0.6, 96.600006)
+
+[node name="StaticBody3D12" parent="Environment" unique_id=2081431617 instance=ExtResource("7_hwpts")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -203.82803, 0.6, 106.46116)
+
+[node name="StaticBody3D13" parent="Environment" unique_id=345655333 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.49999997, -203.05937, 0.6, 103.59251)
+
+[node name="StaticBody3D14" parent="Environment" unique_id=1449666555 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.96592593, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.96592593, -201.03976, 0.6, 105.89059)
+
+[node name="StaticBody3D15" parent="Environment" unique_id=60979033 instance=ExtResource("25_4yxf6")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -201.58092, 0.90000004, 101.35327)
+
+[node name="StaticBody3D16" parent="Environment" unique_id=60611172 instance=ExtResource("25_4yxf6")]
+transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, -201.58092, 4.2000003, 101.35327)
+
+[node name="StaticBody3D17" parent="Environment" unique_id=1734695804 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -202.56918, 2.1000001, 105.04155)
+
+[node name="StaticBody3D18" parent="Environment" unique_id=664559641 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -199.24265, 0.90000004, 100.00327)
+
+[node name="StaticBody3D19" parent="Environment" unique_id=625020796 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -197.95439, 0.90000004, 96.834625)
+
+[node name="StaticBody3D20" parent="Environment" unique_id=950911960 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.25881898, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881898, -195.78476, 0.90000004, 99.39251)
+
+[node name="StaticBody3D21" parent="Environment" unique_id=1561577411 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -197.3838, 2.7, 99.622894)
+
+[node name="StaticBody3D22" parent="Environment" unique_id=709385600 instance=ExtResource("25_aht7i")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -195.57591, 0.6, 96.154236)
+
+[node name="StaticBody3D23" parent="Environment" unique_id=1563216030 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -197.19545, 3.9, 97.232544)
+
+[node name="StaticBody3D24" parent="Environment" unique_id=57590234 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -195.7618, 3.9, 100.26481)
+
+[node name="StaticBody3D25" parent="Environment" unique_id=283826738 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -197.36597, 5.7000003, 100.07348)
+
+[node name="StaticBody3D26" parent="Environment" unique_id=1331699895 instance=ExtResource("25_aht7i")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -194.72194, 3.9, 97.190926)
+
+[node name="StaticBody3D27" parent="Environment" unique_id=1308444800 instance=ExtResource("24_c4ay3")]
+transform = Transform3D(0.7071067, 0, 0.7071069, 0, 1, 0, -0.7071069, 0, 0.7071067, -189.9005, 4.2000003, 95.65613)
+
+[node name="StaticBody3D28" parent="Environment" unique_id=492214909 instance=ExtResource("8_jyqft")]
+transform = Transform3D(-1.4901161e-07, 0, 1, 0, 1, 0, -1, 0, -1.4901161e-07, -192.65823, 4.2000003, 93.74695)
+
+[node name="StaticBody3D29" parent="Environment" unique_id=1737738517 instance=ExtResource("9_3tgeq")]
+transform = Transform3D(0.7071067, 0, 0.7071069, 0, 1, 0, -0.7071069, 0, 0.7071067, -191.1733, 6, 93.11055)
+
+[node name="StaticBody3D30" parent="Environment" unique_id=521199750 instance=ExtResource("25_aht7i")]
+transform = Transform3D(0.7071067, 0, 0.7071069, 0, 1, 0, -0.7071069, 0, 0.7071067, -192.02184, 3.9, 96.92893)
+
 [node name="Default position" type="Node3D" parent="." unique_id=627747539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, -8.600006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.200024, 1.2702271, 4)
 
 [node name="Kart" type="RigidBody3D" parent="." unique_id=1636508589 node_paths=PackedStringArray("wheels", "defaultPosition")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.80002, 1.2702271, -8.600006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.200024, 1.2702271, 4)
 collision_layer = 3
 mass = 60.0
 linear_damp_mode = 1

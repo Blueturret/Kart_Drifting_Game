@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://g7o8a0ouefmm"]
 
 [ext_resource type="Script" uid="uid://dijro04uu1r1y" path="res://Scripts/buttonTrigger.gd" id="1_k7676"]
-[ext_resource type="Material" uid="uid://bj0m0ocux674g" path="res://(TEMP) Debug Materials/Button_red.tres" id="2_g3noo"]
-[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://(TEMP) Debug Materials/Button_green.tres" id="3_12cg8"]
+[ext_resource type="Material" uid="uid://bj0m0ocux674g" path="res://Assets/Button_red.tres" id="2_g3noo"]
+[ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://Assets/Button_green.tres" id="3_12cg8"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_12cg8"]
 particle_flag_rotate_y = true

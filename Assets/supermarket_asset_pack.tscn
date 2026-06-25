@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ddourxoi24np7"]
+
+[ext_resource type="PackedScene" uid="uid://cubfxthnt2g50" path="res://Assets/Asset pack/cardboard_box_1.tscn" id="1_4u53u"]
+[ext_resource type="PackedScene" uid="uid://pp301pmtxy44" path="res://Assets/Asset pack/cardboard_box_open_1.tscn" id="2_jyfqb"]
+[ext_resource type="PackedScene" uid="uid://c54878cddcnxd" path="res://Assets/Asset pack/cardboard_box_2.tscn" id="3_ar53d"]
+[ext_resource type="PackedScene" uid="uid://b6gyiqilqbjy3" path="res://Assets/Asset pack/cardboard_box_open_2.tscn" id="4_l4p11"]
+[ext_resource type="PackedScene" uid="uid://ctjhmbw8majro" path="res://Assets/Asset pack/cardboard_box_3.tscn" id="5_wlm3s"]
+[ext_resource type="PackedScene" uid="uid://cb4kpghasfk1e" path="res://Assets/Asset pack/cardboard_box_open_3.tscn" id="6_hoy04"]
+[ext_resource type="PackedScene" uid="uid://m24335ex2x4w" path="res://Assets/Asset pack/shelf.tscn" id="7_eeaid"]
+[ext_resource type="PackedScene" uid="uid://cbo2htifmsyow" path="res://Assets/Asset pack/fridge.tscn" id="8_c7g8n"]
+[ext_resource type="PackedScene" uid="uid://cu7lppcng5bls" path="res://Assets/Asset pack/soda_can.tscn" id="9_81w07"]
+[ext_resource type="PackedScene" uid="uid://c12wtrq3g3m6s" path="res://Assets/Asset pack/soda_can_tower.tscn" id="10_vtebo"]
+[ext_resource type="PackedScene" uid="uid://bhb7u6s3h283f" path="res://Assets/Asset pack/apple_basket.tscn" id="11_tukb6"]
+[ext_resource type="PackedScene" uid="uid://bj8qvrocngw48" path="res://Assets/Asset pack/banana_basket.tscn" id="12_3ompa"]
+
+[node name="Supermarket asset pack" type="Node3D" unique_id=483644181]
+
+[node name="CardboardBox1" parent="." unique_id=313020225 instance=ExtResource("1_4u53u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002754552, 0.18324831, 0.004795727)
+
+[node name="CardboardBoxOpen1" parent="." unique_id=1569912107 instance=ExtResource("2_jyfqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.004836, 0.1598178, 0.0047966484)
+
+[node name="CardboardBox2" parent="." unique_id=1222884227 instance=ExtResource("3_ar53d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18324831, -1.0000001)
+
+[node name="CardboardBoxOpen2" parent="." unique_id=62886049 instance=ExtResource("4_l4p11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99999994, 0.18324831, -0.99999994)
+
+[node name="CardboardBox3" parent="." unique_id=887243318 instance=ExtResource("5_wlm3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33972028, -1.9999999)
+
+[node name="CardboardBoxOpen3" parent="." unique_id=869238109 instance=ExtResource("6_hoy04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.33972022, -1.9999998)
+
+[node name="Shelf" parent="." unique_id=2079335045 instance=ExtResource("7_eeaid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5999933, 1.1844647, -3.0999997)
+
+[node name="Fridge" parent="." unique_id=104403071 instance=ExtResource("8_c7g8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.999938, 1.1582825, -2.8410041)
+
+[node name="Soda can" parent="." unique_id=733023522 instance=ExtResource("9_81w07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999996, 0.11708814, 0)
+
+[node name="Soda can tower" parent="." unique_id=180459737 instance=ExtResource("10_vtebo")]
+transform = Transform3D(0.97155607, 0, 0.28731647, 0, 1.0131495, 0, -0.28731647, 0, 0.97155607, 3.8860183, 1.5192993, 0.6020496)
+
+[node name="Fruit basket" parent="." unique_id=1733270583 instance=ExtResource("11_tukb6")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 5.450111, 0.36439592, -3.115438)
+
+[node name="Fruit basket_001" parent="." unique_id=1068450970 instance=ExtResource("12_3ompa")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 9, 0.36439592, -3.115438)
