@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm6mfmdn0fid3" path="res://Scripts/checkpoint.gd" id="1_i3j2t"]
 [ext_resource type="ArrayMesh" uid="uid://d2eibu2byphbb" path="res://Assets/Meshes/Arch mesh_Circle.res" id="2_i3j2t"]
+[ext_resource type="AudioStream" uid="uid://dglvibn28gcfy" path="res://Assets/Sound Effects/Checkpoint.wav" id="3_14q6d"]
 
 [sub_resource type="Curve" id="Curve_d41ab"]
 _data = [Vector2(0, 0), 0.0, -0.077752545, 0, 0, Vector2(0.5211039, 1), 2.1692247, -0.10743793, 0, 0, Vector2(0.66071427, 0), -3.9504118, 0.0, 0, 0]
@@ -85,5 +86,9 @@ shape = SubResource("CylinderShape3D_i3j2t")
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=725187537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15, -10.95)
 size = Vector3(37.100002, 1.9, 30.5)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=442350560]
+stream = ExtResource("3_14q6d")
+volume_db = 20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

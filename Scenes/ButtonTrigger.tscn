@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dijro04uu1r1y" path="res://Scripts/buttonTrigger.gd" id="1_k7676"]
 [ext_resource type="Material" uid="uid://bj0m0ocux674g" path="res://Assets/Button_red.tres" id="2_g3noo"]
 [ext_resource type="Material" uid="uid://btkpuxt3clv1x" path="res://Assets/Button_green.tres" id="3_12cg8"]
+[ext_resource type="AudioStream" uid="uid://5jsdvjvbcbpd" path="res://Assets/Sound Effects/Button activate.wav" id="4_axoy3"]
+[ext_resource type="AudioStream" uid="uid://chwgbwvo4ayts" path="res://Assets/Sound Effects/Button deactivate.wav" id="5_7xxk5"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_12cg8"]
 particle_flag_rotate_y = true
@@ -33,6 +35,14 @@ draw_pass_1 = SubResource("PlaneMesh_axoy3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=833802907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.25, 0)
 shape = SubResource("BoxShape3D_imld1")
+
+[node name="Activate" type="AudioStreamPlayer3D" parent="." unique_id=399423710]
+stream = ExtResource("4_axoy3")
+volume_db = 20.0
+
+[node name="Deactivate" type="AudioStreamPlayer3D" parent="." unique_id=249834907]
+stream = ExtResource("5_7xxk5")
+volume_db = 15.0
 
 [node name="Timer" type="Timer" parent="." unique_id=218529885]
 

@@ -3,8 +3,11 @@ class_name CarSuspension
 # LINK TO TUTORIAL : https://www.youtube.com/watch?v=9MqmFSn1Rlw&list=PLiRELyH-yJivTRnpjr0nHeGWncLiMmD2D&index=14
 
 @export var wheels : Array[RaycastWheel]
+@onready var audioEmitter: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var inputStopped : bool = false
+
+@export var defaultPosition : Node3D
 
 ##### CAR ACCELERATION #####
 @export_category("Kart controls")
@@ -32,10 +35,6 @@ var canDrift : bool = true
 # Emitted when kart has stopped drifting to calculate points based on drift time
 signal HAS_STOPPED_DRIFTING
 var driftTimeLeft : float = 0
-
-##### DEBUG #####
-@export_category("DEBUG")
-@export var defaultPosition : Node3D
 
 var motorInput := 0
 var isDrifting := false
@@ -108,9 +107,11 @@ func _on_drift_cooldown_timeout() -> void:
 
 func _ready() -> void:
 	
+	add_to_group("Player")
+	
 	tireMaxRotation = maxRotation
 	tireTurnSpeed = turnSpeed
-
+	
 func _physics_process(delta: float) -> void:
 	
 	BasicSteeringRotation(delta)
@@ -205,9 +206,13 @@ func DoSingleWheelAcceleration(ray: RaycastWheel) -> void:
 		var forceVector := forward * acceleration * motorInput * ac
 		var forceOffset := contact - global_position
 		
+		# Handle audio
+		
+		
 		# Apply forces
 		if(motorInput):
 			apply_force(forceVector, forceOffset)
+			
 	
 func DoSingleWheelSuspension(ray: RaycastWheel) -> void:
 	

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://1y17wpjtulst"]
+
+[ext_resource type="Material" uid="uid://ca25em8s42y1l" path="res://(TEMP) Debug Materials/Blue.tres" id="1_mw28t"]
+[ext_resource type="Script" uid="uid://cgsm8laa2lmlx" path="res://Scripts/door.gd" id="2_7mbvs"]
+[ext_resource type="AudioStream" uid="uid://djmp0ji26tj44" path="res://Assets/Sound Effects/Door Open.wav" id="3_1fk65"]
+[ext_resource type="AudioStream" uid="uid://bgqtdk2baa5sx" path="res://Assets/Sound Effects/Door close.wav" id="4_bgsld"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mw28t"]
+size = Vector3(12.685, 7.16, 49.800003)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1658127885]
+script = ExtResource("2_7mbvs")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1261634608]
+transform = Transform3D(-7.1525574e-07, 0, -1.9151151, 0, 0.77999985, 0, 4.7614775, 0, -2.3841858e-07, 0, 0, 0)
+material_override = ExtResource("1_mw28t")
+size = Vector3(10.5, 8.8, 6.6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2128620864]
+shape = SubResource("BoxShape3D_mw28t")
+
+[node name="DoorOpen" type="AudioStreamPlayer3D" parent="." unique_id=196399263]
+stream = ExtResource("3_1fk65")
+volume_db = 12.0
+pitch_scale = 1.1
+
+[node name="DoorClose" type="AudioStreamPlayer3D" parent="." unique_id=815125423]
+stream = ExtResource("4_bgsld")
+volume_db = 15.0
+
+[connection signal="finished" from="DoorOpen" to="." method="_on_door_open_finished"]

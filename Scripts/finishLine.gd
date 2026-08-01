@@ -5,7 +5,7 @@ extends Area3D
 
 @onready var endScreen: Control = $Control
 
-func _on_body_entered(body: Node3D) -> void:
+func _on_body_entered(_body: Node3D) -> void:
 	
 	var scoreToDisplay : int
 	

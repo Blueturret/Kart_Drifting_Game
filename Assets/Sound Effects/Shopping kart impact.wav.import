@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cc18wr08dvxgu"
+path="res://.godot/imported/Shopping kart impact.wav-fdb2cbc8a45fc096b9f1e18a18807a91.sample"
+
+[deps]
+
+source_file="res://Assets/Sound Effects/Shopping kart impact.wav"
+dest_files=["res://.godot/imported/Shopping kart impact.wav-fdb2cbc8a45fc096b9f1e18a18807a91.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

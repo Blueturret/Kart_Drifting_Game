@@ -1,5 +1,8 @@
 extends Node3D
 
+@onready var activateSound: AudioStreamPlayer3D = $Activate
+@onready var deactivateSound: AudioStreamPlayer3D = $Deactivate
+
 @export_category("Button trigger")
 @export var toTrigger: Array[Node3D]
 @export var onEnterMethod : String
@@ -19,10 +22,11 @@ var triggerable := true
 
 func _on_body_entered(_body: Node3D) -> void:
 	
-	if(not triggerable or onEnterMethod == "" or toTrigger == null): return
-	
 	# Set material to green
 	get_child(0).material_override = greenMat
+	activateSound.play()
+	
+	if(not triggerable or onEnterMethod == "" or toTrigger == null): return
 	
 	for obj in toTrigger:
 	
@@ -63,6 +67,8 @@ func _on_timer_timeout() -> void:
 	# Set material to red
 	get_child(0).material_override = redMat
 	triggerable = true
+	
+	deactivateSound.play()
 	
 	if(onTimerRunOutMethod == ""): return
 		

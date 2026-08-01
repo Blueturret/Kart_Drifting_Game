@@ -111,3 +111,9 @@ mesh = SubResource("ArrayMesh_7gp0r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=168472434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.54, 0.16499984)
 shape = SubResource("BoxShape3D_iv8h5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1097494201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4000006, 6.6000004)
+light_color = Color(0.2553764, 0.5828216, 0.6257098, 1)
+light_energy = 8.0
+omni_range = 8.883

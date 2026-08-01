@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l5l6t5k8wldf"
+path="res://.godot/imported/Cardboard impact 2.wav-5edd47ae03d6af6aee4005d78e8950f7.sample"
+
+[deps]
+
+source_file="res://Assets/Sound Effects/Cardboard impact 2.wav"
+dest_files=["res://.godot/imported/Cardboard impact 2.wav-5edd47ae03d6af6aee4005d78e8950f7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

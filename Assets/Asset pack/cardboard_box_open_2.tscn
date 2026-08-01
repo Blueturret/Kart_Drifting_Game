@@ -1,6 +1,11 @@
 [gd_scene format=4 uid="uid://b6gyiqilqbjy3"]
 
+[ext_resource type="Script" uid="uid://c85urqyqur44q" path="res://Scripts/PlaySoundOnCollision.gd" id="1_1hb3x"]
 [ext_resource type="Material" uid="uid://diemnlrijc6ow" path="res://Assets/Albedo.tres" id="1_r68mv"]
+[ext_resource type="AudioStream" uid="uid://rhl52lfkv8fi" path="res://Assets/Sound Effects/Cardboard impact 1.wav" id="3_pj8x4"]
+[ext_resource type="AudioStream" uid="uid://l5l6t5k8wldf" path="res://Assets/Sound Effects/Cardboard impact 2.wav" id="4_wr3cu"]
+[ext_resource type="AudioStream" uid="uid://c6oknkbwa7arr" path="res://Assets/Sound Effects/Cardboard impact 3.wav" id="5_ipc7o"]
+[ext_resource type="AudioStream" uid="uid://bb0qnbd3n4ven" path="res://Assets/Sound Effects/Cardboard impact 4..wav" id="6_enp4y"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8rnrw"]
 _surfaces = [{
@@ -39,7 +44,15 @@ shadow_mesh = SubResource("ArrayMesh_8rnrw")
 [sub_resource type="BoxShape3D" id="BoxShape3D_r68mv"]
 size = Vector3(1.9, 1.73, 2.2)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g52f5"]
+streams_count = 4
+stream_0/stream = ExtResource("3_pj8x4")
+stream_1/stream = ExtResource("4_wr3cu")
+stream_2/stream = ExtResource("5_ipc7o")
+stream_3/stream = ExtResource("6_enp4y")
+
 [node name="StaticBody3D" type="RigidBody3D" unique_id=1329552524]
+script = ExtResource("1_1hb3x")
 
 [node name="CardboardBoxOpen2" type="MeshInstance3D" parent="." unique_id=62886049]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0.90000004, 0)
@@ -48,3 +61,6 @@ mesh = SubResource("ArrayMesh_5yq5v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1554471262]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88499993, 0)
 shape = SubResource("BoxShape3D_r68mv")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=227233527]
+stream = SubResource("AudioStreamRandomizer_g52f5")

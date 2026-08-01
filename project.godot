@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/GPUTrail-main/plugin.cfg")
 folder_colors={
 "res://(TEMP) Debug Materials/": "pink",
 "res://Assets/": "yellow",
+"res://Assets/Sound Effects/": "blue",
 "res://Scenes/": "green"
 }
 
